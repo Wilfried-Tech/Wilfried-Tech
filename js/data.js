@@ -3,7 +3,7 @@ var Data = {
     name: "convertisseur",
     long_name: "convertisseur",
     downloadName: "converter.apk",
-    link: "https://github.com/Wilfried-Tech/Public_Creation/releases/download/v1.2/Convertisseur.apk",
+    link: "https://github.com/Wilfried-Tech/Wilfried-Tech/releases/download/v1.2/Convertisseur.apk",
     size: '64.09 ko',
     rate: 3,
     min_age: 5,
@@ -16,7 +16,7 @@ var Data = {
       name: "converter",
       url: "app/Convertisseur/convertisseur_logo.png"
     },
-    disabled: false,
+    disabled: !false,
     prev: []
    }],
   page: [{
