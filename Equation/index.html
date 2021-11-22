@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- Responsive Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <!-- <meta http-equiv="refresh" content="1">-->
+  <!-- Page Informations -->
+  <meta property="og:title" content="Equation">
+  <meta name="author" content="Wilfried-Tech" />
+  <meta property="og:image" content="assets/images/favicon/favicon.png">
+  <meta property="og:description" content="Wilfried-Tech vous offre la capacité de resoudre vos equation linéaire depuis sa page">
+  <meta name="description" content="Wilfried-Tech vous offre la capacité de resoudre vos equation linéaire depuis sa page" />
+  <meta name="keywords" content="equation, Wilfried-Tech" />
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" type="icon" href="assets/images/favicon/favicon.png">
+  <!-- JavaScript -->
+  <script type="text/javascript" src="assets/fonts/icon/icons.js"></script>
+  <script type="text/javascript" src="../libs/alert.js"></script>
+  <script type="text/javascript" src="../libs/Matrix.js"></script>
+  <title>Equation</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav class="nav-bar">
+        <h1 class="nav-title">Equation Linéaire</h1>
+      </nav>
+    </header>
+    <aside class="content">
+      <div class="option glass">
+        <div class="exemple">
+          <button class="btn-exemple" >exemple</button>
+        </div>
+        <div class="variable">
+          <label for="var-count">
+            nombre d'inconnu
+            <input type="number" name="variable" id="var-count" min="1" value="2">
+          </label>
+        </div>
+      </div>
+      <fieldset class="glass equation">
+        <legend><span>equation</span></legend>
+        <div class="equation-content"></div>
+      </fieldset>
+      <div class="solve">
+        <button>resoudre</button>
+      </div>
+      <fieldset class="glass solution">
+        <legend><span>solution</span></legend>
+        <div class="solution-content"></div>
+      </fieldset>
+    </aside>
+    <footer class="foot" id="footer">
+      <p class="copyright">
+        &copy; Wilfried-Tech &infin; Coder-Master
+      </p>
+      <p class="account">
+        <ul>
+          <li><a href="tel:657933001"><span class="fa fa-phone-alt"></span></a></li>
+          <li><a href="whatsapp://send?phone=+237657933001"><span class="fab fa-whatsapp"></span></a></li>
+          <li><a href="https://www.facebook.com/wilfriedlarry.nyandjou"><span class="fab fa-facebook"></span></a></li>
+          <li><a href="mailto:wilfriedlarry63@gmail.com"><span class="fab fa-google"></span></a></li>
+          <li><a href="https://github.com/Wilfried-Tech"><span class="fab fa-github"></span></a></li>
+          <li><a href="https://www.linkedin.com/in/nyandjou-wilfried-larry"><span class="fab fa-linkedin"></span></a></li>
+          <li><a href="https://m.youtube.com/channel/UCRCpf6O4US7hJ9qVPa4G51A"><span class="fab fa-youtube"></span></a></li>
+        </ul>
+      </p>
+    </footer>
+  </div>
+  <!-- JavaScript -->
+  <script type="text/javascript" src="js/setup.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

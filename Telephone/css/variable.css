@@ -1,0 +1,7 @@
+:root {
+  --translucent-color: #FFFFFF70;
+  --ripple-color: #FFFFFF96;
+  --window-background: linear-gradient(to top, #ba28ff, #34b1e9);
+  --screen-on-shadow: 0 0 1px #e0e0e0f0;
+  --window-background-off: #000;
+}

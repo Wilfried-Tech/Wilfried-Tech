@@ -1,0 +1,297 @@
+@import url("variable.css");
+@import url("animation.css");
+@import url("font-face.css");
+@import url("util.css");
+@import url("interfaces.css");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'delius', 'Times New Roman', Times, serif;
+  outline: none;
+  transition: all 250ms ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: black;
+}
+
+body {
+  text-align: center;
+  background-color: #fff;
+}
+
+body>iframe {
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0px auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  height: 100%;
+  padding: 10px 0;
+}
+
+.sizeAdjust,
+.phone-button {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 200px;
+  width: 30px;
+  padding: 5px 0;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  box-shadow: 0px -1px 3px black;
+}
+
+.sizeAdjust {
+  left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.sizeAdjust #phone-scale {
+  transform: rotate(-90deg);
+  margin: auto;
+  width: 200px;
+  height: 5px;
+  background: #ddd;
+  border-radius: 50px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#phone-scale::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0EBCE6;
+}
+
+.phone-button {
+  flex-direction: column;
+  justify-content: space-between;
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.phone-button>* {
+  color: #0EBCE6;
+  font-size: 18px;
+}
+
+.phone-button .power {
+  color: red;
+}
+
+.phone#phone {
+  width: 290px;
+  height: 590px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  border-radius: 30px;
+  transform: translate(-50%, -50%) scale(0.82);
+  padding: 7px 5px 15px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.off-screen {
+  position: absolute;
+  z-index: 49;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: display 250ms ease-in;
+}
+
+.front-camera {
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  transform: translte(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #000;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-front-camera {
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(#fff, #000);
+  border-radius: 50%;
+}
+
+.screen#screen {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 23px;
+  overflow: hidden;
+  background: var(--window-background);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  box-shadow: 0px 0px 3px #fff;
+}
+
+.screen .status-bar {
+  width: 100%;
+  height: 20px;
+  text-align: initial;
+  margin-top: 0px;
+  padding: 2px 7px 0 10%;
+  color: #fff;
+  position: absolute;
+  z-index: 40;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: #0002;
+}
+
+.status-bar-items {
+  list-style-type: none;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.status-bar-items li {
+  float: right;
+  height: 100%;
+  margin-left: 4px;
+  padding: 0;
+}
+
+.status-bar-items span {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.status-bar .material-icons {
+  font-size: 14px;
+}
+
+.status-bar .mdi {
+  font-size: 16px;
+}
+
+.status-bar-battery-level {
+  margin-left: 2px;
+}
+
+span.status-bar-4g {
+  font-size: 6px;
+  position: relative;
+  top: -10px;
+  left: 8px;
+  text-transform: uppercase;
+}
+
+.mdi.status-bar-wifi {
+  display: none;
+}
+
+.status-bar-battery::before {
+  content: '';
+  width: 2px;
+  height: 50%;
+  display: inline-block;
+  background-color: #fff;
+  position: absolute;
+  left: -3px;
+  top: 25%;
+}
+
+.status-bar-battery {
+  display: block;
+  width: 20px;
+  height: 55%;
+  border: 1px solid white;
+  margin: 22% 0 0 3px;
+  position: relative;
+  padding: 1.5px;
+}
+
+.status-bar-battery-value {
+  width: 100%;
+  height: 100%;
+  display: block;
+  float: right;
+}
+
+.material-icons.status-bar-battery-charge-indicator {
+  color: white;
+  transform: rotate(90deg);
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  font-size: 12px;
+  display: none;
+}
+
+.online {
+  transform: rotate(90deg);
+  margin-right: -10px;
+}
+
+.material-icons.status-bar-data {
+  display: none;
+}
+
+li.mbps {
+  float: left;
+}
+
+.phone-nav-button {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--translucent-color);
+  z-index: 30;
+}
+
+.nav-button {
+  color: white;
+}

@@ -1,0 +1,6 @@
+@keyframes swipe-up {
+  to {
+    transform: translateY(-20px);
+  }
+}
+

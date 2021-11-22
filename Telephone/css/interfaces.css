@@ -1,0 +1,140 @@
+.interface {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0 30px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#lockscreen {
+  background: transparent url('../assets/images/lockscreen.jpg') center center /cover no-repeat;
+  padding: 0;
+}
+
+#lockscreen>div {
+  width: 100%;
+  height: 100%;
+}
+
+.lockscreen-main{
+  transition: transform 250ms;
+}
+
+.lockscreen-icons {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  padding: 0 5px;
+}
+
+img.lockscreen-icon {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.lockscreen-icons .camera {
+  float: right;
+}
+
+.lockscreen-icons .phone-call {
+  float: left;
+}
+
+.lockscreen-watch {
+  width: 100%;
+  height: 40%;
+  text-align: center;
+  padding-top: 30%;
+}
+
+.watch-time {
+  font-size: 40px;
+  font-weight: bolder;
+  letter-spacing: 6px;
+  color: #fff;
+}
+
+.watch-date {
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.lockscreen-message {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  color: #fff;
+}
+
+.swipe-anim {
+  animation: swipe-up 750ms linear infinite;
+  transform: translateY(0px);
+}
+
+.lockscreen-pin{
+  padding-top: 50%;
+  text-transform: capitalize;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.pin-message{
+  margin-bottom: 5px;
+  text-transform: initial;
+  transition: display 2s ease-in;
+}
+
+.pin-message-error.invalid{
+  color: #f00;
+}
+
+.pin-input{
+  width: 90%;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin-bottom: 13px;
+}
+
+.pin-input input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 20px;
+  text-align: center;
+  background: transparent;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+#keyboard{
+  width: 75%;
+  height: 45%;
+  display: grid;
+  grid-template: repeat(4,1fr) / repeat(3,1fr);
+  grid-gap: 4px;
+}
+
+.key{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.emergency{
+  width: 50%;
+  padding: 7px 4px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin: 5px auto;
+}
