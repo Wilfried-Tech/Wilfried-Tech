@@ -41,7 +41,7 @@ const ComponentsTemplate = $('#Components-template');
 
 const $whatsapp = $('#gotowhatsapp');
 
-
+/*
 alert('Wilfriedroid V2.1')
 alert(`
     maintenez le bouton allumer pour allumer le téléphone

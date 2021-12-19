@@ -116,7 +116,7 @@ async function Ajax(method, url, data) {
       }
     }
     xhr.onerror = function(e) {
-      reject(xhr.statusText);
+      reject(xhr.statusText+' (error code: '+xhr.status+' )');
     }
   })
 }

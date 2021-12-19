@@ -211,6 +211,12 @@ class Message extends Application {
     this.startActivity('conversationPicker');
     var $this = this;
     this.picker.innerHTML = '';
+    if (Android.UserList.accounts.length == 0) {
+      this.picker.appendChild(createElement('h4', {
+        text:'aucun contact disponible pour l\'instant !',
+        style:`width:100%;height:100%; display:flex;align-item:center;justify-content:center;`
+      }))
+    }
     Android.UserList.accounts.forEach(user => {
       var disc = createElement('div', {
         class: 'discussion',
@@ -228,8 +234,8 @@ class Message extends Application {
 
   }
   static async listenChange() {
+          console.log(Android.User);
     Message.listenOnlineUser();
-
     var MsgConfig = Android.User.config.Message || {};
     var configDiscs = MsgConfig.discussions || {};
     var discussion = {};

@@ -17,7 +17,7 @@
     user = JSON.parse(response);
     Android.User = new Utilisateur(user.self);
     Android.UserList = new UtilisateurList(user.accounts);
-    loginContainer.css('display', 'none');
+    return Promise.resolve();
   }
   const loginContainer = $('.login-container');
   const stockage = new JStorage(JStorage.LOCAL);
@@ -39,15 +39,16 @@
           password: data.get('mdp'),
           email: data.get('email')
         }))
-        await getUsers();
+        window.location.reload();
       }).catch(e => {
         console.error(e);
       });
       e.preventDefault();
-      window.location.reload();
     }
   } else {
-    await getUsers();
+    getUsers().then(v => {
+      loginContainer.css('display', 'none');
+    });
   }
 
 })()
