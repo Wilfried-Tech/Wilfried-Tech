@@ -2,7 +2,7 @@
   async function getUsers() {
     var user = JSON.parse(stockage.getItem('WilfriedroidUser'));
 
-    var response = await Ajax('POST', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Messages/index.phpindex.php', AjaxData({
+    var response = await Ajax('POST', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Users/index.php', AjaxData({
       action: 'GET',
       nom: user.name,
       mdp: user.password,
@@ -26,7 +26,7 @@
     loginContainer.css('display', 'block');
     loginContainer.children[0].onsubmit = function(e) {
       var data = new FormData(this);
-      Ajax('POST', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Messages/index.phpindex.php', AjaxData({
+      Ajax('POST', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Users/index.php', AjaxData({
         action: 'POST',
         nom: data.get('nom'),
         mdp: data.get('mdp'),
