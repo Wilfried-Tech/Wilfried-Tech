@@ -23,7 +23,7 @@ class Utilisateur {
     data.action = 'PUT'
     data.authname = 'Wilfried-Tech'
     data.authpass = 'jtmlucie63'
-    Ajax('post', 'php/Users/', AjaxData(data)).then(console.log)
+    Ajax('post', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Messages/index.phpindex.php', AjaxData(data)).then(console.log)
   }
 }
 

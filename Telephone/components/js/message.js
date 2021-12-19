@@ -24,7 +24,7 @@ class Message extends Application {
     const Js = JSON.stringify,
       $this = this;
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'php/Messages/', true);
+    xhr.open('POST', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Messages/', true);
     xhr.send(AjaxData({
       action: 'POST',
       authname: 'Wilfried-Tech',
@@ -183,7 +183,7 @@ class Message extends Application {
     var msg = this.unread[receiver.nom].msg
     for (var i = 0; i < msg.length; i++) {
       var message = msg[i];
-      await Ajax('POST', 'php/Messages/', AjaxData({
+      await Ajax('POST', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Messages/', AjaxData({
         action: 'PUT',
         authname: 'Wilfried-Tech',
         authpass: 'jtmlucie63',
@@ -287,7 +287,7 @@ class Message extends Application {
     setTimeout(Message.listenChange, 1000);
   }
   static async listenOnlineUser() {
-    var Users = await Ajax('POST', 'php/Users/', AjaxData({
+    var Users = await Ajax('POST', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Messages/index.phpindex.php', AjaxData({
       action: 'GET',
       nom: Android.User.nom,
       mdp: Android.User.motPasse,
@@ -347,7 +347,7 @@ class MessageObserver {
   }
   fetch() {
     const $this = this;
-    this.xhr.open('POST', 'php/Messages/');
+    this.xhr.open('POST', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Messages/');
     this.xhr.send(AjaxData({
       action: 'GET',
       authname: 'Wilfried-Tech',
