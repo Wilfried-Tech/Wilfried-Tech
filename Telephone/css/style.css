@@ -3,6 +3,8 @@
 @import url("font-face.css");
 @import url("util.css");
 @import url("interfaces.css");
+@import url("widget.css");
+@import url("notification.css");
 
 
 * {
@@ -11,11 +13,14 @@
   box-sizing: border-box;
   font-family: 'delius', 'Times New Roman', Times, serif;
   outline: none;
-  transition: all 250ms ease-in-out;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+#Components-template {
+  display: none;
 }
 
 html,
@@ -23,17 +28,12 @@ body {
   height: 100%;
   width: 100%;
   background: black;
+  overflow: hidden;
 }
 
 body {
   text-align: center;
   background-color: #fff;
-}
-
-body>iframe {
-  width: 0px;
-  height: 0px;
-  visibility: hidden;
 }
 
 .container {
@@ -49,7 +49,8 @@ body>iframe {
 }
 
 .sizeAdjust,
-.phone-button {
+.phone-button,
+#manual {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
@@ -61,8 +62,18 @@ body>iframe {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100;
   box-shadow: 0px -1px 3px black;
+  z-index: 100;
+}
+
+#manual {
+  left: 0;
+  top: 10%;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  font-size: 1.6em;
+  margin: 3px;
 }
 
 .sizeAdjust {
@@ -81,7 +92,8 @@ body>iframe {
   appearance: none;
 }
 
-#phone-scale::-webkit-slider-thumb {
+#phone-scale::-webkit-slider-thumb,
+#screen-brightness::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
@@ -106,9 +118,9 @@ body>iframe {
 }
 
 .phone#phone {
-  width: 290px;
+  width: 280px;
   height: 590px;
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   margin: 0;
@@ -117,6 +129,7 @@ body>iframe {
   padding: 7px 5px 15px;
   overflow: hidden;
   background-color: #000;
+  transition: transform 250ms ease-in;
 }
 
 .off-screen {
@@ -131,7 +144,7 @@ body>iframe {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  transition: display 250ms ease-in;
+  transition: display 500ms ease-in;
 }
 
 .front-camera {
@@ -167,7 +180,141 @@ body>iframe {
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
-  box-shadow: 0px 0px 3px #fff;
+  transition: opacity 750ms linear;
+}
+
+#screen.isfullscreen {
+  border-radius: 0;
+}
+
+.topbar-container {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 48;
+  text-align: center;
+  transition: top 0.5s ease-out;
+
+}
+
+.topbar {
+  background-color: #ffff;
+  width: 95%;
+  border-radius: 20px 20px 10px 10px;
+  margin: 0px auto 0;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 0 0 7px;
+}
+
+.topbar-container.topbar-open {
+  transition: top 0.5s ease-out, background 0s ease-out 0.5s;
+  top: 0;
+  background: #0005;
+}
+
+.topbar-part1 {
+  width: 95%;
+  border-bottom: 1px solid #000;
+  margin: 0 auto;
+  display: flex;
+  justify-content: stretch;
+  align-items: baseline;
+}
+
+.topbar-time {
+  font-size: 30px;
+  font-weight: bolder;
+  letter-spacing: 6px;
+  margin-left: 23px;
+}
+
+.topbar-date {
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: capitalize;
+  margin-left: 3px;
+}
+
+.topbar-settings {
+  flex: 2;
+  text-align: right;
+  padding-right: 5px;
+}
+
+.brightnessAdjust {
+  line-height: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.brightnessAdjust .brightness-icon {
+  float: left;
+}
+
+.brightnessAdjust input {
+  width: 80%;
+  height: 3px;
+  background: #ddd;
+  margin-left: -15px;
+  border-radius: 50px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.topbar .settings-options {
+  margin: 5px 0;
+}
+
+.settings-options .options {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.option {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 21%;
+  height: 60px;
+  background-color: #fff0;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #999;
+}
+
+/*
+.option :first-child{
+  border-radius: 50%;
+  border: 1px solid #000;
+  width: 70%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3px;
+}
+*/
+.option-title {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  border-top: 1px solid grey;
+  line-height: 1.5;
 }
 
 .screen .status-bar {
@@ -178,11 +325,11 @@ body>iframe {
   padding: 2px 7px 0 10%;
   color: #fff;
   position: absolute;
-  z-index: 40;
+  z-index: 47;
   top: 0;
   left: 0;
   display: none;
-  background-color: #0002;
+  background-color: #0004;
 }
 
 .status-bar-items {
@@ -284,14 +431,87 @@ li.mbps {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 30px;
+  height: 35px;
   position: absolute;
   bottom: 0;
   left: 0;
   background: var(--translucent-color);
-  z-index: 30;
+  z-index: 47;
 }
 
 .nav-button {
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  height: 100%;
+  width: 20%;
+}
+
+.login-container {
+  display: none;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+  padding: 30px 0;
+  background: #fff url(../assets/images/favicon/favicon.png) center center/contain no-repeat;
+  z-index: 101;
+}
+
+.login-container .login {
+  width: 90%;
+  border-radius: 30px;
+  box-shadow: 2px 2px 4px #0005,
+            -2px -2px 4px #eee;
+  padding: 10px;
+  background: #fff4;
+  margin: 0 auto;
+}
+
+.login>fieldset {
+  border: none;
+  width: 100%;
+}
+
+fieldset img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.login fieldset fieldset {
+  width: 100%;
+  margin-top: 7px;
+}
+
+.login fieldset fieldset legend {
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 5px;
+}
+
+fieldset input {
+  width: 90%;
+  padding: 5px;
+  margin: 7px;
+  border-radius: 10px;
+  border: 2px solid blue;
+  font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+  background: transparent;
+}
+
+fieldset.login-btn {
+  text-align: center;
+}
+
+fieldset.login-btn input {
+  width: 45%;
+  background-color: lime;
+  border-style: outset;
+  text-transform: capitalize;
+  margin: 5px auto;
 }

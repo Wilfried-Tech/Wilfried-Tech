@@ -1,5 +1,6 @@
 const phone = $('#phone');
 const sizeAdjust = $('#phone-scale');
+const manual = $('#manual');
 
 phone.screen = $('#screen');
 phone.screen.off = $('.off-screen')
@@ -8,7 +9,7 @@ phone.screen.off = $('.off-screen')
 phone.volDown = $('.vol-down');
 phone.volUp = $('.vol-up');
 phone.power = $('.power');
-registerForLongClickEvent(phone.power,1000);
+registerForLongClickEvent(phone.power, 1000);
 
 phone.bottomNavBar = $('.phone-nav-button');
 phone.bottomNavBar.recent = $('.nav-button:nth-child(1)');
@@ -16,6 +17,8 @@ phone.bottomNavBar.home = $('.nav-button:nth-child(2)');
 phone.bottomNavBar.back = $('.nav-button:nth-child(3)');
 
 phone.statusBar = $('.status-bar');
+registerForSwipeEvent(phone.statusBar);
+
 phone.statusBar.time = $('.status-bar-time');
 phone.statusBar.mbps = $('.status-bar-mbps');
 phone.statusBar.wifi = $('.status-bar-wifi');
@@ -26,11 +29,25 @@ phone.statusBar.chargeIndicator = $('.status-bar-battery-charge-indicator');
 phone.statusBar.data = $('.status-bar-data');
 phone.statusBar.dataType = $('.status-bar-4g');
 
-alert('Wilfriedroid V1.0 beta')
+phone.topBar = $('.topbar');
+registerForSwipeEvent(phone.topBar.parentNode);
+phone.topBar.date = $('.topbar-date');
+phone.topBar.time = $('.topbar-time');
+phone.topBar.settings = $('.topbar-settings');
+
+phone.brightnessAdjust = $('#screen-brightness');
+
+const ComponentsTemplate = $('#Components-template');
+
+const $whatsapp = $('#gotowhatsapp');
+
+
+alert('Wilfriedroid V2.1')
 alert(`
     maintenez le bouton allumer pour allumer le téléphone
     bouton volume non operationel !
     redimensionner le téléphone avec le bouton bleu a gauche. glisser le vers le haut pour agrandir et vers le bas pour rétrécir !
+    cliquez sur le cahier a gauche pour passer en plein écran
 `)
 
 alert(`
@@ -38,10 +55,15 @@ alert(`
     mais vous pouvez voir la réaction du téléphone au éventuellement suivant
       vous charger votre téléphone
       vous activez ou désactivez la connexion 
-      vous vous connectez a un wifi 
+      vous vous connectez a un wifi
 `)
 
-if(confirm(`
+alert(
+  `     nouveautés    
+  vous pouvez désormais chatter en temps réel dans l'application message
+  si vous rencontrez des problème svp contacter moi pour que je puisse le régler`
+)
+/*if (confirm(`
 Dans quelques mois :
   mise en place du menu principal
   mise place de la barre de statut
@@ -50,6 +72,6 @@ Dans quelques mois :
   
   pour voir la maquette de la version future cliquez sur 'ok'
   pour le demander a Mr Wilfried sur WhatsApp !
-`)){
-  window.open('whatsapp://send?phone=+237657933001&text=Bonsoir Mr.\n c\'est a propos de la maquette de votre project Wilfriedroid','_blank')
-}
+`)) {
+  
+}*/
