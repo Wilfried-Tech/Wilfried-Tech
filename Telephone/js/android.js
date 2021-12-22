@@ -186,7 +186,7 @@ class AndroidUtils {
         setTimeout(() => {
           _this.displayInterface('lockscreen').then(() => {
             _this.power = 'on';
-                  Message.listenChange();
+            Message.listenChange();
           })
         }, 11750);
       }, 1500);
