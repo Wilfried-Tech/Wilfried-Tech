@@ -8,22 +8,21 @@ class Utilisateur {
     if (active) {
       this.config = /\{|\}|\"/.test(`${data.config}`) ? JSON.parse(data.config) : {}
       this.others = /\{|\}|\"/.test(`${data.others}`) ? JSON.parse(data.others) : {}
-      this.motPasse = data.password
+      this.password = data.password
     }
   }
   exportData() {
-    var data = {};
-    data.name = this.name
-    data.id = this.id
-    data.email = this.email
-    data.online = this.online ? 1 : 0;
-    data.config = JSON.stringify(this.config);
-    data.others = JSON.stringify(this.others)
-    data.password = this.motPasse;
-    data.action = 'PUT'
-    data.authname = 'Wilfried-Tech'
-    data.authpass = 'jtmlucie63'
-    Ajax('post', API.Users, AjaxData(data)).then(console.log)
+
+    Ajax('post', API.Users, AjaxData({
+      name: this.name,
+      id: this.id,
+      email: this.email,
+      online: this.online ? 1 : 0,
+      config: JSON.stringify(this.config),
+      others = JSON.stringify(this.others),
+      password: this.password,
+      action: 'PUT'
+    })).then(console.log)
   }
 }
 

@@ -12,9 +12,7 @@ async function initLogin() {
         action: 'POST',
         name: data.get('name'),
         password: data.get('password'),
-        email: data.get('email'),
-        authname: 'Wilfried-Tech',
-        authpass: 'jtmlucie63'
+        email: data.get('email')
       })).then(response => {
         stockage.setItem('WilfriedroidUser', JSON.stringify({
           name: data.get('name'),
@@ -34,16 +32,14 @@ async function initLogin() {
       action: 'GET',
       name: $user.name,
       password: $user.password,
-      email: $user.email,
-      authname: 'Wilfried-Tech',
-      authpass: 'jtmlucie63'
+      email: $user.email
     })).then(response => {
       $user = JSON.parse(response);
       User = new Utilisateur($user.self);
       User.Friends = new UtilisateurList($user.accounts);
       window.dispatchEvent(new CustomEvent('Logged'));
     }).catch(reason => {
-      console.log(reason);
+      console.error(reason);
       alert('impossible de te connecter automatiquement vérifier votre connexion Internet et réessayer');
       loginContainer.css('display', 'block');
     })

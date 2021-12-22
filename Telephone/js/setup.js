@@ -128,6 +128,8 @@ function AjaxData(obj) {
   for (var p in obj) {
     data.append(p, obj[p]);
   }
+  data.append('authname', 'Wilfried-Tech');
+  data.append('authpass', 'jtmlucie63')
   return data
 }
 

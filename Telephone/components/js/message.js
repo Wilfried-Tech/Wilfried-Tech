@@ -20,44 +20,34 @@ class Message extends Application {
       this.MainActivity();
     }
   }
-
-
-}
-/*
+  async onCreate() {
+    this.MainActivity();
+    ripple(this.select('div.back', '*'))
+    ripple(this.select('div.more', '*'))
+    var onback = this.onBack.bind(this);
+    this.select('.back', '*').forEach(back => {
+      back.onclick = onback;
+    })
+  }
   sendMessage() {
     const Js = JSON.stringify,
       $this = this;
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', API.Messages, true);
-    xhr.send(AjaxData({
+
+    Ajax('POST', API.Messages, AjaxData({
       action: 'POST',
-      authname: 'Wilfried-Tech',
-      authpass: 'jtmlucie63',
       message: this.input.value.trim(),
-      destinataire: this.receiver.id,
-      expediteur: User.id,
-      autres: `${Js({
+      receiver: this.receiver.id,
+      sender: User.id,
+      others: `${Js({
             seen: false
           })}`
-    }));
-    return new Promise((resolve, reject) => {
-      xhr.onerror = function(e) {
-        reject(xhr.statusText)
-      }
-      xhr.onload = function() {
-        if (xhr.readyState == XMLHttpRequest.DONE) {
-          if (xhr.status >= 200 && xhr.status < 300) {
-            resolve(xhr.response);
-          }
-          if (xhr.status >= 400 && xhr.status < 500) {
-            reject(xhr.responseText);
-          }
-          if (xhr.status >= 500) {
-            reject(xhr.responseText);
-          }
-        }
-      }
-    })
+    })).then(response => {
+      console.info(response);
+      $this.input.value = '';
+    }).catch(reason => {
+      console.error(reason);
+    });
+
   }
   setMessage(data) {
     const $this = this;
@@ -76,18 +66,23 @@ class Message extends Application {
   }
   async MainActivity() {
     var $this = this;
-    this.unread = [];
-    var messages = await (new MessageObserver(User, User)).fetch();
-    if (!messages) {
-      NotificationManager.fire('la connexion au serveur est impossible');
-      this.onBack();
-    }
     var discussion = {},
       id = User.id,
       Jp = JSON.parse;
     const getUser = function(id) {
       return id == User.id ? User : User.Friends.getUserById(id);
     };
+    this.unread = [];
+    
+    Ajax('POST',API.Messages,AjaxData({
+      
+    }))
+    
+    if (!messages) {
+      NotificationManager.fire('la connexion au serveur est impossible');
+      this.onBack();
+    }
+
 
     messages.forEach((msg, i) => {
       var name = getUser(msg.sender).name
@@ -143,6 +138,12 @@ class Message extends Application {
     }
     this.newMsg.onclick = this.ConversationPickerActivity.bind(this);
   }
+
+} //class
+/*
+  
+  
+  
   async ConversationActivity(receiver) {
     const $this = this;
     this.startActivity('conversation');
@@ -202,15 +203,7 @@ class Message extends Application {
       //$this.unread[receiver.name].msg.shift();
     }
   }
-  async onCreate() {
-    this.MainActivity();
-    ripple(this.select('div.back', '*'))
-    ripple(this.select('div.more', '*'))
-    var onback = this.onBack.bind(this);
-    this.select('.back', '*').forEach(back => {
-      back.onclick = onback;
-    })
-  }
+  
   ConversationPickerActivity() {
     this.startActivity('conversationPicker');
     var $this = this;
