@@ -1,21 +1,28 @@
-const Android = new AndroidUtils(phone, {});
+/* GET USER AND CONFIGURATION */
 
+initLogin();
 
 /* IMPORT COMPONENTS */
 
-Android.importAllComponents().then(() => {
-  Android.displayInterface('window').then(() => { phone.screen.off.css('display', 'none') })
- // Android.launchApplication('message');
-  Message.listenChange();
-  /*
-  var m = new NotificationManager('some thing to notify', {
-    type: NotificationManager.ALERT_NOTIFICATION,
-    prompt:true
-  },createElement('img',{
-    src:'assets/images/android-boot.gif'
-  }));
-  m.fire();*/
-});
+const Android = new AndroidUtils(phone, {});
+
+window.addEventListener('Logged', (e) => {
+  Android.importAllComponents().then(() => {
+    Android.displayInterface('window').then(() => { phone.screen.off.css('display', 'none') })
+    Android.launchApplication('message');
+      Message.listenChange();
+
+    /*
+    var m = new NotificationManager('some thing to notify', {
+      type: NotificationManager.ALERT_NOTIFICATION,
+      prompt:true
+    },createElement('img',{
+      src:'assets/images/android-boot.gif'
+    }));
+    m.fire();*/
+  });
+  Android.dispatchEvents();
+})
 
 /* RIPPLE ANIMATIONS */
 
@@ -63,6 +70,7 @@ window.addEventListener('components-imported', function(e) {
   phone.power.addEventListener('longclick', function(e) {
     if (Android.power == 'off') {
       Android.boot();
+      Message.listenChange();
     } else {
       //Android.shutDown();
     }
@@ -110,9 +118,6 @@ phone.bottomNavBar.home.addEventListener('click', (e) => {
     Android.activeComponent.onBack();
   }
 })
-
-Android.dispatchEvents();
-
 
 
 /**/
