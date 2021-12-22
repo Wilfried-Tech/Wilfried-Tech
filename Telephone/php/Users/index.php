@@ -18,7 +18,7 @@ if(isset($_POST['action'])){
     $Users = array();
     while($row = $res->fetch(PDO::FETCH_ASSOC)){
       if($row['email']==$_POST['email']){
-        if ($row['name']==$_POST['name']&&$row['password']==$_POST['mdp']) {
+        if ($row['name']==$_POST['name']&&$row['password']==$_POST['password']) {
           header('Content-type: text/plain','success',200);
           exit(json_encode($row));
         } else {
@@ -31,7 +31,7 @@ if(isset($_POST['action'])){
     $response = $sql->prepare('INSERT INTO Utilisateurs(name,password,email) VALUES(:name,:password,:email)');
       $response->execute(array(
         'name' => htmlspecialchars($_POST['name']),
-        'password' => $_POST['mdp'],
+        'password' => $_POST['password'],
         'email' => $_POST['email']
         ));
     header('Content-type: text/plain','success',200);
@@ -42,7 +42,7 @@ if(isset($_POST['action'])){
     $Users = array();
     $Users['accounts'] = array();
     while($row = $res->fetch(PDO::FETCH_ASSOC)){
-      if($row['name']==$_POST['name']&&$row['password']==$_POST['mdp']){
+      if($row['name']==$_POST['name']&&$row['password']==$_POST['password']){
         $Users['self'] = $row;
       }else{
         $arr = array();

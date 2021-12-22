@@ -34,7 +34,7 @@ class UtilisateurList {
   }
   getUserByName(name) {
     for (var index in this.accounts) {
-      if (this.accounts[index].nom == name) {
+      if (this.accounts[index].name == name) {
         return this.accounts[index]
       }
     }

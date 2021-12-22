@@ -3,10 +3,12 @@
   overflow: hidden;
   --ripple-position-top: 0;
   --ripple-position-left: 0;
-  --ripple-background: /*#0068FF9C*/#0EBCE670;
+  --ripple-background:
+    /*#0068FF9C*/
+    #0EBCE670;
 }
 
-[ripple]::before {
+[ripple]>.ripple-span {
   content: '';
   position: absolute;
   top: var(--ripple-position-top, 0);
@@ -19,11 +21,11 @@
   opacity: 1;
 }
 
-[ripple].ripple-active::before {
+[ripple].ripple-active>.ripple-span {
   animation: ripple 750ms;
 }
 
-div#ComponentsTemplate{
+div#ComponentsTemplate {
   display: none;
   visibility: hidden;
 }

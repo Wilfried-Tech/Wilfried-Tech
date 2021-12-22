@@ -31,7 +31,7 @@ class Message extends Application {
       authpass: 'jtmlucie63',
       message: this.input.value.trim(),
       destinataire: this.receiver.id,
-      expediteur: Android.User.id,
+      expediteur: User.id,
       autres: `${Js({
             seen: false
           })}`
@@ -59,7 +59,7 @@ class Message extends Application {
     const $this = this;
     data.forEach(row => {
       var msg = createElement('div', {
-        class: 'message-item ' + ((row.expediteur == Android.User.id) ? 'me' : 'him')
+        class: 'message-item ' + ((row.sender == User.id) ? 'me' : 'him')
       }, null, [createElement('div', {
         class: 'message-content',
         text: row.message
@@ -73,37 +73,37 @@ class Message extends Application {
   async MainActivity() {
     var $this = this;
     this.unread = [];
-    var messages = await (new MessageObserver(Android.User, Android.User)).fetch();
+    var messages = await (new MessageObserver(User, User)).fetch();
     if (!messages) {
       NotificationManager.fire('la connexion au serveur est impossible');
       this.onBack();
     }
     var discussion = {},
-      id = Android.User.id,
+      id = User.id,
       Jp = JSON.parse;
     const getUser = function(id) {
-      return id == Android.User.id ? Android.User : Android.UserList.getUserById(id);
+      return id == User.id ? User : User.Friends.getUserById(id);
     };
 
     messages.forEach((msg, i) => {
-      var nom = getUser(msg.expediteur).nom
-      if (msg.destinataire != id) {
-        discussion[getUser(msg.destinataire).nom] = {
+      var name = getUser(msg.sender).name
+      if (msg.receiver != id) {
+        discussion[getUser(msg.receiver).name] = {
           msg: msg.message,
-          id: msg.destinataire,
+          id: msg.receiver,
           date: msg.date
         };
       } else {
-        discussion[getUser(msg.expediteur).nom] = {
+        discussion[getUser(msg.sender).name] = {
           msg: msg.message,
-          id: msg.expediteur,
+          id: msg.sender,
           date: msg.date
         };
-        $this.unread[nom] = $this.unread[nom] || { count: 0, msg: [] };
+        $this.unread[name] = $this.unread[name] || { count: 0, msg: [] };
 
         if (!Jp(msg.others).seen) {
-          $this.unread[nom].count += 1
-          $this.unread[nom].msg.push(msg);
+          $this.unread[name].count += 1
+          $this.unread[name].msg.push(msg);
         }
       }
     })
@@ -119,7 +119,7 @@ class Message extends Application {
       },
       {
         onclick: function(e) {
-          $this.ConversationActivity(Android.UserList.getUserById(discussion[name].id));
+          $this.ConversationActivity(User.Friends.getUserById(discussion[name].id));
         }
       })
       this.discussion.appendChild(disc);
@@ -144,7 +144,7 @@ class Message extends Application {
     this.startActivity('conversation');
     this.receiverName.innerHTML = receiver.name;
     this.messages.innerHTML = '';
-    this.Observer = new MessageObserver(Android.User, receiver)
+    this.Observer = new MessageObserver(User, receiver)
     this.receiver = receiver
     this.send.onclick = function(e) {
       if ($this.input.value.trim() != '') {
@@ -158,13 +158,13 @@ class Message extends Application {
     if (Message.infoOnline) {
       var info = Message.infoOnline[receiver.name];
       if (info.online) {
-        this.online.innerHTML = `<span style='color:lime;'>enligne</span>`
+        this.online.innerHTML = `<span style='color:lime;'>en ligne</span>`
       } else {
         this.online.innerHTML = `vu le ${receiver.seen.toLocaleString('fr')}`;
       }
     }
     window.addEventListener('Message', (e) => {
-      if (e.detail.from.name == receiver.name || e.detail.from.name == Android.User.name) {
+      if (e.detail.from.name == receiver.name || e.detail.from.name == User.name) {
         if (e.detail.object == 'new-msg') {
           $this.setMessage([e.detail.msg]);
         }
@@ -172,7 +172,7 @@ class Message extends Application {
       if (e.detail.from.name != receiver.name) return;
 
       if (e.detail.object == 'user-online') {
-        $this.online.innerHTML = `<span style='color:lime;'>enligne</span>`
+        $this.online.innerHTML = `<span style='color:lime;'>en ligne</span>`
       }
       if (e.detail.object == 'user-offline') {
         $this.online.innerHTML = `vu le ${e.detail.user.seen.toLocaleString('fr')}`;
@@ -189,8 +189,8 @@ class Message extends Application {
         authpass: 'jtmlucie63',
         message: message.message.trim(),
         date: message.date,
-        destinataire: message.destinataire,
-        expediteur: message.expediteur,
+        destinataire: message.receiver,
+        expediteur: message.sender,
         autres: `${JSON.stringify({
                     seen: true
                   })}`
@@ -211,13 +211,13 @@ class Message extends Application {
     this.startActivity('conversationPicker');
     var $this = this;
     this.picker.innerHTML = '';
-    if (Android.UserList.accounts.length == 0) {
+    if (User.Friends.accounts.length == 0) {
       this.picker.appendChild(createElement('h4', {
         text: 'aucun contact disponible pour l\'instant !',
         style: `width:100%;height:100%; display:flex;align-item:center;justify-content:center;`
       }))
     }
-    Android.UserList.accounts.forEach(user => {
+    User.Friends.accounts.forEach(user => {
       var disc = createElement('div', {
         class: 'discussion',
         text: `<div class="disc-img"><i class="fa fa-circle-user"></i></div><div class="disc-name">${user.name}</div><div class="disc-email">${user.email}</div>`
@@ -234,15 +234,15 @@ class Message extends Application {
 
   }
   static async listenChange() {
-    //console.log(Android.User);
+    //console.log(User);
     Message.listenOnlineUser();
-    var MsgConfig = Android.User.config.Message || {};
+    var MsgConfig = User.config.Message || {};
     var configDiscs = MsgConfig.discussions || {};
     var discussion = {};
-    var response = await (new MessageObserver(Android.User, Android.User)).fetch();
-    var userId = Android.User.id;
+    var response = await (new MessageObserver(User, User)).fetch();
+    var userId = User.id;
     const getUser = function(id) {
-      return id == Android.User.id ? Android.User : Android.UserList.getUserById(id);
+      return id == User.id ? User : User.Friends.getUserById(id);
     };
     response.forEach((msg, i) => {
       const { message, expediteur, destinataire } = msg;
@@ -289,32 +289,32 @@ class Message extends Application {
       }
     }
     MsgConfig.discussions = configDiscs;
-    Android.User.config.Message = MsgConfig;
+    User.config.Message = MsgConfig;
     setTimeout(Message.listenChange, 1000);
   }
   static async listenOnlineUser() {
     var Users = await Ajax('POST', API.Users, AjaxData({
       action: 'GET',
-      nom: Android.User.name,
-      mdp: Android.User.motPasse,
-      email: Android.User.email,
+      name: User.name,
+      mdp: User.motPasse,
+      email: User.email,
       authname: 'Wilfried-Tech',
       authpass: 'jtmlucie63'
     }))
     Users = JSON.parse(Users)
     if (Users) {
-      Android.UserList = new UtilisateurList(Users.accounts);
+      User.Friends = new UtilisateurList(Users.accounts);
       var info = {}
       if (!Message.infoOnline) {
         Message.infoOnline = info;
       } else {
         info = Message.infoOnline;
       }
-      Android.UserList.accounts.forEach(user => {
+      User.Friends.accounts.forEach(user => {
         info[user.name] = info[user.name] || {};
         if (Number(user.online)) {
-          if (!info[user.name].enligne) {
-            info[user.name].enligne = 1;
+          if (!info[user.name].online) {
+            info[user.name].online = 1;
             AndroidUtils.dispatchEvent(new CustomEvent('Message', {
               bubbles: true,
               cancelable: false,
@@ -325,8 +325,8 @@ class Message extends Application {
             }), window)
           }
         } else {
-          if (info[user.name].enligne) {
-            info[user.name].enligne = 0;
+          if (info[user.name].online) {
+            info[user.name].online = 0;
             AndroidUtils.dispatchEvent(new CustomEvent('Message', {
               bubbles: false,
               cancelable: false,

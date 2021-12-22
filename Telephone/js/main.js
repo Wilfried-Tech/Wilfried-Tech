@@ -95,8 +95,8 @@ manual.onclick = function() {
 }
 
 window.onblur = window.onunload = function() {
-  Android.User.online = 0
-  Android.User.exportData();
+  User.online = 0
+  User.exportData();
 }
 
 phone.bottomNavBar.back.addEventListener('click', (e) => {

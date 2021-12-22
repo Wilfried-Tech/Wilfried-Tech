@@ -48,6 +48,9 @@ function copyFromTo(a = {}, b = {}, writable = true) {
 function ripple(elts) {
   elts.forEach((elt) => {
     elt.setAttribute('ripple', '');
+    elt.appendChild(createElement('span', {
+      class: 'ripple-span'
+    }))
     var id = undefined;
     elt.addEventListener('click', (e) => {
       var rect = elt.getBoundingClientRect();
@@ -55,7 +58,6 @@ function ripple(elts) {
       var y = e.pageY - rect.top - (elt.offsetHeight / 2)
       elt.style.setProperty('--ripple-position-top', y + 'px');
       elt.style.setProperty('--ripple-position-left', x + 'px');
-
       if (elt.classList.contains('ripple-active')) {
         elt.classList.remove('ripple-active');
         clearTimeout(id);

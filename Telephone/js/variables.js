@@ -50,6 +50,7 @@ const API = {
     return ['php/Messages/', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Messages/'][this.index] + 'index.php';
   }
 }
+var User = null;
 
 /*
 alert('Wilfriedroid V2.1')
