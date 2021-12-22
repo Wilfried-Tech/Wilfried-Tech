@@ -95,7 +95,7 @@ manual.onclick = function() {
 }
 
 window.onblur = window.onunload = function() {
-  Android.User.enligne = 0
+  Android.User.online = 0
   Android.User.exportData();
 }
 

@@ -86,20 +86,23 @@ class Application {
     }
     return (param) ? elt : elt[0];
   }
+  static getDefaults() {
+    return { 'message': '' };
+  }
   static launcherOf(appName) {
     const AppList = {
       "agenda": "assets/images/agenda.png",
       "android": "assets/images/android.png",
       "apple_contacts": "assets/images/apple-contacts.png",
-      "digital_camera": "assets/images/camera-2.png",
+      "camera_digital": "assets/images/camera-2.png",
       "camera": "assets/images/camera.png",
       "chrome": "assets/images/chrome.png",
       "contacts": "assets/images/contact.png",
       "discord": "assets/images/discord.png",
       "facebook": "assets/images/facebook-circled.png",
-      "files": "assets/images/files.png",
-      "gallery": "assets/images/gallery.png",
-      "game": "assets/images/game.png",
+      "fichiers": "assets/images/files.png",
+      "galerie": "assets/images/gallery.png",
+      "jeux": "assets/images/game.png",
       "google_duo": "assets/images/google-duo.png",
       "google_map": "assets/images/google-maps.png",
       "google_photo": "assets/images/google-photos.png",
@@ -115,8 +118,8 @@ class Application {
       "mytikr": "assets/images/mytikr.png",
       "notepad": "assets/images/notepad.png",
       "telephone": "assets/images/phone-dial.png",
-      "settings": "assets/images/settings.png",
-      "snapchat_square": "assets/images/snapchat-squared.png",
+      "parametre": "assets/images/settings.png",
+      "snapchat_1": "assets/images/snapchat-squared.png",
       "snapchat": "assets/images/snapchat.png",
       "sololearn": "assets/images/sololearn.png",
       "sublime_text": "assets/images/sublime-text.png",
@@ -125,10 +128,9 @@ class Application {
       "uc_browser": "assets/images/uc-browser.png",
       "viber": "assets/images/viber.png",
       "whatsapp": "assets/images/whatsapp.png",
-      "files_explorer": "assets/images/windows-explorer.png",
+      "explorer_fichiers": "assets/images/windows-explorer.png",
       "youtube": "assets/images/youtube.png"
     }
-    if (appName == undefined) return AppList;
     if (isNaN(appName)) {
       return AppList[appName];
     } else {
@@ -143,7 +145,10 @@ class Application {
     }
   }
   onBack() {}
+
 }
+
+
 
 AndroidUtils.Application = Application;
 

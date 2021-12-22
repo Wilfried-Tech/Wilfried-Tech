@@ -111,12 +111,12 @@ async function Ajax(method, url, data) {
       if (xhr.readyState == XMLHttpRequest.DONE && xhr.status >= 200 && xhr.status < 300) {
         revolve(xhr.responseText);
       }
-      if (xhr.status >= 400 && xhr.status < 500) {
+      if (xhr.status < 200 || xhr.status >= 300) {
         reject(xhr.responseText);
       }
     }
     xhr.onerror = function(e) {
-      reject(xhr.statusText+' (error code: '+xhr.status+' )');
+      reject(xhr.statusText + ' (error code: ' + xhr.status + ' )');
     }
   })
 }
@@ -133,7 +133,6 @@ function $click(url) {
   var a;
   $('.off-screen').appendChild(a = createElement('a', {
     href: url,
-    style: 'color: #fff;',
     onclick: 'setTimeout(this.remove.bind(this),1000);'
   }));
   a.click();

@@ -24,7 +24,7 @@ class Message extends Application {
     const Js = JSON.stringify,
       $this = this;
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Messages/index.php', true);
+    xhr.open('POST', API.Messages, true);
     xhr.send(AjaxData({
       action: 'POST',
       authname: 'Wilfried-Tech',
@@ -101,7 +101,7 @@ class Message extends Application {
         };
         $this.unread[nom] = $this.unread[nom] || { count: 0, msg: [] };
 
-        if (!Jp(msg.autres).seen) {
+        if (!Jp(msg.others).seen) {
           $this.unread[nom].count += 1
           $this.unread[nom].msg.push(msg);
         }
@@ -125,7 +125,7 @@ class Message extends Application {
       this.discussion.appendChild(disc);
       if (Message.infoOnline) {
         var info = Message.infoOnline[name];
-        if (info.enligne) {
+        if (info.online) {
           disc.style.setProperty('--online', 'lime')
         }
       }
@@ -142,7 +142,7 @@ class Message extends Application {
   async ConversationActivity(receiver) {
     const $this = this;
     this.startActivity('conversation');
-    this.receiverName.innerHTML = receiver.nom;
+    this.receiverName.innerHTML = receiver.name;
     this.messages.innerHTML = '';
     this.Observer = new MessageObserver(Android.User, receiver)
     this.receiver = receiver
@@ -156,34 +156,34 @@ class Message extends Application {
       }
     }
     if (Message.infoOnline) {
-      var info = Message.infoOnline[receiver.nom];
-      if (info.enligne) {
+      var info = Message.infoOnline[receiver.name];
+      if (info.online) {
         this.online.innerHTML = `<span style='color:lime;'>enligne</span>`
       } else {
-        this.online.innerHTML = `vu le ${receiver.vu.toLocaleString('fr')}`;
+        this.online.innerHTML = `vu le ${receiver.seen.toLocaleString('fr')}`;
       }
     }
     window.addEventListener('Message', (e) => {
-      if (e.detail.from.nom == receiver.nom || e.detail.from.nom == Android.User.nom) {
+      if (e.detail.from.name == receiver.name || e.detail.from.name == Android.User.name) {
         if (e.detail.object == 'new-msg') {
           $this.setMessage([e.detail.msg]);
         }
       }
-      if (e.detail.from.nom != receiver.nom) return;
+      if (e.detail.from.name != receiver.name) return;
 
       if (e.detail.object == 'user-online') {
         $this.online.innerHTML = `<span style='color:lime;'>enligne</span>`
       }
       if (e.detail.object == 'user-offline') {
-        $this.online.innerHTML = `vu le ${e.detail.user.vu.toLocaleString('fr')}`;
+        $this.online.innerHTML = `vu le ${e.detail.user.seen.toLocaleString('fr')}`;
       }
     })
     var Messages = await this.Observer.fetch();
     this.setMessage(Messages);
-    var msg = this.unread[receiver.nom].msg
+    var msg = this.unread[receiver.name].msg
     for (var i = 0; i < msg.length; i++) {
       var message = msg[i];
-      await Ajax('POST', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Messages/index.php', AjaxData({
+      await Ajax('POST', API.Messages, AjaxData({
         action: 'PUT',
         authname: 'Wilfried-Tech',
         authpass: 'jtmlucie63',
@@ -195,7 +195,7 @@ class Message extends Application {
                     seen: true
                   })}`
       }))
-      //$this.unread[receiver.nom].msg.shift();
+      //$this.unread[receiver.name].msg.shift();
     }
   }
   async start() {
@@ -213,14 +213,14 @@ class Message extends Application {
     this.picker.innerHTML = '';
     if (Android.UserList.accounts.length == 0) {
       this.picker.appendChild(createElement('h4', {
-        text:'aucun contact disponible pour l\'instant !',
-        style:`width:100%;height:100%; display:flex;align-item:center;justify-content:center;`
+        text: 'aucun contact disponible pour l\'instant !',
+        style: `width:100%;height:100%; display:flex;align-item:center;justify-content:center;`
       }))
     }
     Android.UserList.accounts.forEach(user => {
       var disc = createElement('div', {
         class: 'discussion',
-        text: `<div class="disc-img"><i class="fa fa-circle-user"></i></div><div class="disc-name">${user.nom}</div><div class="disc-email">${user.email}</div>`
+        text: `<div class="disc-img"><i class="fa fa-circle-user"></i></div><div class="disc-name">${user.name}</div><div class="disc-email">${user.email}</div>`
       },
       {
         onclick: function(e) {
@@ -234,7 +234,7 @@ class Message extends Application {
 
   }
   static async listenChange() {
-          console.log(Android.User);
+    //console.log(Android.User);
     Message.listenOnlineUser();
     var MsgConfig = Android.User.config.Message || {};
     var configDiscs = MsgConfig.discussions || {};
@@ -293,9 +293,9 @@ class Message extends Application {
     setTimeout(Message.listenChange, 1000);
   }
   static async listenOnlineUser() {
-    var Users = await Ajax('POST', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Users/index.php', AjaxData({
+    var Users = await Ajax('POST', API.Users, AjaxData({
       action: 'GET',
-      nom: Android.User.nom,
+      nom: Android.User.name,
       mdp: Android.User.motPasse,
       email: Android.User.email,
       authname: 'Wilfried-Tech',
@@ -311,10 +311,10 @@ class Message extends Application {
         info = Message.infoOnline;
       }
       Android.UserList.accounts.forEach(user => {
-        info[user.nom] = info[user.nom] || {};
-        if (Number(user.enligne)) {
-          if (!info[user.nom].enligne) {
-            info[user.nom].enligne = 1;
+        info[user.name] = info[user.name] || {};
+        if (Number(user.online)) {
+          if (!info[user.name].enligne) {
+            info[user.name].enligne = 1;
             AndroidUtils.dispatchEvent(new CustomEvent('Message', {
               bubbles: true,
               cancelable: false,
@@ -325,8 +325,8 @@ class Message extends Application {
             }), window)
           }
         } else {
-          if (info[user.nom].enligne) {
-            info[user.nom].enligne = 0;
+          if (info[user.name].enligne) {
+            info[user.name].enligne = 0;
             AndroidUtils.dispatchEvent(new CustomEvent('Message', {
               bubbles: false,
               cancelable: false,
@@ -353,7 +353,7 @@ class MessageObserver {
   }
   fetch() {
     const $this = this;
-    this.xhr.open('POST', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Messages/index.php');
+    this.xhr.open('POST', API.Messages);
     this.xhr.send(AjaxData({
       action: 'GET',
       authname: 'Wilfried-Tech',

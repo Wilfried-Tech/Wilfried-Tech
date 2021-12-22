@@ -47,7 +47,6 @@ class AndroidUtils {
     }];
     this.openedApp = [];
     this.activeComponent = null;
-    //this.isfullscreen = false;
   }
   set power(v) {
     phone.power.css('color', (v == 'on' ? 'lime' : (v == 'off' ? 'red' : (v == 'sleep' ? 'orange' : ''))));
@@ -203,16 +202,18 @@ class AndroidUtils {
           $('#Components-template').lastElementChild.id = result[2].id;
         }
       }).catch((err) => {
-        console.error(err + ' in import components ');
+        console.error(err + ' in import interfaces components ');
       });
     }
-    for (var application in Application.launcherOf()) {
+    for (var application in Application.getDefaults()) {
       await getView(application).then(result => {
         if (/\<(\w+)\>([\w\W\s]*)\<\/\1\>/.test(result[2].response)) {
           $('#Components-template').insertAdjacentHTML('beforeend', result[2].response);
           $('#Components-template').lastElementChild.id = result[2].id;
         }
-      }).catch((err) => {});
+      }).catch((err) => {
+        console.error(err + ' in import application components ');
+      });
     }
     AndroidUtils.dispatchEvent(new CustomEvent('components-imported', {
       cancelable: false,
@@ -269,13 +270,15 @@ class AndroidUtils {
       NotificationManager.fire(reason);
     });
   }
- /* autoToggleNavigationBar() {
-    setTimeout(() => {
-      phone.bottomNavBar.css('bottom', '50px');
-    }, 2000);
-    phone.addEventListener('swipe',(e)=>{
-      
-    })
-  }*/
+  /* autoToggleNavigationBar() {
+     setTimeout(() => {
+       phone.bottomNavBar.css('bottom', '50px');
+     }, 2000);
+     phone.addEventListener('swipe',(e)=>{
+       
+     })
+   }*/
 
 } //class
+
+

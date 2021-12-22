@@ -1,29 +1,29 @@
 class Utilisateur {
   constructor(data, active = true) {
     this.id = data.id
-    this.nom = data.nom
+    this.name = data.name
     this.email = data.email
-    this.enligne = data.enligne
-    this.vu = new Date(data.vu);
+    this.online = data.online
+    this.seen = new Date(data.seen);
     if (active) {
-      this.config = /\{|\}|\"/.test(`${data.donnees}`) ? JSON.parse(data.donnees) : {}
-      this.autres = /\{|\}|\"/.test(`${data.autres}`) ? JSON.parse(data.autres) : {}
+      this.config = /\{|\}|\"/.test(`${data.config}`) ? JSON.parse(data.config) : {}
+      this.others = /\{|\}|\"/.test(`${data.others}`) ? JSON.parse(data.others) : {}
       this.motPasse = data.password
     }
   }
   exportData() {
     var data = {};
-    data.nom = this.nom
+    data.name = this.name
     data.id = this.id
     data.email = this.email
-    data.enligne = this.enligne? 1: 0;
-    data.donnees = JSON.stringify(this.config);
-    data.autres = JSON.stringify(this.autres)
+    data.online = this.online ? 1 : 0;
+    data.config = JSON.stringify(this.config);
+    data.others = JSON.stringify(this.others)
     data.password = this.motPasse;
     data.action = 'PUT'
     data.authname = 'Wilfried-Tech'
     data.authpass = 'jtmlucie63'
-    Ajax('post', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Users/index.php', AjaxData(data)).then(console.log)
+    Ajax('post', API.Users, AjaxData(data)).then(console.log)
   }
 }
 

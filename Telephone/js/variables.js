@@ -41,6 +41,16 @@ const ComponentsTemplate = $('#Components-template');
 
 const $whatsapp = $('#gotowhatsapp');
 
+const API = {
+  index: 0,
+  get Users() {
+    return ['php/Users/', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Users/'][this.index] + 'index.php';
+  },
+  get Messages() {
+    return ['php/Messages/', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Messages/'][this.index] + 'index.php';
+  }
+}
+
 /*
 alert('Wilfriedroid V2.1')
 alert(`

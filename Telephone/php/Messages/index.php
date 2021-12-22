@@ -13,18 +13,18 @@ require_once('../db.php');
 
 if(isset($_POST['action'])){
   if($_POST['action'] == 'POST'){
-    $response = $sql->prepare('INSERT INTO Messages(message,expediteur,destinataire,autres) VALUES(:message,:expediteur,:destinataire,:autres)');
+    $response = $sql->prepare('INSERT INTO Messages(message,sender,receiver,others) VALUES(:message,:sender,:receiver,:others)');
     $response->execute(array(
       'message' => htmlspecialchars($_POST['message']),
-      'expediteur' => $_POST['expediteur'],
-      'destinataire' => $_POST['destinataire'],
-      'autres' => $_POST['autres']
+      'sender' => $_POST['sender'],
+      'receiver' => $_POST['receiver'],
+      'others' => $_POST['others']
       ));
     header('Content-type: text/plain','success',200);
     exit('successfull');
   }
   if($_POST['action']=='GET'){
-    $res = $sql->query("SELECT * FROM Messages WHERE expediteur= '".$_POST['expediteur']."' OR destinataire='".$_POST['expediteur']."'");
+    $res = $sql->query("SELECT * FROM Messages WHERE sender= '".$_POST['sender']."' OR receiver='".$_POST['sender']."'");
     $Messages = array();
     while($row = $res->fetch(PDO::FETCH_ASSOC)){
      $Messages[] = $row;
@@ -34,10 +34,10 @@ if(isset($_POST['action'])){
     exit;
   }
   if($_POST['action'] == 'PUT'){
-    $response = $sql->prepare('UPDATE Messages SET message=:message,autres=:autres WHERE date = :date');
+    $response = $sql->prepare('UPDATE Messages SET message=:message,others=:others WHERE date = :date');
     $response->execute(array(
       'message' => htmlspecialchars($_POST['message']),
-      'autres' => $_POST['autres'],
+      'others' => $_POST['others'],
       'date' => $_POST['date']
       ));
     header('Content-type: text/plain','success',200);

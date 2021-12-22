@@ -18,8 +18,8 @@ class MainWindow extends Interface {
           ['widget_time', 'widget_time', 'widget_time', 'widget_time'],
           ['widget_search', 'widget_search', 'widget_search', 'widget_search'],
           ['widget_search', 'widget_search', 'widget_search', 'widget_search'],
-          ['files', 'whatsapp', 'facebook', 'gallery'],
-          ['agenda', 'chrome', 'play_store', 'settings']
+          ['fichiers', 'whatsapp', 'facebook', 'galerie'],
+          ['agenda', 'chrome', 'play_store', 'parametre']
           ],
           main: true
     },

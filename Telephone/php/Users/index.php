@@ -18,7 +18,7 @@ if(isset($_POST['action'])){
     $Users = array();
     while($row = $res->fetch(PDO::FETCH_ASSOC)){
       if($row['email']==$_POST['email']){
-        if ($row['nom']==$_POST['nom']&&$row['password']==$_POST['mdp']) {
+        if ($row['name']==$_POST['name']&&$row['password']==$_POST['mdp']) {
           header('Content-type: text/plain','success',200);
           exit(json_encode($row));
         } else {
@@ -28,9 +28,9 @@ if(isset($_POST['action'])){
       }
     }
     
-    $response = $sql->prepare('INSERT INTO Utilisateurs(nom,password,email) VALUES(:nom,:password,:email)');
+    $response = $sql->prepare('INSERT INTO Utilisateurs(name,password,email) VALUES(:name,:password,:email)');
       $response->execute(array(
-        'nom' => htmlspecialchars($_POST['nom']),
+        'name' => htmlspecialchars($_POST['name']),
         'password' => $_POST['mdp'],
         'email' => $_POST['email']
         ));
@@ -42,15 +42,15 @@ if(isset($_POST['action'])){
     $Users = array();
     $Users['accounts'] = array();
     while($row = $res->fetch(PDO::FETCH_ASSOC)){
-      if($row['nom']==$_POST['nom']&&$row['password']==$_POST['mdp']){
+      if($row['name']==$_POST['name']&&$row['password']==$_POST['mdp']){
         $Users['self'] = $row;
       }else{
         $arr = array();
         $arr['id'] = $row['id'];
-        $arr['nom'] = $row['nom'];
+        $arr['name'] = $row['name'];
         $arr['email'] = $row['email'];
-        $arr['vu'] = $row['vu'];
-        $arr['enligne'] = $row['enligne'];
+        $arr['seen'] = $row['seen'];
+        $arr['online'] = $row['online'];
         $Users['accounts'][] = $arr;
       }
     }
@@ -59,14 +59,14 @@ if(isset($_POST['action'])){
     exit;
   }
   if($_POST['action']=='PUT'){
-    $response = $sql->prepare('UPDATE Utilisateurs SET nom=:nom,email=:email,enligne=:enligne,donnees=:donnees,autres=:autres WHERE id=:id');
+    $response = $sql->prepare('UPDATE Utilisateurs SET name=:name,email=:email,online=:online,config=:config,others=:others WHERE id=:id');
     $response->execute(array(
       'id' => $_POST['id'],
-      'nom' => $_POST['nom'],
+      'name' => $_POST['name'],
       'email' => $_POST['email'],
-      'enligne' => $_POST['enligne'],
-      'donnees' => $_POST['donnees'],
-      'autres' => $_POST['autres']
+      'online' => $_POST['online'],
+      'config' => $_POST['config'],
+      'others' => $_POST['others']
       ));
     header('Content-type: text/plain','success',200);
     exit('successfully updated');
