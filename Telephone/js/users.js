@@ -19,7 +19,7 @@ class Utilisateur {
       email: this.email,
       online: this.online ? 1 : 0,
       config: JSON.stringify(this.config),
-      others = JSON.stringify(this.others),
+      others: JSON.stringify(this.others),
       password: this.password,
       action: 'PUT'
     })).then(console.log)
