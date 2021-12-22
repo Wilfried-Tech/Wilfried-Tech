@@ -111,6 +111,11 @@ body {
 .phone-button>* {
   color: #0EBCE6;
   font-size: 18px;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .phone-button .power {

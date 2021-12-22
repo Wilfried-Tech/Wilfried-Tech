@@ -10,7 +10,7 @@ window.addEventListener('Logged', (e) => {
   Android.importAllComponents().then(() => {
     Android.displayInterface('window').then(() => { phone.screen.off.css('display', 'none') })
     Android.launchApplication('message');
-      Message.listenChange();
+    Message.listenChange();
 
     /*
     var m = new NotificationManager('some thing to notify', {
@@ -70,7 +70,6 @@ window.addEventListener('components-imported', function(e) {
   phone.power.addEventListener('longclick', function(e) {
     if (Android.power == 'off') {
       Android.boot();
-      Message.listenChange();
     } else {
       //Android.shutDown();
     }

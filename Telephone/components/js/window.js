@@ -174,7 +174,7 @@ class MainWindow extends Interface {
       dir = 0, dx = 0;
     }
   }
-  start() {
+  onCreate() {
     var $this = this;
     this.buildStaticMenu();
     this.buildSwiperMenu();

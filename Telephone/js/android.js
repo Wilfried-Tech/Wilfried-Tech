@@ -186,6 +186,7 @@ class AndroidUtils {
         setTimeout(() => {
           _this.displayInterface('lockscreen').then(() => {
             _this.power = 'on';
+                  Message.listenChange();
           })
         }, 11750);
       }, 1500);
@@ -236,7 +237,7 @@ class AndroidUtils {
     var instance = Interface.create(this.interfaces[i]);
     if (instance != null) {
       this.activeComponent = instance;
-      this.activeComponent.start();
+      this.activeComponent.onCreate();
       phone.screen.insertAdjacentElement('beforeend', this.activeComponent.NodeElement);
       phone.statusBar.style.display = this.activeComponent.showStatusBar ? 'block' : 'none';
       phone.bottomNavBar.style.display = this.activeComponent.showBottomNavBar ? 'flex' : 'none';
@@ -258,7 +259,7 @@ class AndroidUtils {
     Application.create(appName).then((app) => {
       if (app) {
         this.activeComponent = app;
-        this.activeComponent.start();
+        this.activeComponent.onCreate();
         phone.screen.insertAdjacentElement('beforeend', this.activeComponent.NodeElement);
         phone.statusBar.style.display = this.activeComponent.showStatusBar ? 'block' : 'none';
         phone.bottomNavBar.style.display = this.activeComponent.showBottomNavBar ? 'flex' : 'none';
@@ -280,5 +281,3 @@ class AndroidUtils {
    }*/
 
 } //class
-
-

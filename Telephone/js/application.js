@@ -145,7 +145,7 @@ class Application {
     }
   }
   onBack() {}
-
+  async onCreate() {}
 }
 
 

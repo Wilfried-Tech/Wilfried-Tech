@@ -9,7 +9,7 @@ class Lockscreen extends Interface {
     this.watchTime.innerText = Android.time.time;
     this.watchDate.innerHTML = Android.time.format();
   }
-  start() {
+  onCreate() {
     var $this = this;
 
     this.NodeElement.addEventListener('phone-timechange', (e) => {

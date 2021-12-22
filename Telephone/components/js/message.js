@@ -20,6 +20,10 @@ class Message extends Application {
       this.MainActivity();
     }
   }
+
+
+}
+/*
   sendMessage() {
     const Js = JSON.stringify,
       $this = this;
@@ -198,7 +202,7 @@ class Message extends Application {
       //$this.unread[receiver.name].msg.shift();
     }
   }
-  async start() {
+  async onCreate() {
     this.MainActivity();
     ripple(this.select('div.back', '*'))
     ripple(this.select('div.more', '*'))
@@ -345,45 +349,6 @@ class Message extends Application {
 } //class
 
 
-class MessageObserver {
-  constructor(sender, receiver) {
-    this.sender = sender;
-    this.receiver = receiver;
-    this.xhr = new XMLHttpRequest();
-  }
-  fetch() {
-    const $this = this;
-    this.xhr.open('POST', API.Messages);
-    this.xhr.send(AjaxData({
-      action: 'GET',
-      authname: 'Wilfried-Tech',
-      authpass: 'jtmlucie63',
-      expediteur: this.sender.id,
-      destinataire: this.receiver.id
-    }));
-    return new Promise((resolve, reject) => {
-      $this.xhr.onerror = function(e) {
-        NotificationManager.fire('la connexion au serveur est impossible');
-        reject($this.xhr.statusText)
-      }
-      $this.xhr.onload = function(e) {
-        if ($this.xhr.readyState == XMLHttpRequest.DONE) {
-          if ($this.xhr.status >= 200 && $this.xhr.status < 300) {
-            resolve(JSON.parse($this.xhr.response))
-          }
-          if ($this.xhr.status >= 400 && $this.xhr.status < 500) {
-            NotificationManager.fire('la connexion au serveur est impossible');
-            reject($this.xhr.responseText);
-          }
-          if ($this.xhr.status >= 500) {
-            NotificationManager.fire('la connexion au serveur est impossible');
-            reject($this.xhr.responseText);
-          }
-        }
-      }
-    })
-  }
-}
-
+*/
 
 Application.Message = Message;
