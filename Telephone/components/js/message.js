@@ -108,32 +108,34 @@ class Message extends Application {
       this.discussion.innerHTML = '';
 
       for (var name in discussion) {
-        /(\d+):(\d+):\d+/.test(discussion[name].date)
-        var { $1, $2 } = RegExp;
-        var disc = createElement('div', {
-          class: 'discussion',
-          text: `<div class="disc-img"><i class="fa fa-circle-user"></i></div><div class="disc-name" data-date="${$1}:${$2}">${name}</div><div class="disc-last-msg">${discussion[name].msg}</div>${(this.unread[name].count)?`<div class='disc-unread'>${this.unread[name].count}</div>`:''}`
-        },
-        {
-          onclick: function(e) {
-            $this.ConversationActivity(User.Friends.getUserById(discussion[name].id));
+        (function(name, discussion) {
+          /(\d+):(\d+):\d+/.test(discussion[name].date)
+          var { $1, $2 } = RegExp;
+          var disc = createElement('div', {
+            class: 'discussion',
+            text: `<div class="disc-img"><i class="fa fa-circle-user"></i></div><div class="disc-name" data-date="${$1}:${$2}">${name}</div><div class="disc-last-msg">${discussion[name].msg}</div>${($this.unread[name].count)?`<div class='disc-unread'>${$this.unread[name].count}</div>`:''}`
+          },
+          {
+            onclick: function(e) {
+              $this.ConversationActivity(User.Friends.getUserById(discussion[name].id));
+            }
+          })
+          $this.discussion.appendChild(disc);
+          if (Message.infoOnline) {
+            var info = Message.infoOnline[name];
+            if (info.online) {
+              disc.style.setProperty('--online', 'lime')
+            }
           }
-        })
-        this.discussion.appendChild(disc);
-        if (Message.infoOnline) {
-          var info = Message.infoOnline[name];
-          if (info.online) {
-            disc.style.setProperty('--online', 'lime')
-          }
-        }
-        window.addEventListener('Message', (e) => {
-          if (e.detail.object == 'new-msg') {
-            $this.MainActivity();
-          } else {
-            disc.style.setProperty('--online', (e.detail.object == 'user-online' ? 'lime' : '#fff0'))
-          }
-        })
-      };
+          window.addEventListener('Message', (e) => {
+            if (e.detail.object == 'new-msg') {
+              $this.MainActivity();
+            } else {
+              disc.style.setProperty('--online', (e.detail.object == 'user-online' ? 'lime' : '#fff0'))
+            }
+          })
+        })(name, discussion);
+      }
     })
     this.newMsg.onclick = this.ConversationPickerActivity.bind(this);
   }
@@ -209,8 +211,8 @@ class Message extends Application {
     }).catch(reason => {
       console.log(reason);
     })
-    
-    if(!this.unread[receiver.name]) return;
+
+    if (!this.unread[receiver.name]) return;
     var msg = this.unread[receiver.name].msg
     for (var i = 0, l = msg.length; i < l; i++) {
       var message = msg[i];
