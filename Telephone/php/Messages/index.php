@@ -24,7 +24,10 @@ if(isset($_POST['action'])){
     exit('successfull');
   }
   if($_POST['action']=='GET'){
-    $res = $sql->query("SELECT * FROM Messages WHERE sender= '".$_POST['sender']."' OR receiver='".$_POST['sender']."'");
+    $sender = $_POST['sender'];
+    $receiver = $_POST['receiver'];
+    
+    $res = $sql->query("SELECT * FROM Messages WHERE (sender=$sender AND receiver=$receiver) OR (sender=$receiver AND receiver=$sender) OR (receiver=$sender OR sender=$sender)");
     $Messages = array();
     while($row = $res->fetch(PDO::FETCH_ASSOC)){
      $Messages[] = $row;

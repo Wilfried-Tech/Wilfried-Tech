@@ -9,8 +9,6 @@ class Message extends Application {
     this.receiverName = this.select('.receiver');
     this.online = this.select('.receiver-online');
     this.picker = this.select('.message-picker-list');
-
-    this.Observer = null;
     this.receiver = null;
     this.unread = {};
   }
@@ -137,26 +135,45 @@ class Message extends Application {
         })
       };
     })
-    // this.newMsg.onclick = this.ConversationPickerActivity.bind(this);
+    this.newMsg.onclick = this.ConversationPickerActivity.bind(this);
   }
-} //class
-/*
-  
-  
-  
+  ConversationPickerActivity() {
+    this.startActivity('conversationPicker');
+    var $this = this;
+    this.picker.innerHTML = '';
+    if (User.Friends.accounts.length == 0) {
+      this.picker.appendChild(createElement('h4', {
+        text: 'aucun contact disponible pour l\'instant !',
+        style: `width:100%;height:100%; display:flex;align-item:center;justify-content:center;`
+      }))
+    }
+    User.Friends.accounts.forEach(user => {
+      var disc = createElement('div', {
+        class: 'discussion',
+        text: `<div class="disc-img"><i class="fa fa-circle-user"></i></div><div class="disc-name">${user.name}</div><div class="disc-email">${user.email}</div>`
+      },
+      {
+        onclick: function(e) {
+          $this.onBack();
+          $this.ConversationActivity(user);
+        }
+      })
+      $this.picker.appendChild(disc);
+    })
+  }
   async ConversationActivity(receiver) {
     const $this = this;
     this.startActivity('conversation');
     this.receiverName.innerHTML = receiver.name;
     this.messages.innerHTML = '';
-    this.Observer = new MessageObserver(User, receiver)
+
     this.receiver = receiver
     this.send.onclick = function(e) {
       if ($this.input.value.trim() != '') {
         $this.sendMessage().then(() => {
           $this.input.value = ''
         }).catch(err => {
-          NotificationManager.fire('la connexion au serveur est impossible');
+          NotificationManager.fire('Impossible d\'envoyer votre msg vérifier votre connexion internet et réessayer');
         })
       }
     }
@@ -183,53 +200,38 @@ class Message extends Application {
         $this.online.innerHTML = `vu le ${e.detail.user.seen.toLocaleString('fr')}`;
       }
     })
-    var Messages = await this.Observer.fetch();
-    this.setMessage(Messages);
+    Ajax('POST', API.Messages, AjaxData({
+      action: 'GET',
+      receiver: this.receiver.id,
+      sender: User.id
+    })).then(response => {
+      this.setMessage(JSON.parse(response));
+    }).catch(reason => {
+      console.log(reason);
+    })
+
     var msg = this.unread[receiver.name].msg
-    for (var i = 0; i < msg.length; i++) {
+    for (var i = 0, l = msg.length; i < l; i++) {
       var message = msg[i];
       await Ajax('POST', API.Messages, AjaxData({
         action: 'PUT',
-        authname: 'Wilfried-Tech',
-        authpass: 'jtmlucie63',
         message: message.message.trim(),
         date: message.date,
-        destinataire: message.receiver,
-        expediteur: message.sender,
-        autres: `${JSON.stringify({
-                    seen: true
-                  })}`
+        receiver: message.receiver,
+        sender: message.sender,
+        autres: `${JSON.stringify({seen: true})}`
       }))
       //$this.unread[receiver.name].msg.shift();
     }
   }
-  
-  ConversationPickerActivity() {
-    this.startActivity('conversationPicker');
-    var $this = this;
-    this.picker.innerHTML = '';
-    if (User.Friends.accounts.length == 0) {
-      this.picker.appendChild(createElement('h4', {
-        text: 'aucun contact disponible pour l\'instant !',
-        style: `width:100%;height:100%; display:flex;align-item:center;justify-content:center;`
-      }))
-    }
-    User.Friends.accounts.forEach(user => {
-      var disc = createElement('div', {
-        class: 'discussion',
-        text: `<div class="disc-img"><i class="fa fa-circle-user"></i></div><div class="disc-name">${user.name}</div><div class="disc-email">${user.email}</div>`
-      },
-      {
-        onclick: function(e) {
-          $this.onBack();
-          $this.ConversationActivity
-          $this.ConversationActivity(user);
-        }
-      })
-      $this.picker.appendChild(disc);
-    })
+} //class
 
-  }
+
+
+/*
+  
+  
+  
   static async listenChange() {
     //console.log(User);
     Message.listenOnlineUser();
