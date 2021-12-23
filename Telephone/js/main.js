@@ -102,7 +102,14 @@ manual.onclick = function() {
 }
 
 window.onblur = window.onunload = function() {
+  if (!User) return;
   User.online = 0
+  User.exportData();
+}
+
+window.onfocus = window.onload = function() {
+  if (!User) return;
+  User.online = 1;
   User.exportData();
 }
 

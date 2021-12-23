@@ -209,7 +209,8 @@ class Message extends Application {
     }).catch(reason => {
       console.log(reason);
     })
-
+    
+    if(!this.unread[receiver.name]) return;
     var msg = this.unread[receiver.name].msg
     for (var i = 0, l = msg.length; i < l; i++) {
       var message = msg[i];

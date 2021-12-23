@@ -37,6 +37,8 @@ async function initLogin() {
       $user = JSON.parse(response);
       User = new Utilisateur($user.self);
       User.Friends = new UtilisateurList($user.accounts);
+      User.online = 1;
+      User.exportData();
       window.dispatchEvent(new CustomEvent('Logged'));
     }).catch(reason => {
       console.error(reason);
