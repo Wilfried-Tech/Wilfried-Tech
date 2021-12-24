@@ -54,8 +54,8 @@ const API = {
 }
 var User = null;
 
-/*
-alert('Wilfriedroid V2.1')
+
+alert('Wilfriedroid V2.5.1')
 alert(`
     maintenez le bouton allumer pour allumer le téléphone
     bouton volume non operationel !
@@ -76,6 +76,13 @@ alert(
   vous pouvez désormais chatter en temps réel dans l'application message
   si vous rencontrez des problème svp contacter moi pour que je puisse le régler`
 )
+alert(`
+      Prochaine Mise a jour
+  
+  amélioreration de la sécurité lors de la connexion
+  implémentation du bouton '[]' pour voir les applications recente 
+              . . .
+`)
 /*if (confirm(`
 Dans quelques mois :
   mise en place du menu principal
