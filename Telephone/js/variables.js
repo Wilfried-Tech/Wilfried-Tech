@@ -83,6 +83,10 @@ alert(`
   implémentation du bouton '[]' pour voir les applications recente 
               . . .
 `)
+alert(`
+      votre code pin est 58658243
+   vous pourrez la changer dans une mise a jour future
+`)
 /*if (confirm(`
 Dans quelques mois :
   mise en place du menu principal

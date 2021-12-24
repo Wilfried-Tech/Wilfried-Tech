@@ -4,7 +4,7 @@
 class AndroidUtils {
 
   constructor(lastConfig) {
-    this.password = ''; //'58658243';
+    this.password = '58658243';
     this._power = 'off';
     this.volume = 100;
     this.size = Number(sizeAdjust.value);
