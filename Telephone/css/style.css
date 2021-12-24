@@ -536,7 +536,7 @@ fieldset.login-btn input {
   margin: 2px auto;
   width: 95%;
   overflow: hidden;
-  background-color: #ff0;
+  background-color: #ff00;
 }
 
 .account>* {
@@ -582,4 +582,5 @@ fieldset.login-btn input {
   text-overflow: ellipsis;
   display: block;
   font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+  background: #f000;
 }
