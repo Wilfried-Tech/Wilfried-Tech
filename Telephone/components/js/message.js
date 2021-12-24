@@ -13,12 +13,16 @@ class Message extends Application {
     this.unread = {};
   }
   onBack() {
+    super.onBack();
+
     this.finish();
     if (this.launchedActivity.length == 1) {
       this.MainActivity();
     }
   }
   async onCreate() {
+    super.onCreate();
+
     this.MainActivity();
     ripple(this.select('div.back', '*'))
     ripple(this.select('div.more', '*'))

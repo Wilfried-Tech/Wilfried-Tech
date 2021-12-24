@@ -10,6 +10,8 @@ class Lockscreen extends Interface {
     this.watchDate.innerHTML = Android.time.format();
   }
   onCreate() {
+    super.onCreate();
+
     var $this = this;
 
     this.NodeElement.addEventListener('phone-timechange', (e) => {
@@ -48,7 +50,9 @@ class Lockscreen extends Interface {
         } else if (elt.classList.contains('key-ok')) {
           if (Android.password == input.value) {
             input.value = '';
-            Android.displayInterface('window').then(() => $this.NodeElement.remove());
+            //Android.displayInterface('window').then(() => 
+            $this.onDestroy()
+            //);
           } else {
             input.value = '';
             errorCount++;

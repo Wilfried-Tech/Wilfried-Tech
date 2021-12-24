@@ -8,7 +8,7 @@ const Android = new AndroidUtils(phone, {});
 
 window.addEventListener('Logged', (e) => {
   Android.importAllComponents().then(() => {
-    Android.displayInterface('window').then(() => { phone.screen.off.css('display', 'none') })
+  /*  Android.displayInterface('window').then(() => { phone.screen.off.css('display', 'none') })
     Android.launchApplication('message');
     Message.listenChange();
 
@@ -118,7 +118,7 @@ phone.bottomNavBar.back.addEventListener('click', (e) => {
 })
 phone.bottomNavBar.home.addEventListener('click', (e) => {
   if (Android.activeComponent instanceof Application) {
-    Android.activeComponent.remove();
+    Android.activeComponent.onDestroy();
     Android.displayInterface('Window');
   } else {
     Android.activeComponent.onBack();

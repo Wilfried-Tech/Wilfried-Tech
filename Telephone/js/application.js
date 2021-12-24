@@ -1,29 +1,14 @@
-class Application {
+class Application extends Components {
   constructor(appName) {
-    this.name = appName;
-    this.showStatusBar = true;
-    this.showBottomNavBar = true;
-
-    var elt = document.getElementById(`${appName}-template`);
-
-    if (!elt) {
-      console.error('element with id ' + `${appName}-template` + ' not found');
-      return null;
-    }
-    this.NodeElement = elt.cloneNode(true);
-    this.NodeElement.id = elt.id.split('-')[0];
+    super(appName);
     this.NodeElement.classList.add('application');
     this.NodeElement.ref = this;
-    this.activities = [];
-    for (var i = 0; i < this.NodeElement.children.length; i++) {
-      this.activities.push(this.NodeElement.children[i]);
-      if (i) this.activities[i].style.display = 'none';
-    }
     this.launchedActivity = [];
     this.launchedActivity.push(this.activities[0]);
-  }
-  remove() {
-    this.NodeElement.remove();
+    this.activities.forEach((activity, i) => {
+      if (i) activity.style.display = 'none';
+    })
+    super.initParams();
   }
   startActivity(id) {
     if (this.activities.findIndex(act => act.id == id) == -1) {
@@ -45,7 +30,7 @@ class Application {
       activity.style.display = 'none';
       this.launchedActivity[this.launchedActivity.length - 1].style.display = 'block';
     } else {
-      this.remove();
+      this.onDestroy();
     }
   }
   static rename(name) {
@@ -63,29 +48,7 @@ class Application {
       }
     })
   }
-  select(selector, param) {
-    var elt = this.NodeElement.querySelectorAll(selector);
-    if (elt.length) {
-      elt.forEach(el => {
-        el.css = function(prop, value) {
-          if (!value) return el.style.getPropertyValue(prop);
 
-          el.style.setProperty(prop, value);
-
-          return el;
-        }
-      })
-      elt.css = function(prop, value) {
-        if (!value) {
-          var values = [];
-          elt.forEach(el => values.push(el.css(prop)))
-          return values;
-        }
-        elt.forEach(el => el.css(prop, value))
-      }
-    }
-    return (param) ? elt : elt[0];
-  }
   static getDefaults() {
     return { 'message': '' };
   }
@@ -144,8 +107,6 @@ class Application {
       return launcher;
     }
   }
-  onBack() {}
-  async onCreate() {}
 }
 
 

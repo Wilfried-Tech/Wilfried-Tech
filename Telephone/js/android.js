@@ -47,6 +47,7 @@ class AndroidUtils {
     }];
     this.openedApp = [];
     this.activeComponent = null;
+    this.recentsComponent = [];
   }
   set power(v) {
     phone.power.css('color', (v == 'on' ? 'lime' : (v == 'off' ? 'red' : (v == 'sleep' ? 'orange' : ''))));
@@ -183,13 +184,14 @@ class AndroidUtils {
       var _this = this;
       setTimeout(() => {
         phone.screen.off.css('background', 'var(--window-booting)');
+        _this.displayInterface('window');
         setTimeout(() => {
           _this.displayInterface('lockscreen').then(() => {
             _this.power = 'on';
-            Message.listenChange();
+            //  Message.listenChange();
           })
-        }, 11750);
-      }, 1500);
+        }, 11750 * 0.0001);
+      }, 1500 * 0.0001);
       this.power = 'booting';
     }
   }
@@ -233,14 +235,13 @@ class AndroidUtils {
     if (i == l) {
       return Promise.reject('interface ' + name + ' doesn\'t exist');
     }
-    // if (this.activeComponent && typeof this.activeComponent == AndroidUtils.Interface) this.activeComponent.NodeElement.remove();
+    
     var instance = Interface.create(this.interfaces[i]);
     if (instance != null) {
       this.activeComponent = instance;
+      this.registerComponent()
       this.activeComponent.onCreate();
       phone.screen.insertAdjacentElement('beforeend', this.activeComponent.NodeElement);
-      phone.statusBar.style.display = this.activeComponent.showStatusBar ? 'block' : 'none';
-      phone.bottomNavBar.style.display = this.activeComponent.showBottomNavBar ? 'flex' : 'none';
       phone.screen.off.css('display', 'none');
       return Promise.resolve();
     }
@@ -259,10 +260,10 @@ class AndroidUtils {
     Application.create(appName).then((app) => {
       if (app) {
         this.activeComponent = app;
+        this.registerComponent();
         this.activeComponent.onCreate();
         phone.screen.insertAdjacentElement('beforeend', this.activeComponent.NodeElement);
-        phone.statusBar.style.display = this.activeComponent.showStatusBar ? 'block' : 'none';
-        phone.bottomNavBar.style.display = this.activeComponent.showBottomNavBar ? 'flex' : 'none';
+        
         phone.screen.off.css('display', 'none');
         return Promise.resolve();
       }
@@ -270,6 +271,23 @@ class AndroidUtils {
     }).catch(reason => {
       NotificationManager.fire(reason);
     });
+  }
+  registerComponent() {
+    if (this.recentsComponent.length&&this.recentsComponent[this.recentsComponent.length-1].name == this.activeComponent.name) {
+      return;
+    }
+    this.recentsComponent.forEach(component => {
+      component.NodeElement.style.display = 'none'
+    })
+    this.activeComponent.NodeElement.style.display = 'block';
+    this.recentsComponent.push(this.activeComponent);
+    this.activeComponent.onRestore()
+  }
+  unregisterComponent() {
+    if (this.recentsComponent.length < 2) return;
+    this.recentsComponent.pop();
+    this.activeComponent = this.recentsComponent.pop();
+    if (this.activeComponent) this.registerComponent();
   }
   /* autoToggleNavigationBar() {
      setTimeout(() => {
