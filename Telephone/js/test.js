@@ -1,1 +1,1 @@
-$('.vol-up').onclick = function() { window.location.reload() };
+//$('.vol-up').onclick = function() { window.location.reload() };
