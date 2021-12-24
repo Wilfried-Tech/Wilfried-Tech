@@ -42,7 +42,9 @@ const ComponentsTemplate = $('#Components-template');
 const $whatsapp = $('#gotowhatsapp');
 
 const API = {
-  index: 0,
+  get index() {
+    return /^https/.test(window.location.href) ? 1 : 0;
+  },
   get Users() {
     return ['php/Users/', 'https://wilfried-tech.000webhostapp.com/API/Wilfriedroid/Users/'][this.index] + 'index.php';
   },

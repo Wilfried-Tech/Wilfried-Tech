@@ -184,14 +184,16 @@ class AndroidUtils {
       var _this = this;
       setTimeout(() => {
         phone.screen.off.css('background', 'var(--window-booting)');
-        _this.displayInterface('window');
+        _this.displayInterface('window').then(() => {
+          phone.screen.off.css('display', 'block');
+        });
         setTimeout(() => {
           _this.displayInterface('lockscreen').then(() => {
             _this.power = 'on';
-            //  Message.listenChange();
+            Message.listenChange();
           })
-        }, 11750 * 0.0001);
-      }, 1500 * 0.0001);
+        }, 11750);
+      }, 1500);
       this.power = 'booting';
     }
   }
@@ -235,7 +237,7 @@ class AndroidUtils {
     if (i == l) {
       return Promise.reject('interface ' + name + ' doesn\'t exist');
     }
-    
+
     var instance = Interface.create(this.interfaces[i]);
     if (instance != null) {
       this.activeComponent = instance;
@@ -263,8 +265,7 @@ class AndroidUtils {
         this.registerComponent();
         this.activeComponent.onCreate();
         phone.screen.insertAdjacentElement('beforeend', this.activeComponent.NodeElement);
-        
-        phone.screen.off.css('display', 'none');
+
         return Promise.resolve();
       }
       return Promise.reject('operation failed');
@@ -273,7 +274,7 @@ class AndroidUtils {
     });
   }
   registerComponent() {
-    if (this.recentsComponent.length&&this.recentsComponent[this.recentsComponent.length-1].name == this.activeComponent.name) {
+    if (this.recentsComponent.length && this.recentsComponent[this.recentsComponent.length - 1].name == this.activeComponent.name) {
       return;
     }
     this.recentsComponent.forEach(component => {
