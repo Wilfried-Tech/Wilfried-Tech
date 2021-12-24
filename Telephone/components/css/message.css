@@ -46,7 +46,6 @@ div.message-picker-list {
   height: 50px;
   background-color: #f1f1f1;
   padding: 0 5px;
-  grid-gap: 0;
   text-align: left;
   margin-bottom: 2px;
 }
@@ -116,6 +115,10 @@ div.message-picker-list {
   text-overflow: ellipsis;
   display: block;
   font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+
+.discussion .disc-last-msg{
+  width: 75%;
 }
 
 .discussion .disc-unread {

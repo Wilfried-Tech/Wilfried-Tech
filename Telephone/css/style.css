@@ -460,26 +460,33 @@ li.mbps {
   position: absolute;
   top: 0;
   left: 0;
-  overflow: scroll;
+  overflow: hidden;
+  overflow-y: scroll;
   padding: 30px 0;
   background: #fff url(../assets/images/favicon/favicon.png) center center/contain no-repeat;
   z-index: 101;
+  text-align: center;
 }
 
-.login-container .login {
+.login-container>* {
   width: 90%;
+  max-width: 90%;
   border-radius: 30px;
   box-shadow: 2px 2px 4px #0005,
-            -2px -2px 4px #eee;
+    -2px -2px 4px #eee;
   padding: 10px;
   background: #fff4;
   margin: 0 auto;
+  display: none;
+  text-align: center;
 }
 
-.login>fieldset {
+.login>fieldset,
+.phone-account-logged>fieldset {
   border: none;
   width: 100%;
 }
+
 
 fieldset img {
   width: 100px;
@@ -488,12 +495,13 @@ fieldset img {
   object-fit: contain;
 }
 
-.login fieldset fieldset {
+.login-container fieldset fieldset {
   width: 100%;
   margin-top: 7px;
+  text-align: center;
 }
 
-.login fieldset fieldset legend {
+.login-container fieldset legend {
   text-transform: capitalize;
   font-weight: bold;
   padding: 5px;
@@ -519,4 +527,59 @@ fieldset.login-btn input {
   border-style: outset;
   text-transform: capitalize;
   margin: 5px auto;
+}
+
+.account {
+  background-color: #f1f1f103;
+  padding: 0 5px;
+  text-align: left;
+  margin: 2px auto;
+  width: 95%;
+  overflow: hidden;
+  background-color: #ff0;
+}
+
+.account>* {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.account .user-img {
+  float: left;
+  height: 100%;
+  width: 20%;
+  font-size: 40px;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.account .user-name {
+  height: 50%;
+  padding-left: 5px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.user-name::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: 1px;
+  background-color: #000;
+  left: 0px;
+}
+
+
+.account .user-email {
+  height: 50%;
+  padding: 2px 0 0 5px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: block;
+  font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
 }

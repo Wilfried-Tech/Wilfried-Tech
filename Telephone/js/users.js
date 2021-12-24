@@ -3,7 +3,7 @@ class Utilisateur {
     this.id = data.id
     this.name = data.name
     this.email = data.email
-    this.online = data.online
+    this.online = Number(data.online);
     this.seen = new Date(data.seen);
     if (active) {
       this.config = /\{|\}|\"/.test(`${data.config}`) ? JSON.parse(data.config) : {}

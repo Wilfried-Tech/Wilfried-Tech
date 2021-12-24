@@ -28,22 +28,21 @@ class Message extends Application {
     })
   }
   sendMessage() {
-    const Js = JSON.stringify,
-      $this = this;
-
+    const $this = this;
     Ajax('POST', API.Messages, AjaxData({
       action: 'POST',
       message: this.input.value.trim(),
       receiver: this.receiver.id,
       sender: User.id,
-      others: `${Js({
-              seen: false
-            })}`
+      others: JSON.stringify({
+        seen: false
+      })
     })).then(response => {
       console.info(response);
       $this.input.value = '';
     }).catch(reason => {
       console.error(reason);
+      NotificationManager.fire('Impossible d\'envoyer votre message vérifier votre connexion internet et réessayer');
     });
 
   }
@@ -65,8 +64,7 @@ class Message extends Application {
   async MainActivity() {
     var $this = this;
     var discussion = {},
-      id = User.id,
-      Jp = JSON.parse;
+      id = User.id;
     const getUser = function(id) {
       return id == User.id ? User : User.Friends.getUserById(id);
     };
@@ -97,8 +95,7 @@ class Message extends Application {
             date: msg.date
           };
           $this.unread[name] = $this.unread[name] || { count: 0, msg: [] };
-
-          if (!Jp(msg.others).seen) {
+          if (!JSON.parse(msg.others).seen) {
             $this.unread[name].count += 1
             $this.unread[name].msg.push(msg);
           }
@@ -107,7 +104,12 @@ class Message extends Application {
 
       this.discussion.innerHTML = '';
 
+      discussion = sortObject(discussion, 'desc', (a, b) => {
+        return a.value.date.localeCompare(b.value.date);
+      })
+
       for (var name in discussion) {
+        //name = discArr.shift().name;
         (function(name, discussion) {
           /(\d+):(\d+):\d+/.test(discussion[name].date)
           var { $1, $2 } = RegExp;
@@ -172,11 +174,7 @@ class Message extends Application {
     this.receiver = receiver
     this.send.onclick = function(e) {
       if ($this.input.value.trim() != '') {
-        $this.sendMessage().then(() => {
-          $this.input.value = ''
-        }).catch(err => {
-          NotificationManager.fire('Impossible d\'envoyer votre msg vérifier votre connexion internet et réessayer');
-        })
+        $this.sendMessage();
       }
     }
     if (Message.infoOnline) {
@@ -208,9 +206,7 @@ class Message extends Application {
       sender: User.id
     })).then(response => {
       this.setMessage(JSON.parse(response));
-    }).catch(reason => {
-      console.log(reason);
-    })
+    }).catch(console.error)
 
     if (!this.unread[receiver.name]) return;
     var msg = this.unread[receiver.name].msg
@@ -222,43 +218,41 @@ class Message extends Application {
         date: message.date,
         receiver: message.receiver,
         sender: message.sender,
-        autres: `${JSON.stringify({seen: true})}`
+        others: JSON.stringify({ seen: true })
       }))
       //$this.unread[receiver.name].msg.shift();
     }
   }
-} //class
-
-
-
-/*
-  
-  
-  
   static async listenChange() {
-    //console.log(User);
+
     Message.listenOnlineUser();
+
     var MsgConfig = User.config.Message || {};
     var configDiscs = MsgConfig.discussions || {};
     var discussion = {};
-    var response = await (new MessageObserver(User, User)).fetch();
     var userId = User.id;
     const getUser = function(id) {
       return id == User.id ? User : User.Friends.getUserById(id);
     };
+    var response = await Ajax('POST', API.Messages, AjaxData({
+      action: 'GET',
+      sender: User.id,
+      receiver: User.id
+    })).catch(console.error);
+    response = JSON.parse(response);
     response.forEach((msg, i) => {
-      const { message, expediteur, destinataire } = msg;
-      if (expediteur != userId) {
-        discussion[expediteur] = discussion[expediteur] || [];
-        discussion[expediteur].push({
-          id: expediteur,
+      const { message, sender, receiver } = msg;
+      if (sender != userId) {
+        discussion[sender] = discussion[sender] || [];
+        discussion[sender].push({
+          id: sender,
           msg: message,
           info: msg
         })
       } else {
-        discussion[destinataire] = discussion[destinataire] || [];
-        discussion[destinataire].push({
-          id: expediteur,
+        discussion[receiver] = discussion[receiver] || [];
+        discussion[receiver].push({
+          id: sender,
           msg: message,
           info: msg
         })
@@ -268,7 +262,7 @@ class Message extends Application {
       var last = discussion[$id][discussion[$id].length - 1];
       if (!configDiscs[$id]) {
         configDiscs[$id] = {
-          info: last.info,
+          //  info: last.info,
           id: last.id,
           lastMsg: last.msg
         };
@@ -298,12 +292,12 @@ class Message extends Application {
     var Users = await Ajax('POST', API.Users, AjaxData({
       action: 'GET',
       name: User.name,
-      mdp: User.motPasse,
-      email: User.email,
-      authname: 'Wilfried-Tech',
-      authpass: 'jtmlucie63'
-    }))
-    Users = JSON.parse(Users)
+      password: User.password,
+      email: User.email
+    })).catch(console.error);
+
+    Users = JSON.parse(Users);
+
     if (Users) {
       User.Friends = new UtilisateurList(Users.accounts);
       var info = {}
@@ -343,10 +337,7 @@ class Message extends Application {
       Message.infoOnline = info;
     }
   }
-
 } //class
 
-
-*/
 
 Application.Message = Message;

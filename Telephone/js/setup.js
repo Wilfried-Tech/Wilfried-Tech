@@ -145,3 +145,20 @@ function $click(url) {
 function rand(a, b) {
   return Math.floor(Math.random() * (b - a)) + a;
 }
+
+function sortObject(obj, order, sortfunc) {
+  var objArr = [];
+  for (var prop in obj) {
+    objArr.push({
+      prop: prop,
+      value: obj[prop]
+    })
+  }
+  objArr = objArr.sort(sortfunc);
+  if (order.toLowerCase() == 'desc') {
+    objArr = objArr.reverse();
+  }
+  obj = {};
+  objArr.forEach(entrie => obj[entrie.prop] = entrie.value);
+  return obj
+}
