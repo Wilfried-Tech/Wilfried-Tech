@@ -1,4 +1,5 @@
-body,html{
+body,
+html {
   font-size: large;
   background-color: #222;
   height: 100%;
@@ -9,7 +10,7 @@ body,html{
   text-align: center;
 }
 
-.container{
+.container {
   height: 100%;
   width: 900px;
   max-width: 100%;
@@ -35,7 +36,8 @@ canvas,
 
 }
 
-#cvs,canvas{
+#cvs,
+canvas {
   top: 31%;
 }
 
@@ -85,6 +87,7 @@ canvas,
 .btn:active {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
 }
+
 /*
 @media screen and (orientation : landscape) {
   

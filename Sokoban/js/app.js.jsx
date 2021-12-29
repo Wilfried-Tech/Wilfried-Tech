@@ -18,6 +18,8 @@ function getPosition(element) {
   return { x: left, y: top };
 }
 
+
+
 function getMousePosition(event) {
   return {
     x: event.pageX,
