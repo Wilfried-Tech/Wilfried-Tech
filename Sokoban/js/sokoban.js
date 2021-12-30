@@ -116,6 +116,7 @@ class Sokoban {
         }
       }
     }
+    this.checkLevelTerminated();
   }
   /**
    * 
@@ -145,8 +146,137 @@ class Sokoban {
       }
     }
   }
+  /**
+   * 
+   */
+  nextCases(dir) {
+    var Case1 = {},
+      Case2 = {},
+      map = {};
+    Case1.x = Case2.x = this.game.player.x
+    Case1.y = Case2.y = this.game.player.y
+    map.sizeY = this.game.map.length;
+    map.sizeX = this.game.map[0].length;
 
-  onwin(event) {}
+    switch (dir) {
+      case Sokoban.Sprites.DIR_UP:
+        Case1.y--;
+        Case2.y = Case1.y - 1;
+        break;
+      case Sokoban.Sprites.DIR_DOWN:
+        Case1.y++;
+        Case2.y = Case1.y + 1;
+        break;
+      case Sokoban.Sprites.DIR_LEFT:
+        Case1.x--;
+        Case2.x = Case1.x - 1;
+        break;
+      case Sokoban.Sprites.DIR_RIGHT:
+        Case1.x++;
+        Case2.x = Case1.x + 1;
+        break;
+    }
+    Case2.x = (Case2.x < 0) ? Case1.x : Case2.x;
+    Case2.y = (Case2.y < 0) ? Case1.y : Case2.y;
+    
+    Case2.x = (Case2.x >= map.sizeX) ? Case1.x : Case2.x;
+    Case2.y = (Case2.y >= map.sizeY) ? Case1.y : Case2.y;
+
+    Case1.$ = this.game.map[Case1.y][Case1.x];
+    Case2.$ = this.game.map[Case2.y][Case2.x];
+
+    return [Case1, Case2];
+  }
+  /**
+   * 
+   */
+  moveSprites(dir) {
+    var x = this.game.player.x,
+      y = this.game.player.y;
+    var [Case1, Case2] = this.nextCases(dir);
+    var map = this.game.map;
+
+    if (Case1.$ != Sokoban.Sprites.WALL) {
+      if (Case1.$ == Sokoban.Sprites.VOID || Case1.$ == Sokoban.Sprites.TARGET) {
+        map[y][x] = Sokoban.Sprites.VOID
+        map[Case1.y][Case1.x] = Sokoban.Sprites.MARIO
+        this.changePlayerPosition(dir);
+      }
+      if (Case1.$ == Sokoban.Sprites.BOX) {
+        if (Case2.$ != Sokoban.Sprites.WALL) {
+          if (Case2.$ == Sokoban.Sprites.VOID) {
+            map[y][x] = Sokoban.Sprites.VOID;
+            map[Case1.y][Case1.x] = Sokoban.Sprites.MARIO;
+            map[Case2.y][Case2.x] = Sokoban.Sprites.BOX;
+            this.changePlayerPosition(dir);
+          }
+          if (Case2.$ == Sokoban.Sprites.TARGET) {
+            map[y][x] = Sokoban.Sprites.VOID;
+            map[Case1.y][Case1.x] = Sokoban.Sprites.MARIO;
+            map[Case2.y][Case2.x] = Sokoban.Sprites.BOX_OK;
+            this.changePlayerPosition(dir);
+          }
+        }
+      }
+      if (Case1.$ == Sokoban.Sprites.BOX_OK) {
+        if (Case2.$ != Sokoban.Sprites.WALL) {
+          if (Case2.$ == Sokoban.Sprites.VOID) {
+            map[y][x] = Sokoban.Sprites.VOID;
+            map[Case1.y][Case1.x] = Sokoban.Sprites.MARIO;
+            map[Case2.y][Case2.x] = Sokoban.Sprites.BOX;
+            this.changePlayerPosition(dir);
+          }
+          if (Case2.$ == Sokoban.Sprites.TARGET) {
+            map[y][x] = Sokoban.Sprites.VOID;
+            map[Case1.y][Case1.x] = Sokoban.Sprites.MARIO;
+            map[Case2.y][Case2.x] = Sokoban.Sprites.BOX_OK;
+            this.changePlayerPosition(dir);
+          }
+        }
+      }
+    }
+  }
+  changePlayerPosition(dir) {
+    switch (dir) {
+      case Sokoban.Sprites.DIR_UP:
+        this.game.player.y--;
+        this.Mario = this.sprites.MarioUp;
+        break;
+      case Sokoban.Sprites.DIR_DOWN:
+        this.game.player.y++;
+        this.Mario = this.sprites.MarioDown;
+        break;
+      case Sokoban.Sprites.DIR_LEFT:
+        this.game.player.x--;
+        this.Mario = this.sprites.MarioLeft;
+        break;
+      case Sokoban.Sprites.DIR_RIGHT:
+        this.game.player.x++;
+        this.Mario = this.sprites.MarioRight;
+        break;
+    }
+  };
+  checkLevelTerminated() {
+    var targets = this.game.target,
+      count = 0;
+    for (var i = 0, l = targets.length; i < l; i++) {
+      var cx = targets[i][0],
+        cy = targets[i][1];
+      if (this.game.map[cy][cx] == Sokoban.Sprites.BOX_OK) {
+        count++
+      }
+    }
+    if (count == targets.length) {
+      this.onLevelTeminated();
+    }
+  }
+  /**
+   * 
+   */
+  onLevelTeminated(event) {}
+  /**
+   * 
+   */
   onload(event) {}
 }
 
@@ -163,8 +293,6 @@ Sokoban.Sprites = class {
     this.MarioRight = new Image();
     this.MarioDown = new Image();
     this.spriteDir = '.';
-
-    console.log(this);
   }
   setSpriteDir(path) {
     this.spriteDir = path;
@@ -209,11 +337,7 @@ Sokoban.Sprites.TREE = 6
 Sokoban.Sprites.MARIO = 3
 Sokoban.Sprites.VOID = 0;
 
-
-const B = 1
-W = 2
-M = 3
-V = 0
-T = 4
-O = 5
-A = 6
+Sokoban.Sprites.DIR_UP = 0
+Sokoban.Sprites.DIR_DOWN = 1
+Sokoban.Sprites.DIR_LEFT = 2
+Sokoban.Sprites.DIR_RIGHT = 3

@@ -21,5 +21,39 @@ Game.setSprite(sprites);
 Game.loadMapFromAssets('assets/map/map.json');
 
 Game.onload = function(e) {
-  Game.start();
+  Game.level = 4;
+    Game.start();
+}
+
+const Control = {
+  Left: document.querySelector('.control .left'),
+  Right: document.querySelector('.control .right'),
+  Up: document.querySelector('.control .up'),
+  Down: document.querySelector('.control .down')
+}
+
+Control.Up.addEventListener('click', (e) => {
+  Game.moveSprites(Sokoban.Sprites.DIR_UP);
+  Game.render();
+})
+Control.Down.addEventListener('click', (e) => {
+  Game.moveSprites(Sokoban.Sprites.DIR_DOWN);
+  Game.render();
+})
+Control.Left.addEventListener('click', (e) => {
+  Game.moveSprites(Sokoban.Sprites.DIR_LEFT);
+  Game.render();
+})
+Control.Right.addEventListener('click', (e) => {
+  Game.moveSprites(Sokoban.Sprites.DIR_RIGHT);
+  Game.render();
+})
+
+Game.onLevelTeminated = function(e) {
+  if (this.level + 1 < this.levels.length) {
+    this.level++;
+    this.start();
+  } else {
+    alert('vous avez terminé tous les niveaux');
+  }
 }
