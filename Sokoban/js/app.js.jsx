@@ -49,34 +49,7 @@ const B = 1,
   A = 6;
 
 
-function SPRITE() {
 
-  this.size =parseInt(getComputedStyle(document.querySelector('canvas').parentNode).width) / 10 ;
-  this.Mario = {
-    up: new Image(this.size, this.size),
-    down: new Image(this.size, this.size),
-    left: new Image(this.size, this.size),
-    right: new Image(this.size, this.size)
-  };
-  this.WALL = new Image(this.size, this.size);
-  this.BOX = new Image(this.size, this.size);
-  this.TARGET = new Image(this.size, this.size);
-  this.BOX_OK = new Image(this.size, this.size);
-  this.TREE = new Image(this.size, this.size);
-  this.GROUND = new Image(this.size, this.size);
-
-  this.GROUND.src = Path('land');
-  this.WALL.src = Path('mur');
-  this.BOX.src = Path('caisse');
-  this.TARGET.src = Path('objectif');
-  this.TREE.src = Path('arbre');
-  this.BOX_OK.src = Path('caisse_ok');
-  this.Mario.up.src = Path('mario_haut');
-  this.Mario.down.src = Path('mario_bas');
-  this.Mario.left.src = Path('mario_gauche');
-  this.Mario.right.src = Path('mario_droite');
-  this.MARIO = this.Mario.down;
-}
 
 function GAME(id, data) {
   SPRITE.call(this);
@@ -106,48 +79,7 @@ GAME.prototype = {
   },
   render: function() {
 
-    this.setGround();
-
-    var t = this.targets;
-    for (var i = 0, l = t.length; i < l; i++) {
-      var cx = t[i][0],
-        cy = t[i][1];
-
-      if (this.map[cy][cx] != O) {
-        this.draw(this.TARGET, cx, cy);
-      }
-      if (this.map[cy][cx] == V) {
-        this.map[cy][cx] = T;
-      }
-    }
-    for (var y = 0; y < this.map.length; y++) {
-      for (var x = 0; x < this.map[0].length; x++) {
-        switch (this.map[y][x]) {
-          case V:
-
-            continue;
-          case W:
-            this.draw(this.WALL, x, y);
-            break;
-          case B:
-            this.draw(this.BOX, x, y);
-            break;
-          case T:
-            this.draw(this.TARGET, x, y);
-            break;
-          case O:
-            this.draw(this.BOX_OK, x, y);
-            break;
-          case M:
-            this.draw(this.MARIO, x, y);
-            break;
-          case A:
-            this.draw(this.TREE, x, y);
-            break;
-        }
-      }
-    }
-  },
+    
   init: function() {
     this.cvs.width = this.size * this.map[0].length;
     this.cvs.height = this.size * this.map.length;
@@ -260,13 +192,7 @@ GAME.prototype.ChangePos = function(dir) {
   }
 };
 
-GAME.prototype.setGround = function() {
-  for (var x = 0; x < this.map[0].length; x++) {
-    for (var y = 0; y < this.map.length; y++) {
-      this.draw(this.GROUND, y, x);
-    }
-  }
-};
+GAME.prototype.
 
 GAME.prototype.IsWin = function() {
   var t = this.targets,
@@ -290,12 +216,12 @@ GAME.prototype.getDirection = function(x, y) {
     h = this.cvs.height,
     dir = "none",
     box1 = {
-      x: w/5,
+      x: w / 5,
       y: 0,
-      w: (w*3)/5,
-      h: (h/5)
+      w: (w * 3) / 5,
+      h: (h / 5)
     };
-console.log(box1);
+  console.log(box1);
 
   if (x >= box1.x && x < box1.x + box1.w && y >= box1.y && y < box1.y + box1.h) {
     dir = "up"

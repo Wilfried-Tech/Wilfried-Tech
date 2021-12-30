@@ -19,6 +19,15 @@
   <link rel="icon" type="icon" href="assets/images/favicon/favicon.png">
   <!-- JavaScript -->
   <script type="text/javascript" src="assets/fonts/icon/icons.js"></script>
+  <script src="../libs/eruda.min.js"></script>
+  <script>
+    eruda.init();
+    eruda.get().config.set('displaySize', 60);
+    eruda.remove('info');
+    eruda.remove('sources');
+    eruda.remove('snippets');
+    eruda.remove('settings');
+  </script>
   <title>Sokoban</title>
 </head>
 
@@ -37,6 +46,7 @@
   </div>
   <!-- JavaScript -->
   <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/sokoban.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 
