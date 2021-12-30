@@ -86,7 +86,7 @@ class Sokoban {
    */
   render() {
     this.setGround();
-
+    
   }
   /**
    * 
