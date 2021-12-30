@@ -17,6 +17,7 @@ class Sokoban {
     this.level = 1;
     this.sprites = null;
     this.game = null;
+    this.Mario = null;
   }
   /**
    * load levels map from JSON files
@@ -40,6 +41,7 @@ class Sokoban {
    */
   async setSprite(sprites) {
     this.sprites = sprites;
+    this.Mario = sprites.MarioDown;
     /*
         var promises = [],
           $this = this;
@@ -76,7 +78,7 @@ class Sokoban {
    * 
    */
   start() {
-    this.game = this.levels[this.level];
+    this.game = this.levels[this.level - 1];
     this.cvs.width = this.size * this.game.map[0].length;
     this.cvs.height = this.size * this.game.map.length;
     this.render();
@@ -86,7 +88,34 @@ class Sokoban {
    */
   render() {
     this.setGround();
-    
+    this.updateTargets();
+
+    for (var y = 0; y < this.game.map.length; y++) {
+      for (var x = 0; x < this.game.map[0].length; x++) {
+        switch (this.game.map[y][x]) {
+          case Sokoban.Sprites.VOID:
+            continue;
+          case Sokoban.Sprites.WALL:
+            this.draw(this.sprites.Wall, x, y);
+            break;
+          case Sokoban.Sprites.BOX:
+            this.draw(this.sprites.Box, x, y);
+            break;
+          case Sokoban.Sprites.TARGET:
+            this.draw(this.sprites.Target, x, y);
+            break;
+          case Sokoban.Sprites.BOX_OK:
+            this.draw(this.sprites.BoxOk, x, y);
+            break;
+          case Sokoban.Sprites.MARIO:
+            this.draw(this.Mario, x, y);
+            break;
+          case Sokoban.Sprites.TREE:
+            this.draw(this.sprites.Tree, x, y);
+            break;
+        }
+      }
+    }
   }
   /**
    * 
@@ -95,6 +124,24 @@ class Sokoban {
     for (var x = 0; x < this.game.map[0].length; x++) {
       for (var y = 0; y < this.game.map.length; y++) {
         this.draw(this.sprites.Ground, y, x);
+      }
+    }
+  }
+  /**
+   * 
+   */
+  updateTargets() {
+    const Sprites = Sokoban.Sprites;
+    var targets = this.game.target;
+    for (var i = 0, l = targets.length; i < l; i++) {
+      var cx = targets[i][0],
+        cy = targets[i][1];
+
+      if (this.game.map[cy][cx] != Sprites.BOX_OK) {
+        this.draw(this.sprites.Target, cx, cy);
+      }
+      if (this.game.map[cy][cx] == Sprites.VOID) {
+        this.game.map[cy][cx] = Sprites.TARGET;
       }
     }
   }
@@ -152,5 +199,21 @@ Sokoban.Sprites = class {
   setMarioRight(url) {
     this.MarioRight.src = this.spriteDir + '/' + url;
   }
-
 }
+
+Sokoban.Sprites.BOX = 1
+Sokoban.Sprites.BOX_OK = 5
+Sokoban.Sprites.WALL = 2
+Sokoban.Sprites.TARGET = 4
+Sokoban.Sprites.TREE = 6
+Sokoban.Sprites.MARIO = 3
+Sokoban.Sprites.VOID = 0;
+
+
+const B = 1
+W = 2
+M = 3
+V = 0
+T = 4
+O = 5
+A = 6
