@@ -89,12 +89,15 @@ class Sokoban {
   render() {
     this.setGround();
     this.updateTargets();
-
+    var speed = 0;
     for (var y = 0; y < this.game.map.length; y++) {
       for (var x = 0; x < this.game.map[0].length; x++) {
+        /*  (function(x, y) {
+            setTimeout((function() {
+              setTimeout((function() { */
         switch (this.game.map[y][x]) {
           case Sokoban.Sprites.VOID:
-            continue;
+            break;
           case Sokoban.Sprites.WALL:
             this.draw(this.sprites.Wall, x, y);
             break;
@@ -114,6 +117,9 @@ class Sokoban {
             this.draw(this.sprites.Tree, x, y);
             break;
         }
+        /*  }).bind(this), x * speed);
+          }).bind(this), y * this.game.map[0].length*speed);
+        }).bind(this)(x, y);*/
       }
     }
     this.checkLevelTerminated();
@@ -178,7 +184,7 @@ class Sokoban {
     }
     Case2.x = (Case2.x < 0) ? Case1.x : Case2.x;
     Case2.y = (Case2.y < 0) ? Case1.y : Case2.y;
-    
+
     Case2.x = (Case2.x >= map.sizeX) ? Case1.x : Case2.x;
     Case2.y = (Case2.y >= map.sizeY) ? Case1.y : Case2.y;
 
