@@ -89,10 +89,10 @@ class Sokoban {
   render() {
     this.setGround();
     this.updateTargets();
-    var speed = 0;
+    var speed = 100;
     for (var y = 0; y < this.game.map.length; y++) {
       for (var x = 0; x < this.game.map[0].length; x++) {
-        /*  (function(x, y) {
+        /* (function(x, y) {
             setTimeout((function() {
               setTimeout((function() { */
         switch (this.game.map[y][x]) {
