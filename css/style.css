@@ -63,6 +63,7 @@ h1.title {
 h1.title {
   padding-top: 15px;
   text-shadow: 2px 0px 0px grey;
+  font-size: 20pt;
 }
 
 p.logo img {
