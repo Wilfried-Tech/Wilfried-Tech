@@ -10,12 +10,13 @@
 }
 
 #main-header {
+  --pos-y: 0px;
   background: linear-gradient(#fff0 0%, #fff4 25%, #fff4 75%, #fff0 100%);
   color: #fff;
   position: absolute;
   z-index: 1;
   left: 0;
-  top: 0;
+  top: var(--pos-y);
 }
 
 #brand {
@@ -69,6 +70,7 @@
   width: 100%;
   padding: 15px 7px 7px;
   text-align: center;
+  height: 10000px;
 }
 
 .content-desc {

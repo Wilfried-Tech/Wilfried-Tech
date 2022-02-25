@@ -12,7 +12,7 @@ function matrixRain(canvas) {
   ctx = canvas.getContext('2d');
   matrix = '101010110110101010001101011010110100101'.split('');
   rain = [];
-  
+ 
   for (var i = 0; i < width / 2; i++) {
     rain.push(1);
   }

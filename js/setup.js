@@ -9,7 +9,7 @@ function $(selector) {
 /**
  * select all HTML element
  * @param {String} selector
- * @returns {HTMLElement}
+ * @returns {NodeListOf<HTMLElement>}
  */
 function $$(selector) {
   return document.querySelectorAll(selector);
@@ -63,6 +63,10 @@ function initSwipeMenu() {
       e.currentTarget.style.setProperty('--menu-translationY', '0');
     })
     $('#nav-menu').classList.replace('circled', 'swipe');
+    $('.container').onscroll = function(e) {
+      $('#main-header').style.setProperty('--pos-y', `${document.body.scrollTop}px`);
+     console.log($('body').scrollTop)
+    }
   }
 }
 /**
