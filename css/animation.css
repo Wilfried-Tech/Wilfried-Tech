@@ -1,0 +1,31 @@
+@keyframes matrix {
+  from {
+    background-position: 100% 0%;
+  }
+
+  to {
+    background-position: 100% 90%;
+  }
+}
+
+@keyframes pending {
+  0% {
+    opacity: 0
+  }
+
+  20% {
+    opacity: 0
+  }
+
+  21% {
+    opacity: 1
+  }
+
+  75% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0
+  }
+}

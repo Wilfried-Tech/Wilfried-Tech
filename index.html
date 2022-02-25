@@ -6,25 +6,71 @@
   <!-- Responsive Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="theme-color" content="#3f51b5" />
   <!-- <meta http-equiv="refresh" content="1">-->
   <meta property="og:title" content="Wilfried-Tech">
-  <meta property="og:description" content="Bonjour ,moi c'est Wilfried-Tech.   Je suis apprenti développeur d'applications Web et Android
-  Visitez ma page pour plus d'informations">
+  <meta property="og:description" content="Bonjour ,moi c'est Wilfried-Tech.   Je suis apprenti développeur Web et d'applications Android. Visitez ma page pour plus d'informations">
   <meta property="og:image" content="assets/images/favicon/favicon.png">
-  <meta name="description" content="Bonjour ,moi c'est Wilfried-Tech.   Je suis apprenti développeur d'applications Web et Android
-  Visitez ma page pour plus d'informations" />
+  <meta name="description" content="Bonjour ,moi c'est Wilfried-Tech.   Je suis apprenti développeur Web et d'applications Android. Visitez ma page pour plus d'informations" />
   <meta name="author" content="Wilfried-Tech" />
   <meta name="keywords" content="wilfried,larry, Nyandjou, Wilfried-Tech,self learner" />
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="icon" href="assets/images/favicon/favicon.png">
   <!-- JavaScript -->
+  <script src="libs/eruda.min.js"></script>
+  <script>
+    eruda.init();
+    eruda.get().config.set('displaySize', 60);
+    eruda.remove('info');
+    eruda.remove('sources');
+    eruda.remove('snippets');
+    eruda.remove('settings');
+  </script>
   <script type="text/javascript" src="assets/fonts/icon/icons.js"></script>
   <title>Wilfried-Tech</title>
 </head>
 
 <body>
   <div class="container">
+    <header id="main-header">
+      <div id="menu" data-swipe="true">
+        <div id="menu-line"></div>
+      </div>
+      <nav class="nav-bar">
+        <h1 class="nav-title v-center"><a href="" class="web-site-link">WILFRIED-TECH</a></h1>
+      </nav>
+      <aside id="nav-menu">
+        <header id="nav-menu-header">
+          <h1 class="nav-menu-title v-center"><a href="" class="web-site-link">Wilfried-Tech</a></h1>
+        </header>
+        <article id="nav-menu-items">
+          <div class="nav-menu-item"><span class="nav-menu-item-icon"><i class="mdi mdi-format-float-right"></i></span><a href="">Fil d'actualité</a></div>
+          <div class="nav-menu-item"><span class="nav-menu-item-icon"><i class="material-icons">message</i></span><a href="">forum</a></div>
+          <div class="nav-menu-item"><span class="nav-menu-item-icon"><i class="mdi mdi-web"></i></span><a href="">decouverte</a></div>
+          <div class="nav-menu-item"><span class="nav-menu-item-icon"><i class="mdi mdi-information-variant"></i></span><a href="">a propos</a></div>
+        </article>
+      </aside>
+    </header>
+    <div id="brand">
+      <canvas id="matrix"></canvas>
+      <div id="console">
+        <span id="console-line" class="pending" data-message="Wilfried-Tech,The Web Developer,The Mobile App Coder,Created By Wilfried-Tech, With Love"></span>
+        <span id="console-cursor"></span>
+      </div>
+    </div>
+    <div id="page-content">
+
+    </div>
+  </div>
+</body>
+<script src="js/setup.js"></script>
+<script src="js/matrix.js"></script>
+<script src="js/main.js"></script>
+
+</html>
+<!--
     <header>
       <nav>
         <p class="logo">
@@ -49,15 +95,15 @@
         &copy; Wilfried-Tech &infin; Coder-Master
       </p>
       <p class="account">
-        <ul>
-          <li><a href="tel:657933001"><span class="fa fa-phone-alt"></span></a></li>
-          <li><a href="whatsapp://send?phone=+237657933001"><span class="fab fa-whatsapp"></span></a></li>
-          <li><a href="https://www.facebook.com/wilfriedlarry.nyandjou"><span class="fab fa-facebook"></span></a></li>
-          <li><a href="mailto:wilfriedlarry63@gmail.com"><span class="fab fa-google"></span></a></li>
-          <li><a href="https://github.com/Wilfried-Tech"><span class="fab fa-github"></span></a></li>
-          <li><a href="https://www.linkedin.com/in/nyandjou-wilfried-larry"><span class="fab fa-linkedin"></span></a></li>
-          <li><a href="https://m.youtube.com/channel/UCRCpf6O4US7hJ9qVPa4G51A"><span class="fab fa-youtube"></span></a></li>
-        </ul>
+      <ul>
+        <li><a href="tel:657933001"><span class="fa fa-phone-alt"></span></a></li>
+        <li><a href="whatsapp://send?phone=+237657933001"><span class="fab fa-whatsapp"></span></a></li>
+        <li><a href="https://www.facebook.com/wilfriedlarry.nyandjou"><span class="fab fa-facebook"></span></a></li>
+        <li><a href="mailto:wilfriedlarry63@gmail.com"><span class="fab fa-google"></span></a></li>
+        <li><a href="https://github.com/Wilfried-Tech"><span class="fab fa-github"></span></a></li>
+        <li><a href="https://www.linkedin.com/in/nyandjou-wilfried-larry"><span class="fab fa-linkedin"></span></a></li>
+        <li><a href="https://m.youtube.com/channel/UCRCpf6O4US7hJ9qVPa4G51A"><span class="fab fa-youtube"></span></a></li>
+      </ul>
       </p>
     </footer>
     <div class="bio-cover">
@@ -75,10 +121,9 @@
       </fieldset>
     </div>
   </div>
-  <!-- JavaScript -->
-  <script type="text/javascript" src="js/ProgressBar.js"></script>
-  <script type="text/Javascript" src="js/data.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/ProgressBar.js"></script>
+<script type="text/Javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 
-</html>
+</html>-->

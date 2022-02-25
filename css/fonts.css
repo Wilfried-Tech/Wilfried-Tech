@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'delius';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../assets/fonts/family/delius.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'pixel';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../assets/fonts/family/pixel.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'tangerine';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../assets/fonts/family/tangerine.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'calligra';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../assets/fonts/family/calligra.ttf) format('truetype');
+}
