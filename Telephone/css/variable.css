@@ -1,0 +1,10 @@
+:root {
+  --translucent-color: #fff5;
+  --ripple-color: #FFFFFF96;
+  --window-background: linear-gradient(to top, #ba28ff, #34b1e9);
+  --screen-on-shadow: 0 0 1px #e0e0e0f0;
+  --window-background-off: #000;
+  --window-boot-logo: #000 url('./assets/images/favicon/favicon.png') center center /contain no-repeat;
+  --window-booting: #000 url('./assets/images/google-boot.gif') center center /contain no-repeat;
+  --lockscreen-background: transparent url('../../assets/images/lockscreen.jpg') center center /cover no-repeat;
+}

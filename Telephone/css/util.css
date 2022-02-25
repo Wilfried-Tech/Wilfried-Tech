@@ -1,0 +1,31 @@
+[ripple] {
+  position: relative;
+  overflow: hidden;
+  --ripple-position-top: 0;
+  --ripple-position-left: 0;
+  --ripple-background:
+    /*#0068FF9C*/
+    #0EBCE670;
+}
+
+[ripple]>.ripple-span {
+  content: '';
+  position: absolute;
+  top: var(--ripple-position-top, 0);
+  left: var(--ripple-position-left, 0);
+  background: var(--ripple-background, #ddd);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 1;
+}
+
+[ripple].ripple-active>.ripple-span {
+  animation: ripple 750ms;
+}
+
+div#ComponentsTemplate {
+  display: none;
+  visibility: hidden;
+}

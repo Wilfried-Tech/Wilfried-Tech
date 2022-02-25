@@ -1,0 +1,3728 @@
+[{
+    "name": "3d_rotation",
+    "class": "material-icons"
+  },
+  {
+    "name": "ac_unit",
+    "class": "material-icons"
+  },
+  {
+    "name": "access_alarm",
+    "class": "material-icons"
+  },
+  {
+    "name": "access_alarms",
+    "class": "material-icons"
+  },
+  {
+    "name": "access_time",
+    "class": "material-icons"
+  },
+  {
+    "name": "accessibility",
+    "class": "material-icons"
+  },
+  {
+    "name": "accessible",
+    "class": "material-icons"
+  },
+  {
+    "name": "account_balance",
+    "class": "material-icons"
+  },
+  {
+    "name": "account_balance_wallet",
+    "class": "material-icons"
+  },
+  {
+    "name": "account_box",
+    "class": "material-icons"
+  },
+  {
+    "name": "account_circle",
+    "class": "material-icons"
+  },
+  {
+    "name": "adb",
+    "class": "material-icons"
+  },
+  {
+    "name": "add",
+    "class": "material-icons"
+  },
+  {
+    "name": "add_a_photo",
+    "class": "material-icons"
+  },
+  {
+    "name": "add_alarm",
+    "class": "material-icons"
+  },
+  {
+    "name": "add_alert",
+    "class": "material-icons"
+  },
+  {
+    "name": "add_box",
+    "class": "material-icons"
+  },
+  {
+    "name": "add_circle",
+    "class": "material-icons"
+  },
+  {
+    "name": "add_circle_outline",
+    "class": "material-icons"
+  },
+  {
+    "name": "add_location",
+    "class": "material-icons"
+  },
+  {
+    "name": "add_shopping_cart",
+    "class": "material-icons"
+  },
+  {
+    "name": "add_to_photos",
+    "class": "material-icons"
+  },
+  {
+    "name": "add_to_queue",
+    "class": "material-icons"
+  },
+  {
+    "name": "adjust",
+    "class": "material-icons"
+  },
+  {
+    "name": "airline_seat_flat",
+    "class": "material-icons"
+  },
+  {
+    "name": "airline_seat_flat_angled",
+    "class": "material-icons"
+  },
+  {
+    "name": "airline_seat_individual_suite",
+    "class": "material-icons"
+  },
+  {
+    "name": "airline_seat_legroom_extra",
+    "class": "material-icons"
+  },
+  {
+    "name": "airline_seat_legroom_normal",
+    "class": "material-icons"
+  },
+  {
+    "name": "airline_seat_legroom_reduced",
+    "class": "material-icons"
+  },
+  {
+    "name": "airline_seat_recline_extra",
+    "class": "material-icons"
+  },
+  {
+    "name": "airline_seat_recline_normal",
+    "class": "material-icons"
+  },
+  {
+    "name": "airplanemode_active",
+    "class": "material-icons"
+  },
+  {
+    "name": "airplanemode_inactive",
+    "class": "material-icons"
+  },
+  {
+    "name": "airplay",
+    "class": "material-icons"
+  },
+  {
+    "name": "airport_shuttle",
+    "class": "material-icons"
+  },
+  {
+    "name": "alarm",
+    "class": "material-icons"
+  },
+  {
+    "name": "alarm_add",
+    "class": "material-icons"
+  },
+  {
+    "name": "alarm_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "alarm_on",
+    "class": "material-icons"
+  },
+  {
+    "name": "album",
+    "class": "material-icons"
+  },
+  {
+    "name": "all_inclusive",
+    "class": "material-icons"
+  },
+  {
+    "name": "all_out",
+    "class": "material-icons"
+  },
+  {
+    "name": "android",
+    "class": "material-icons"
+  },
+  {
+    "name": "announcement",
+    "class": "material-icons"
+  },
+  {
+    "name": "apps",
+    "class": "material-icons"
+  },
+  {
+    "name": "archive",
+    "class": "material-icons"
+  },
+  {
+    "name": "arrow_back",
+    "class": "material-icons"
+  },
+  {
+    "name": "arrow_downward",
+    "class": "material-icons"
+  },
+  {
+    "name": "arrow_drop_down",
+    "class": "material-icons"
+  },
+  {
+    "name": "arrow_drop_down_circle",
+    "class": "material-icons"
+  },
+  {
+    "name": "arrow_drop_up",
+    "class": "material-icons"
+  },
+  {
+    "name": "arrow_forward",
+    "class": "material-icons"
+  },
+  {
+    "name": "arrow_upward",
+    "class": "material-icons"
+  },
+  {
+    "name": "art_track",
+    "class": "material-icons"
+  },
+  {
+    "name": "aspect_ratio",
+    "class": "material-icons"
+  },
+  {
+    "name": "assessment",
+    "class": "material-icons"
+  },
+  {
+    "name": "assignment",
+    "class": "material-icons"
+  },
+  {
+    "name": "assignment_ind",
+    "class": "material-icons"
+  },
+  {
+    "name": "assignment_late",
+    "class": "material-icons"
+  },
+  {
+    "name": "assignment_return",
+    "class": "material-icons"
+  },
+  {
+    "name": "assignment_returned",
+    "class": "material-icons"
+  },
+  {
+    "name": "assignment_turned_in",
+    "class": "material-icons"
+  },
+  {
+    "name": "assistant",
+    "class": "material-icons"
+  },
+  {
+    "name": "assistant_photo",
+    "class": "material-icons"
+  },
+  {
+    "name": "attach_file",
+    "class": "material-icons"
+  },
+  {
+    "name": "attach_money",
+    "class": "material-icons"
+  },
+  {
+    "name": "attachment",
+    "class": "material-icons"
+  },
+  {
+    "name": "audiotrack",
+    "class": "material-icons"
+  },
+  {
+    "name": "autorenew",
+    "class": "material-icons"
+  },
+  {
+    "name": "av_timer",
+    "class": "material-icons"
+  },
+  {
+    "name": "backspace",
+    "class": "material-icons"
+  },
+  {
+    "name": "backup",
+    "class": "material-icons"
+  },
+  {
+    "name": "battery_alert",
+    "class": "material-icons"
+  },
+  {
+    "name": "battery_charging_full",
+    "class": "material-icons"
+  },
+  {
+    "name": "battery_full",
+    "class": "material-icons"
+  },
+  {
+    "name": "battery_std",
+    "class": "material-icons"
+  },
+  {
+    "name": "battery_unknown",
+    "class": "material-icons"
+  },
+  {
+    "name": "beach_access",
+    "class": "material-icons"
+  },
+  {
+    "name": "beenhere",
+    "class": "material-icons"
+  },
+  {
+    "name": "block",
+    "class": "material-icons"
+  },
+  {
+    "name": "bluetooth",
+    "class": "material-icons"
+  },
+  {
+    "name": "bluetooth_audio",
+    "class": "material-icons"
+  },
+  {
+    "name": "bluetooth_connected",
+    "class": "material-icons"
+  },
+  {
+    "name": "bluetooth_disabled",
+    "class": "material-icons"
+  },
+  {
+    "name": "bluetooth_searching",
+    "class": "material-icons"
+  },
+  {
+    "name": "blur_circular",
+    "class": "material-icons"
+  },
+  {
+    "name": "blur_linear",
+    "class": "material-icons"
+  },
+  {
+    "name": "blur_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "blur_on",
+    "class": "material-icons"
+  },
+  {
+    "name": "book",
+    "class": "material-icons"
+  },
+  {
+    "name": "bookmark",
+    "class": "material-icons"
+  },
+  {
+    "name": "bookmark_border",
+    "class": "material-icons"
+  },
+  {
+    "name": "border_all",
+    "class": "material-icons"
+  },
+  {
+    "name": "border_bottom",
+    "class": "material-icons"
+  },
+  {
+    "name": "border_clear",
+    "class": "material-icons"
+  },
+  {
+    "name": "border_color",
+    "class": "material-icons"
+  },
+  {
+    "name": "border_horizontal",
+    "class": "material-icons"
+  },
+  {
+    "name": "border_inner",
+    "class": "material-icons"
+  },
+  {
+    "name": "border_left",
+    "class": "material-icons"
+  },
+  {
+    "name": "border_outer",
+    "class": "material-icons"
+  },
+  {
+    "name": "border_right",
+    "class": "material-icons"
+  },
+  {
+    "name": "border_style",
+    "class": "material-icons"
+  },
+  {
+    "name": "border_top",
+    "class": "material-icons"
+  },
+  {
+    "name": "border_vertical",
+    "class": "material-icons"
+  },
+  {
+    "name": "branding_watermark",
+    "class": "material-icons"
+  },
+  {
+    "name": "brightness_1",
+    "class": "material-icons"
+  },
+  {
+    "name": "brightness_2",
+    "class": "material-icons"
+  },
+  {
+    "name": "brightness_3",
+    "class": "material-icons"
+  },
+  {
+    "name": "brightness_4",
+    "class": "material-icons"
+  },
+  {
+    "name": "brightness_5",
+    "class": "material-icons"
+  },
+  {
+    "name": "brightness_6",
+    "class": "material-icons"
+  },
+  {
+    "name": "brightness_7",
+    "class": "material-icons"
+  },
+  {
+    "name": "brightness_auto",
+    "class": "material-icons"
+  },
+  {
+    "name": "brightness_high",
+    "class": "material-icons"
+  },
+  {
+    "name": "brightness_low",
+    "class": "material-icons"
+  },
+  {
+    "name": "brightness_medium",
+    "class": "material-icons"
+  },
+  {
+    "name": "broken_image",
+    "class": "material-icons"
+  },
+  {
+    "name": "brush",
+    "class": "material-icons"
+  },
+  {
+    "name": "bubble_chart",
+    "class": "material-icons"
+  },
+  {
+    "name": "bug_report",
+    "class": "material-icons"
+  },
+  {
+    "name": "build",
+    "class": "material-icons"
+  },
+  {
+    "name": "burst_mode",
+    "class": "material-icons"
+  },
+  {
+    "name": "business",
+    "class": "material-icons"
+  },
+  {
+    "name": "business_center",
+    "class": "material-icons"
+  },
+  {
+    "name": "cached",
+    "class": "material-icons"
+  },
+  {
+    "name": "cake",
+    "class": "material-icons"
+  },
+  {
+    "name": "call",
+    "class": "material-icons"
+  },
+  {
+    "name": "call_end",
+    "class": "material-icons"
+  },
+  {
+    "name": "call_made",
+    "class": "material-icons"
+  },
+  {
+    "name": "call_merge",
+    "class": "material-icons"
+  },
+  {
+    "name": "call_missed",
+    "class": "material-icons"
+  },
+  {
+    "name": "call_missed_outgoing",
+    "class": "material-icons"
+  },
+  {
+    "name": "call_received",
+    "class": "material-icons"
+  },
+  {
+    "name": "call_split",
+    "class": "material-icons"
+  },
+  {
+    "name": "call_to_action",
+    "class": "material-icons"
+  },
+  {
+    "name": "camera",
+    "class": "material-icons"
+  },
+  {
+    "name": "camera_alt",
+    "class": "material-icons"
+  },
+  {
+    "name": "camera_enhance",
+    "class": "material-icons"
+  },
+  {
+    "name": "camera_front",
+    "class": "material-icons"
+  },
+  {
+    "name": "camera_rear",
+    "class": "material-icons"
+  },
+  {
+    "name": "camera_roll",
+    "class": "material-icons"
+  },
+  {
+    "name": "cancel",
+    "class": "material-icons"
+  },
+  {
+    "name": "card_giftcard",
+    "class": "material-icons"
+  },
+  {
+    "name": "card_membership",
+    "class": "material-icons"
+  },
+  {
+    "name": "card_travel",
+    "class": "material-icons"
+  },
+  {
+    "name": "casino",
+    "class": "material-icons"
+  },
+  {
+    "name": "cast",
+    "class": "material-icons"
+  },
+  {
+    "name": "cast_connected",
+    "class": "material-icons"
+  },
+  {
+    "name": "center_focus_strong",
+    "class": "material-icons"
+  },
+  {
+    "name": "center_focus_weak",
+    "class": "material-icons"
+  },
+  {
+    "name": "change_history",
+    "class": "material-icons"
+  },
+  {
+    "name": "chat",
+    "class": "material-icons"
+  },
+  {
+    "name": "chat_bubble",
+    "class": "material-icons"
+  },
+  {
+    "name": "chat_bubble_outline",
+    "class": "material-icons"
+  },
+  {
+    "name": "check",
+    "class": "material-icons"
+  },
+  {
+    "name": "check_box",
+    "class": "material-icons"
+  },
+  {
+    "name": "check_box_outline_blank",
+    "class": "material-icons"
+  },
+  {
+    "name": "check_circle",
+    "class": "material-icons"
+  },
+  {
+    "name": "chevron_left",
+    "class": "material-icons"
+  },
+  {
+    "name": "chevron_right",
+    "class": "material-icons"
+  },
+  {
+    "name": "child_care",
+    "class": "material-icons"
+  },
+  {
+    "name": "child_friendly",
+    "class": "material-icons"
+  },
+  {
+    "name": "chrome_reader_mode",
+    "class": "material-icons"
+  },
+  {
+    "name": "class",
+    "class": "material-icons"
+  },
+  {
+    "name": "clear",
+    "class": "material-icons"
+  },
+  {
+    "name": "clear_all",
+    "class": "material-icons"
+  },
+  {
+    "name": "close",
+    "class": "material-icons"
+  },
+  {
+    "name": "closed_caption",
+    "class": "material-icons"
+  },
+  {
+    "name": "cloud",
+    "class": "material-icons"
+  },
+  {
+    "name": "cloud_circle",
+    "class": "material-icons"
+  },
+  {
+    "name": "cloud_done",
+    "class": "material-icons"
+  },
+  {
+    "name": "cloud_download",
+    "class": "material-icons"
+  },
+  {
+    "name": "cloud_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "cloud_queue",
+    "class": "material-icons"
+  },
+  {
+    "name": "cloud_upload",
+    "class": "material-icons"
+  },
+  {
+    "name": "code",
+    "class": "material-icons"
+  },
+  {
+    "name": "collections",
+    "class": "material-icons"
+  },
+  {
+    "name": "collections_bookmark",
+    "class": "material-icons"
+  },
+  {
+    "name": "color_lens",
+    "class": "material-icons"
+  },
+  {
+    "name": "colorize",
+    "class": "material-icons"
+  },
+  {
+    "name": "comment",
+    "class": "material-icons"
+  },
+  {
+    "name": "compare",
+    "class": "material-icons"
+  },
+  {
+    "name": "compare_arrows",
+    "class": "material-icons"
+  },
+  {
+    "name": "computer",
+    "class": "material-icons"
+  },
+  {
+    "name": "confirmation_number",
+    "class": "material-icons"
+  },
+  {
+    "name": "contact_mail",
+    "class": "material-icons"
+  },
+  {
+    "name": "contact_phone",
+    "class": "material-icons"
+  },
+  {
+    "name": "contacts",
+    "class": "material-icons"
+  },
+  {
+    "name": "content_copy",
+    "class": "material-icons"
+  },
+  {
+    "name": "content_cut",
+    "class": "material-icons"
+  },
+  {
+    "name": "content_paste",
+    "class": "material-icons"
+  },
+  {
+    "name": "control_point",
+    "class": "material-icons"
+  },
+  {
+    "name": "control_point_duplicate",
+    "class": "material-icons"
+  },
+  {
+    "name": "copyright",
+    "class": "material-icons"
+  },
+  {
+    "name": "create",
+    "class": "material-icons"
+  },
+  {
+    "name": "create_new_folder",
+    "class": "material-icons"
+  },
+  {
+    "name": "credit_card",
+    "class": "material-icons"
+  },
+  {
+    "name": "crop",
+    "class": "material-icons"
+  },
+  {
+    "name": "crop_16_9",
+    "class": "material-icons"
+  },
+  {
+    "name": "crop_3_2",
+    "class": "material-icons"
+  },
+  {
+    "name": "crop_5_4",
+    "class": "material-icons"
+  },
+  {
+    "name": "crop_7_5",
+    "class": "material-icons"
+  },
+  {
+    "name": "crop_din",
+    "class": "material-icons"
+  },
+  {
+    "name": "crop_free",
+    "class": "material-icons"
+  },
+  {
+    "name": "crop_landscape",
+    "class": "material-icons"
+  },
+  {
+    "name": "crop_original",
+    "class": "material-icons"
+  },
+  {
+    "name": "crop_portrait",
+    "class": "material-icons"
+  },
+  {
+    "name": "crop_rotate",
+    "class": "material-icons"
+  },
+  {
+    "name": "crop_square",
+    "class": "material-icons"
+  },
+  {
+    "name": "dashboard",
+    "class": "material-icons"
+  },
+  {
+    "name": "data_usage",
+    "class": "material-icons"
+  },
+  {
+    "name": "date_range",
+    "class": "material-icons"
+  },
+  {
+    "name": "dehaze",
+    "class": "material-icons"
+  },
+  {
+    "name": "delete",
+    "class": "material-icons"
+  },
+  {
+    "name": "delete_forever",
+    "class": "material-icons"
+  },
+  {
+    "name": "delete_sweep",
+    "class": "material-icons"
+  },
+  {
+    "name": "description",
+    "class": "material-icons"
+  },
+  {
+    "name": "desktop_mac",
+    "class": "material-icons"
+  },
+  {
+    "name": "desktop_windows",
+    "class": "material-icons"
+  },
+  {
+    "name": "details",
+    "class": "material-icons"
+  },
+  {
+    "name": "developer_board",
+    "class": "material-icons"
+  },
+  {
+    "name": "developer_mode",
+    "class": "material-icons"
+  },
+  {
+    "name": "device_hub",
+    "class": "material-icons"
+  },
+  {
+    "name": "devices",
+    "class": "material-icons"
+  },
+  {
+    "name": "devices_other",
+    "class": "material-icons"
+  },
+  {
+    "name": "dialer_sip",
+    "class": "material-icons"
+  },
+  {
+    "name": "dialpad",
+    "class": "material-icons"
+  },
+  {
+    "name": "directions",
+    "class": "material-icons"
+  },
+  {
+    "name": "directions_bike",
+    "class": "material-icons"
+  },
+  {
+    "name": "directions_boat",
+    "class": "material-icons"
+  },
+  {
+    "name": "directions_bus",
+    "class": "material-icons"
+  },
+  {
+    "name": "directions_car",
+    "class": "material-icons"
+  },
+  {
+    "name": "directions_railway",
+    "class": "material-icons"
+  },
+  {
+    "name": "directions_run",
+    "class": "material-icons"
+  },
+  {
+    "name": "directions_subway",
+    "class": "material-icons"
+  },
+  {
+    "name": "directions_transit",
+    "class": "material-icons"
+  },
+  {
+    "name": "directions_walk",
+    "class": "material-icons"
+  },
+  {
+    "name": "disc_full",
+    "class": "material-icons"
+  },
+  {
+    "name": "dns",
+    "class": "material-icons"
+  },
+  {
+    "name": "do_not_disturb",
+    "class": "material-icons"
+  },
+  {
+    "name": "do_not_disturb_alt",
+    "class": "material-icons"
+  },
+  {
+    "name": "do_not_disturb_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "do_not_disturb_on",
+    "class": "material-icons"
+  },
+  {
+    "name": "dock",
+    "class": "material-icons"
+  },
+  {
+    "name": "domain",
+    "class": "material-icons"
+  },
+  {
+    "name": "done",
+    "class": "material-icons"
+  },
+  {
+    "name": "done_all",
+    "class": "material-icons"
+  },
+  {
+    "name": "donut_large",
+    "class": "material-icons"
+  },
+  {
+    "name": "donut_small",
+    "class": "material-icons"
+  },
+  {
+    "name": "drafts",
+    "class": "material-icons"
+  },
+  {
+    "name": "drag_handle",
+    "class": "material-icons"
+  },
+  {
+    "name": "drive_eta",
+    "class": "material-icons"
+  },
+  {
+    "name": "dvr",
+    "class": "material-icons"
+  },
+  {
+    "name": "edit",
+    "class": "material-icons"
+  },
+  {
+    "name": "edit_location",
+    "class": "material-icons"
+  },
+  {
+    "name": "eject",
+    "class": "material-icons"
+  },
+  {
+    "name": "email",
+    "class": "material-icons"
+  },
+  {
+    "name": "enhanced_encryption",
+    "class": "material-icons"
+  },
+  {
+    "name": "equalizer",
+    "class": "material-icons"
+  },
+  {
+    "name": "error",
+    "class": "material-icons"
+  },
+  {
+    "name": "error_outline",
+    "class": "material-icons"
+  },
+  {
+    "name": "euro_symbol",
+    "class": "material-icons"
+  },
+  {
+    "name": "ev_station",
+    "class": "material-icons"
+  },
+  {
+    "name": "event",
+    "class": "material-icons"
+  },
+  {
+    "name": "event_available",
+    "class": "material-icons"
+  },
+  {
+    "name": "event_busy",
+    "class": "material-icons"
+  },
+  {
+    "name": "event_note",
+    "class": "material-icons"
+  },
+  {
+    "name": "event_seat",
+    "class": "material-icons"
+  },
+  {
+    "name": "exit_to_app",
+    "class": "material-icons"
+  },
+  {
+    "name": "expand_less",
+    "class": "material-icons"
+  },
+  {
+    "name": "expand_more",
+    "class": "material-icons"
+  },
+  {
+    "name": "explicit",
+    "class": "material-icons"
+  },
+  {
+    "name": "explore",
+    "class": "material-icons"
+  },
+  {
+    "name": "exposure",
+    "class": "material-icons"
+  },
+  {
+    "name": "exposure_neg_1",
+    "class": "material-icons"
+  },
+  {
+    "name": "exposure_neg_2",
+    "class": "material-icons"
+  },
+  {
+    "name": "exposure_plus_1",
+    "class": "material-icons"
+  },
+  {
+    "name": "exposure_plus_2",
+    "class": "material-icons"
+  },
+  {
+    "name": "exposure_zero",
+    "class": "material-icons"
+  },
+  {
+    "name": "extension",
+    "class": "material-icons"
+  },
+  {
+    "name": "face",
+    "class": "material-icons"
+  },
+  {
+    "name": "fast_forward",
+    "class": "material-icons"
+  },
+  {
+    "name": "fast_rewind",
+    "class": "material-icons"
+  },
+  {
+    "name": "favorite",
+    "class": "material-icons"
+  },
+  {
+    "name": "favorite_border",
+    "class": "material-icons"
+  },
+  {
+    "name": "featured_play_list",
+    "class": "material-icons"
+  },
+  {
+    "name": "featured_video",
+    "class": "material-icons"
+  },
+  {
+    "name": "feedback",
+    "class": "material-icons"
+  },
+  {
+    "name": "fiber_dvr",
+    "class": "material-icons"
+  },
+  {
+    "name": "fiber_manual_record",
+    "class": "material-icons"
+  },
+  {
+    "name": "fiber_new",
+    "class": "material-icons"
+  },
+  {
+    "name": "fiber_pin",
+    "class": "material-icons"
+  },
+  {
+    "name": "fiber_smart_record",
+    "class": "material-icons"
+  },
+  {
+    "name": "file_download",
+    "class": "material-icons"
+  },
+  {
+    "name": "file_upload",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_1",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_2",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_3",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_4",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_5",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_6",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_7",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_8",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_9",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_9_plus",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_b_and_w",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_center_focus",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_drama",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_frames",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_hdr",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_list",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_none",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_tilt_shift",
+    "class": "material-icons"
+  },
+  {
+    "name": "filter_vintage",
+    "class": "material-icons"
+  },
+  {
+    "name": "find_in_page",
+    "class": "material-icons"
+  },
+  {
+    "name": "find_replace",
+    "class": "material-icons"
+  },
+  {
+    "name": "fingerprint",
+    "class": "material-icons"
+  },
+  {
+    "name": "first_page",
+    "class": "material-icons"
+  },
+  {
+    "name": "fitness_center",
+    "class": "material-icons"
+  },
+  {
+    "name": "flag",
+    "class": "material-icons"
+  },
+  {
+    "name": "flare",
+    "class": "material-icons"
+  },
+  {
+    "name": "flash_auto",
+    "class": "material-icons"
+  },
+  {
+    "name": "flash_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "flash_on",
+    "class": "material-icons"
+  },
+  {
+    "name": "flight",
+    "class": "material-icons"
+  },
+  {
+    "name": "flight_land",
+    "class": "material-icons"
+  },
+  {
+    "name": "flight_takeoff",
+    "class": "material-icons"
+  },
+  {
+    "name": "flip",
+    "class": "material-icons"
+  },
+  {
+    "name": "flip_to_back",
+    "class": "material-icons"
+  },
+  {
+    "name": "flip_to_front",
+    "class": "material-icons"
+  },
+  {
+    "name": "folder",
+    "class": "material-icons"
+  },
+  {
+    "name": "folder_open",
+    "class": "material-icons"
+  },
+  {
+    "name": "folder_shared",
+    "class": "material-icons"
+  },
+  {
+    "name": "folder_special",
+    "class": "material-icons"
+  },
+  {
+    "name": "font_download",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_align_center",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_align_justify",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_align_left",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_align_right",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_bold",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_clear",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_color_fill",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_color_reset",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_color_text",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_indent_decrease",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_indent_increase",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_italic",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_line_spacing",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_list_bulleted",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_list_numbered",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_paint",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_quote",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_shapes",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_size",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_strikethrough",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_textdirection_l_to_r",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_textdirection_r_to_l",
+    "class": "material-icons"
+  },
+  {
+    "name": "format_underlined",
+    "class": "material-icons"
+  },
+  {
+    "name": "forum",
+    "class": "material-icons"
+  },
+  {
+    "name": "forward",
+    "class": "material-icons"
+  },
+  {
+    "name": "forward_10",
+    "class": "material-icons"
+  },
+  {
+    "name": "forward_30",
+    "class": "material-icons"
+  },
+  {
+    "name": "forward_5",
+    "class": "material-icons"
+  },
+  {
+    "name": "free_breakfast",
+    "class": "material-icons"
+  },
+  {
+    "name": "fullscreen",
+    "class": "material-icons"
+  },
+  {
+    "name": "fullscreen_exit",
+    "class": "material-icons"
+  },
+  {
+    "name": "functions",
+    "class": "material-icons"
+  },
+  {
+    "name": "g_translate",
+    "class": "material-icons"
+  },
+  {
+    "name": "gamepad",
+    "class": "material-icons"
+  },
+  {
+    "name": "games",
+    "class": "material-icons"
+  },
+  {
+    "name": "gavel",
+    "class": "material-icons"
+  },
+  {
+    "name": "gesture",
+    "class": "material-icons"
+  },
+  {
+    "name": "get_app",
+    "class": "material-icons"
+  },
+  {
+    "name": "gif",
+    "class": "material-icons"
+  },
+  {
+    "name": "golf_course",
+    "class": "material-icons"
+  },
+  {
+    "name": "gps_fixed",
+    "class": "material-icons"
+  },
+  {
+    "name": "gps_not_fixed",
+    "class": "material-icons"
+  },
+  {
+    "name": "gps_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "grade",
+    "class": "material-icons"
+  },
+  {
+    "name": "gradient",
+    "class": "material-icons"
+  },
+  {
+    "name": "grain",
+    "class": "material-icons"
+  },
+  {
+    "name": "graphic_eq",
+    "class": "material-icons"
+  },
+  {
+    "name": "grid_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "grid_on",
+    "class": "material-icons"
+  },
+  {
+    "name": "group",
+    "class": "material-icons"
+  },
+  {
+    "name": "group_add",
+    "class": "material-icons"
+  },
+  {
+    "name": "group_work",
+    "class": "material-icons"
+  },
+  {
+    "name": "hd",
+    "class": "material-icons"
+  },
+  {
+    "name": "hdr_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "hdr_on",
+    "class": "material-icons"
+  },
+  {
+    "name": "hdr_strong",
+    "class": "material-icons"
+  },
+  {
+    "name": "hdr_weak",
+    "class": "material-icons"
+  },
+  {
+    "name": "headset",
+    "class": "material-icons"
+  },
+  {
+    "name": "headset_mic",
+    "class": "material-icons"
+  },
+  {
+    "name": "healing",
+    "class": "material-icons"
+  },
+  {
+    "name": "hearing",
+    "class": "material-icons"
+  },
+  {
+    "name": "help",
+    "class": "material-icons"
+  },
+  {
+    "name": "help_outline",
+    "class": "material-icons"
+  },
+  {
+    "name": "high_quality",
+    "class": "material-icons"
+  },
+  {
+    "name": "highlight",
+    "class": "material-icons"
+  },
+  {
+    "name": "highlight_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "history",
+    "class": "material-icons"
+  },
+  {
+    "name": "home",
+    "class": "material-icons"
+  },
+  {
+    "name": "hot_tub",
+    "class": "material-icons"
+  },
+  {
+    "name": "hotel",
+    "class": "material-icons"
+  },
+  {
+    "name": "hourglass_empty",
+    "class": "material-icons"
+  },
+  {
+    "name": "hourglass_full",
+    "class": "material-icons"
+  },
+  {
+    "name": "http",
+    "class": "material-icons"
+  },
+  {
+    "name": "https",
+    "class": "material-icons"
+  },
+  {
+    "name": "image",
+    "class": "material-icons"
+  },
+  {
+    "name": "image_aspect_ratio",
+    "class": "material-icons"
+  },
+  {
+    "name": "import_contacts",
+    "class": "material-icons"
+  },
+  {
+    "name": "import_export",
+    "class": "material-icons"
+  },
+  {
+    "name": "important_devices",
+    "class": "material-icons"
+  },
+  {
+    "name": "inbox",
+    "class": "material-icons"
+  },
+  {
+    "name": "indeterminate_check_box",
+    "class": "material-icons"
+  },
+  {
+    "name": "info",
+    "class": "material-icons"
+  },
+  {
+    "name": "info_outline",
+    "class": "material-icons"
+  },
+  {
+    "name": "input",
+    "class": "material-icons"
+  },
+  {
+    "name": "insert_chart",
+    "class": "material-icons"
+  },
+  {
+    "name": "insert_comment",
+    "class": "material-icons"
+  },
+  {
+    "name": "insert_drive_file",
+    "class": "material-icons"
+  },
+  {
+    "name": "insert_emoticon",
+    "class": "material-icons"
+  },
+  {
+    "name": "insert_invitation",
+    "class": "material-icons"
+  },
+  {
+    "name": "insert_link",
+    "class": "material-icons"
+  },
+  {
+    "name": "insert_photo",
+    "class": "material-icons"
+  },
+  {
+    "name": "invert_colors",
+    "class": "material-icons"
+  },
+  {
+    "name": "invert_colors_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "iso",
+    "class": "material-icons"
+  },
+  {
+    "name": "keyboard",
+    "class": "material-icons"
+  },
+  {
+    "name": "keyboard_arrow_down",
+    "class": "material-icons"
+  },
+  {
+    "name": "keyboard_arrow_left",
+    "class": "material-icons"
+  },
+  {
+    "name": "keyboard_arrow_right",
+    "class": "material-icons"
+  },
+  {
+    "name": "keyboard_arrow_up",
+    "class": "material-icons"
+  },
+  {
+    "name": "keyboard_backspace",
+    "class": "material-icons"
+  },
+  {
+    "name": "keyboard_capslock",
+    "class": "material-icons"
+  },
+  {
+    "name": "keyboard_hide",
+    "class": "material-icons"
+  },
+  {
+    "name": "keyboard_return",
+    "class": "material-icons"
+  },
+  {
+    "name": "keyboard_tab",
+    "class": "material-icons"
+  },
+  {
+    "name": "keyboard_voice",
+    "class": "material-icons"
+  },
+  {
+    "name": "kitchen",
+    "class": "material-icons"
+  },
+  {
+    "name": "label",
+    "class": "material-icons"
+  },
+  {
+    "name": "label_outline",
+    "class": "material-icons"
+  },
+  {
+    "name": "landscape",
+    "class": "material-icons"
+  },
+  {
+    "name": "language",
+    "class": "material-icons"
+  },
+  {
+    "name": "laptop",
+    "class": "material-icons"
+  },
+  {
+    "name": "laptop_chromebook",
+    "class": "material-icons"
+  },
+  {
+    "name": "laptop_mac",
+    "class": "material-icons"
+  },
+  {
+    "name": "laptop_windows",
+    "class": "material-icons"
+  },
+  {
+    "name": "last_page",
+    "class": "material-icons"
+  },
+  {
+    "name": "launch",
+    "class": "material-icons"
+  },
+  {
+    "name": "layers",
+    "class": "material-icons"
+  },
+  {
+    "name": "layers_clear",
+    "class": "material-icons"
+  },
+  {
+    "name": "leak_add",
+    "class": "material-icons"
+  },
+  {
+    "name": "leak_remove",
+    "class": "material-icons"
+  },
+  {
+    "name": "lens",
+    "class": "material-icons"
+  },
+  {
+    "name": "library_add",
+    "class": "material-icons"
+  },
+  {
+    "name": "library_books",
+    "class": "material-icons"
+  },
+  {
+    "name": "library_music",
+    "class": "material-icons"
+  },
+  {
+    "name": "lightbulb_outline",
+    "class": "material-icons"
+  },
+  {
+    "name": "line_style",
+    "class": "material-icons"
+  },
+  {
+    "name": "line_weight",
+    "class": "material-icons"
+  },
+  {
+    "name": "linear_scale",
+    "class": "material-icons"
+  },
+  {
+    "name": "link",
+    "class": "material-icons"
+  },
+  {
+    "name": "linked_camera",
+    "class": "material-icons"
+  },
+  {
+    "name": "list",
+    "class": "material-icons"
+  },
+  {
+    "name": "live_help",
+    "class": "material-icons"
+  },
+  {
+    "name": "live_tv",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_activity",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_airport",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_atm",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_bar",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_cafe",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_car_wash",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_convenience_store",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_dining",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_drink",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_florist",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_gas_station",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_grocery_store",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_hospital",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_hotel",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_laundry_service",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_library",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_mall",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_movies",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_offer",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_parking",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_pharmacy",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_phone",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_pizza",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_play",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_post_office",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_printshop",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_see",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_shipping",
+    "class": "material-icons"
+  },
+  {
+    "name": "local_taxi",
+    "class": "material-icons"
+  },
+  {
+    "name": "location_city",
+    "class": "material-icons"
+  },
+  {
+    "name": "location_disabled",
+    "class": "material-icons"
+  },
+  {
+    "name": "location_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "location_on",
+    "class": "material-icons"
+  },
+  {
+    "name": "location_searching",
+    "class": "material-icons"
+  },
+  {
+    "name": "lock",
+    "class": "material-icons"
+  },
+  {
+    "name": "lock_open",
+    "class": "material-icons"
+  },
+  {
+    "name": "lock_outline",
+    "class": "material-icons"
+  },
+  {
+    "name": "looks",
+    "class": "material-icons"
+  },
+  {
+    "name": "looks_3",
+    "class": "material-icons"
+  },
+  {
+    "name": "looks_4",
+    "class": "material-icons"
+  },
+  {
+    "name": "looks_5",
+    "class": "material-icons"
+  },
+  {
+    "name": "looks_6",
+    "class": "material-icons"
+  },
+  {
+    "name": "looks_one",
+    "class": "material-icons"
+  },
+  {
+    "name": "looks_two",
+    "class": "material-icons"
+  },
+  {
+    "name": "loop",
+    "class": "material-icons"
+  },
+  {
+    "name": "loupe",
+    "class": "material-icons"
+  },
+  {
+    "name": "low_priority",
+    "class": "material-icons"
+  },
+  {
+    "name": "loyalty",
+    "class": "material-icons"
+  },
+  {
+    "name": "mail",
+    "class": "material-icons"
+  },
+  {
+    "name": "mail_outline",
+    "class": "material-icons"
+  },
+  {
+    "name": "map",
+    "class": "material-icons"
+  },
+  {
+    "name": "markunread",
+    "class": "material-icons"
+  },
+  {
+    "name": "markunread_mailbox",
+    "class": "material-icons"
+  },
+  {
+    "name": "memory",
+    "class": "material-icons"
+  },
+  {
+    "name": "menu",
+    "class": "material-icons"
+  },
+  {
+    "name": "merge_type",
+    "class": "material-icons"
+  },
+  {
+    "name": "message",
+    "class": "material-icons"
+  },
+  {
+    "name": "mic",
+    "class": "material-icons"
+  },
+  {
+    "name": "mic_none",
+    "class": "material-icons"
+  },
+  {
+    "name": "mic_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "mms",
+    "class": "material-icons"
+  },
+  {
+    "name": "mode_comment",
+    "class": "material-icons"
+  },
+  {
+    "name": "mode_edit",
+    "class": "material-icons"
+  },
+  {
+    "name": "monetization_on",
+    "class": "material-icons"
+  },
+  {
+    "name": "money_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "monochrome_photos",
+    "class": "material-icons"
+  },
+  {
+    "name": "mood",
+    "class": "material-icons"
+  },
+  {
+    "name": "mood_bad",
+    "class": "material-icons"
+  },
+  {
+    "name": "more",
+    "class": "material-icons"
+  },
+  {
+    "name": "more_horiz",
+    "class": "material-icons"
+  },
+  {
+    "name": "more_vert",
+    "class": "material-icons"
+  },
+  {
+    "name": "motorcycle",
+    "class": "material-icons"
+  },
+  {
+    "name": "mouse",
+    "class": "material-icons"
+  },
+  {
+    "name": "move_to_inbox",
+    "class": "material-icons"
+  },
+  {
+    "name": "movie",
+    "class": "material-icons"
+  },
+  {
+    "name": "movie_creation",
+    "class": "material-icons"
+  },
+  {
+    "name": "movie_filter",
+    "class": "material-icons"
+  },
+  {
+    "name": "multiline_chart",
+    "class": "material-icons"
+  },
+  {
+    "name": "music_note",
+    "class": "material-icons"
+  },
+  {
+    "name": "music_video",
+    "class": "material-icons"
+  },
+  {
+    "name": "my_location",
+    "class": "material-icons"
+  },
+  {
+    "name": "nature",
+    "class": "material-icons"
+  },
+  {
+    "name": "nature_people",
+    "class": "material-icons"
+  },
+  {
+    "name": "navigate_before",
+    "class": "material-icons"
+  },
+  {
+    "name": "navigate_next",
+    "class": "material-icons"
+  },
+  {
+    "name": "navigation",
+    "class": "material-icons"
+  },
+  {
+    "name": "near_me",
+    "class": "material-icons"
+  },
+  {
+    "name": "network_cell",
+    "class": "material-icons"
+  },
+  {
+    "name": "network_check",
+    "class": "material-icons"
+  },
+  {
+    "name": "network_locked",
+    "class": "material-icons"
+  },
+  {
+    "name": "network_wifi",
+    "class": "material-icons"
+  },
+  {
+    "name": "new_releases",
+    "class": "material-icons"
+  },
+  {
+    "name": "next_week",
+    "class": "material-icons"
+  },
+  {
+    "name": "nfc",
+    "class": "material-icons"
+  },
+  {
+    "name": "no_encryption",
+    "class": "material-icons"
+  },
+  {
+    "name": "no_sim",
+    "class": "material-icons"
+  },
+  {
+    "name": "not_interested",
+    "class": "material-icons"
+  },
+  {
+    "name": "note",
+    "class": "material-icons"
+  },
+  {
+    "name": "note_add",
+    "class": "material-icons"
+  },
+  {
+    "name": "notifications",
+    "class": "material-icons"
+  },
+  {
+    "name": "notifications_active",
+    "class": "material-icons"
+  },
+  {
+    "name": "notifications_none",
+    "class": "material-icons"
+  },
+  {
+    "name": "notifications_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "notifications_paused",
+    "class": "material-icons"
+  },
+  {
+    "name": "offline_pin",
+    "class": "material-icons"
+  },
+  {
+    "name": "ondemand_video",
+    "class": "material-icons"
+  },
+  {
+    "name": "opacity",
+    "class": "material-icons"
+  },
+  {
+    "name": "open_in_browser",
+    "class": "material-icons"
+  },
+  {
+    "name": "open_in_new",
+    "class": "material-icons"
+  },
+  {
+    "name": "open_with",
+    "class": "material-icons"
+  },
+  {
+    "name": "pages",
+    "class": "material-icons"
+  },
+  {
+    "name": "pageview",
+    "class": "material-icons"
+  },
+  {
+    "name": "palette",
+    "class": "material-icons"
+  },
+  {
+    "name": "pan_tool",
+    "class": "material-icons"
+  },
+  {
+    "name": "panorama",
+    "class": "material-icons"
+  },
+  {
+    "name": "panorama_fish_eye",
+    "class": "material-icons"
+  },
+  {
+    "name": "panorama_horizontal",
+    "class": "material-icons"
+  },
+  {
+    "name": "panorama_vertical",
+    "class": "material-icons"
+  },
+  {
+    "name": "panorama_wide_angle",
+    "class": "material-icons"
+  },
+  {
+    "name": "party_mode",
+    "class": "material-icons"
+  },
+  {
+    "name": "pause",
+    "class": "material-icons"
+  },
+  {
+    "name": "pause_circle_filled",
+    "class": "material-icons"
+  },
+  {
+    "name": "pause_circle_outline",
+    "class": "material-icons"
+  },
+  {
+    "name": "payment",
+    "class": "material-icons"
+  },
+  {
+    "name": "people",
+    "class": "material-icons"
+  },
+  {
+    "name": "people_outline",
+    "class": "material-icons"
+  },
+  {
+    "name": "perm_camera_mic",
+    "class": "material-icons"
+  },
+  {
+    "name": "perm_contact_calendar",
+    "class": "material-icons"
+  },
+  {
+    "name": "perm_data_setting",
+    "class": "material-icons"
+  },
+  {
+    "name": "perm_device_information",
+    "class": "material-icons"
+  },
+  {
+    "name": "perm_identity",
+    "class": "material-icons"
+  },
+  {
+    "name": "perm_media",
+    "class": "material-icons"
+  },
+  {
+    "name": "perm_phone_msg",
+    "class": "material-icons"
+  },
+  {
+    "name": "perm_scan_wifi",
+    "class": "material-icons"
+  },
+  {
+    "name": "person",
+    "class": "material-icons"
+  },
+  {
+    "name": "person_add",
+    "class": "material-icons"
+  },
+  {
+    "name": "person_outline",
+    "class": "material-icons"
+  },
+  {
+    "name": "person_pin",
+    "class": "material-icons"
+  },
+  {
+    "name": "person_pin_circle",
+    "class": "material-icons"
+  },
+  {
+    "name": "personal_video",
+    "class": "material-icons"
+  },
+  {
+    "name": "pets",
+    "class": "material-icons"
+  },
+  {
+    "name": "phone",
+    "class": "material-icons"
+  },
+  {
+    "name": "phone_android",
+    "class": "material-icons"
+  },
+  {
+    "name": "phone_bluetooth_speaker",
+    "class": "material-icons"
+  },
+  {
+    "name": "phone_forwarded",
+    "class": "material-icons"
+  },
+  {
+    "name": "phone_in_talk",
+    "class": "material-icons"
+  },
+  {
+    "name": "phone_iphone",
+    "class": "material-icons"
+  },
+  {
+    "name": "phone_locked",
+    "class": "material-icons"
+  },
+  {
+    "name": "phone_missed",
+    "class": "material-icons"
+  },
+  {
+    "name": "phone_paused",
+    "class": "material-icons"
+  },
+  {
+    "name": "phonelink",
+    "class": "material-icons"
+  },
+  {
+    "name": "phonelink_erase",
+    "class": "material-icons"
+  },
+  {
+    "name": "phonelink_lock",
+    "class": "material-icons"
+  },
+  {
+    "name": "phonelink_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "phonelink_ring",
+    "class": "material-icons"
+  },
+  {
+    "name": "phonelink_setup",
+    "class": "material-icons"
+  },
+  {
+    "name": "photo",
+    "class": "material-icons"
+  },
+  {
+    "name": "photo_album",
+    "class": "material-icons"
+  },
+  {
+    "name": "photo_camera",
+    "class": "material-icons"
+  },
+  {
+    "name": "photo_filter",
+    "class": "material-icons"
+  },
+  {
+    "name": "photo_library",
+    "class": "material-icons"
+  },
+  {
+    "name": "photo_size_select_actual",
+    "class": "material-icons"
+  },
+  {
+    "name": "photo_size_select_large",
+    "class": "material-icons"
+  },
+  {
+    "name": "photo_size_select_small",
+    "class": "material-icons"
+  },
+  {
+    "name": "picture_as_pdf",
+    "class": "material-icons"
+  },
+  {
+    "name": "picture_in_picture",
+    "class": "material-icons"
+  },
+  {
+    "name": "picture_in_picture_alt",
+    "class": "material-icons"
+  },
+  {
+    "name": "pie_chart",
+    "class": "material-icons"
+  },
+  {
+    "name": "pie_chart_outlined",
+    "class": "material-icons"
+  },
+  {
+    "name": "pin_drop",
+    "class": "material-icons"
+  },
+  {
+    "name": "place",
+    "class": "material-icons"
+  },
+  {
+    "name": "play_arrow",
+    "class": "material-icons"
+  },
+  {
+    "name": "play_circle_filled",
+    "class": "material-icons"
+  },
+  {
+    "name": "play_circle_outline",
+    "class": "material-icons"
+  },
+  {
+    "name": "play_for_work",
+    "class": "material-icons"
+  },
+  {
+    "name": "playlist_add",
+    "class": "material-icons"
+  },
+  {
+    "name": "playlist_add_check",
+    "class": "material-icons"
+  },
+  {
+    "name": "playlist_play",
+    "class": "material-icons"
+  },
+  {
+    "name": "plus_one",
+    "class": "material-icons"
+  },
+  {
+    "name": "poll",
+    "class": "material-icons"
+  },
+  {
+    "name": "polymer",
+    "class": "material-icons"
+  },
+  {
+    "name": "pool",
+    "class": "material-icons"
+  },
+  {
+    "name": "portable_wifi_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "portrait",
+    "class": "material-icons"
+  },
+  {
+    "name": "power",
+    "class": "material-icons"
+  },
+  {
+    "name": "power_input",
+    "class": "material-icons"
+  },
+  {
+    "name": "power_settings_new",
+    "class": "material-icons"
+  },
+  {
+    "name": "pregnant_woman",
+    "class": "material-icons"
+  },
+  {
+    "name": "present_to_all",
+    "class": "material-icons"
+  },
+  {
+    "name": "print",
+    "class": "material-icons"
+  },
+  {
+    "name": "priority_high",
+    "class": "material-icons"
+  },
+  {
+    "name": "public",
+    "class": "material-icons"
+  },
+  {
+    "name": "publish",
+    "class": "material-icons"
+  },
+  {
+    "name": "query_builder",
+    "class": "material-icons"
+  },
+  {
+    "name": "question_answer",
+    "class": "material-icons"
+  },
+  {
+    "name": "queue",
+    "class": "material-icons"
+  },
+  {
+    "name": "queue_music",
+    "class": "material-icons"
+  },
+  {
+    "name": "queue_play_next",
+    "class": "material-icons"
+  },
+  {
+    "name": "radio",
+    "class": "material-icons"
+  },
+  {
+    "name": "radio_button_checked",
+    "class": "material-icons"
+  },
+  {
+    "name": "radio_button_unchecked",
+    "class": "material-icons"
+  },
+  {
+    "name": "rate_review",
+    "class": "material-icons"
+  },
+  {
+    "name": "receipt",
+    "class": "material-icons"
+  },
+  {
+    "name": "recent_actors",
+    "class": "material-icons"
+  },
+  {
+    "name": "record_voice_over",
+    "class": "material-icons"
+  },
+  {
+    "name": "redeem",
+    "class": "material-icons"
+  },
+  {
+    "name": "redo",
+    "class": "material-icons"
+  },
+  {
+    "name": "refresh",
+    "class": "material-icons"
+  },
+  {
+    "name": "remove",
+    "class": "material-icons"
+  },
+  {
+    "name": "remove_circle",
+    "class": "material-icons"
+  },
+  {
+    "name": "remove_circle_outline",
+    "class": "material-icons"
+  },
+  {
+    "name": "remove_from_queue",
+    "class": "material-icons"
+  },
+  {
+    "name": "remove_red_eye",
+    "class": "material-icons"
+  },
+  {
+    "name": "remove_shopping_cart",
+    "class": "material-icons"
+  },
+  {
+    "name": "reorder",
+    "class": "material-icons"
+  },
+  {
+    "name": "repeat",
+    "class": "material-icons"
+  },
+  {
+    "name": "repeat_one",
+    "class": "material-icons"
+  },
+  {
+    "name": "replay",
+    "class": "material-icons"
+  },
+  {
+    "name": "replay_10",
+    "class": "material-icons"
+  },
+  {
+    "name": "replay_30",
+    "class": "material-icons"
+  },
+  {
+    "name": "replay_5",
+    "class": "material-icons"
+  },
+  {
+    "name": "reply",
+    "class": "material-icons"
+  },
+  {
+    "name": "reply_all",
+    "class": "material-icons"
+  },
+  {
+    "name": "report",
+    "class": "material-icons"
+  },
+  {
+    "name": "report_problem",
+    "class": "material-icons"
+  },
+  {
+    "name": "restaurant",
+    "class": "material-icons"
+  },
+  {
+    "name": "restaurant_menu",
+    "class": "material-icons"
+  },
+  {
+    "name": "restore",
+    "class": "material-icons"
+  },
+  {
+    "name": "restore_page",
+    "class": "material-icons"
+  },
+  {
+    "name": "ring_volume",
+    "class": "material-icons"
+  },
+  {
+    "name": "room",
+    "class": "material-icons"
+  },
+  {
+    "name": "room_service",
+    "class": "material-icons"
+  },
+  {
+    "name": "rotate_90_degrees_ccw",
+    "class": "material-icons"
+  },
+  {
+    "name": "rotate_left",
+    "class": "material-icons"
+  },
+  {
+    "name": "rotate_right",
+    "class": "material-icons"
+  },
+  {
+    "name": "rounded_corner",
+    "class": "material-icons"
+  },
+  {
+    "name": "router",
+    "class": "material-icons"
+  },
+  {
+    "name": "rowing",
+    "class": "material-icons"
+  },
+  {
+    "name": "rss_feed",
+    "class": "material-icons"
+  },
+  {
+    "name": "rv_hookup",
+    "class": "material-icons"
+  },
+  {
+    "name": "satellite",
+    "class": "material-icons"
+  },
+  {
+    "name": "save",
+    "class": "material-icons"
+  },
+  {
+    "name": "scanner",
+    "class": "material-icons"
+  },
+  {
+    "name": "schedule",
+    "class": "material-icons"
+  },
+  {
+    "name": "school",
+    "class": "material-icons"
+  },
+  {
+    "name": "screen_lock_landscape",
+    "class": "material-icons"
+  },
+  {
+    "name": "screen_lock_portrait",
+    "class": "material-icons"
+  },
+  {
+    "name": "screen_lock_rotation",
+    "class": "material-icons"
+  },
+  {
+    "name": "screen_rotation",
+    "class": "material-icons"
+  },
+  {
+    "name": "screen_share",
+    "class": "material-icons"
+  },
+  {
+    "name": "sd_card",
+    "class": "material-icons"
+  },
+  {
+    "name": "sd_storage",
+    "class": "material-icons"
+  },
+  {
+    "name": "search",
+    "class": "material-icons"
+  },
+  {
+    "name": "security",
+    "class": "material-icons"
+  },
+  {
+    "name": "select_all",
+    "class": "material-icons"
+  },
+  {
+    "name": "send",
+    "class": "material-icons"
+  },
+  {
+    "name": "sentiment_dissatisfied",
+    "class": "material-icons"
+  },
+  {
+    "name": "sentiment_neutral",
+    "class": "material-icons"
+  },
+  {
+    "name": "sentiment_satisfied",
+    "class": "material-icons"
+  },
+  {
+    "name": "sentiment_very_dissatisfied",
+    "class": "material-icons"
+  },
+  {
+    "name": "sentiment_very_satisfied",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_applications",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_backup_restore",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_bluetooth",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_brightness",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_cell",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_ethernet",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_input_antenna",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_input_component",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_input_composite",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_input_hdmi",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_input_svideo",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_overscan",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_phone",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_power",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_remote",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_system_daydream",
+    "class": "material-icons"
+  },
+  {
+    "name": "settings_voice",
+    "class": "material-icons"
+  },
+  {
+    "name": "share",
+    "class": "material-icons"
+  },
+  {
+    "name": "shop",
+    "class": "material-icons"
+  },
+  {
+    "name": "shop_two",
+    "class": "material-icons"
+  },
+  {
+    "name": "shopping_basket",
+    "class": "material-icons"
+  },
+  {
+    "name": "shopping_cart",
+    "class": "material-icons"
+  },
+  {
+    "name": "short_text",
+    "class": "material-icons"
+  },
+  {
+    "name": "show_chart",
+    "class": "material-icons"
+  },
+  {
+    "name": "shuffle",
+    "class": "material-icons"
+  },
+  {
+    "name": "signal_cellular_4_bar",
+    "class": "material-icons"
+  },
+  {
+    "name": "signal_cellular_connected_no_internet_4_bar",
+    "class": "material-icons"
+  },
+  {
+    "name": "signal_cellular_no_sim",
+    "class": "material-icons"
+  },
+  {
+    "name": "signal_cellular_null",
+    "class": "material-icons"
+  },
+  {
+    "name": "signal_cellular_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "signal_wifi_4_bar",
+    "class": "material-icons"
+  },
+  {
+    "name": "signal_wifi_4_bar_lock",
+    "class": "material-icons"
+  },
+  {
+    "name": "signal_wifi_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "sim_card",
+    "class": "material-icons"
+  },
+  {
+    "name": "sim_card_alert",
+    "class": "material-icons"
+  },
+  {
+    "name": "skip_next",
+    "class": "material-icons"
+  },
+  {
+    "name": "skip_previous",
+    "class": "material-icons"
+  },
+  {
+    "name": "slideshow",
+    "class": "material-icons"
+  },
+  {
+    "name": "slow_motion_video",
+    "class": "material-icons"
+  },
+  {
+    "name": "smartphone",
+    "class": "material-icons"
+  },
+  {
+    "name": "smoke_free",
+    "class": "material-icons"
+  },
+  {
+    "name": "smoking_rooms",
+    "class": "material-icons"
+  },
+  {
+    "name": "sms",
+    "class": "material-icons"
+  },
+  {
+    "name": "sms_failed",
+    "class": "material-icons"
+  },
+  {
+    "name": "snooze",
+    "class": "material-icons"
+  },
+  {
+    "name": "sort",
+    "class": "material-icons"
+  },
+  {
+    "name": "sort_by_alpha",
+    "class": "material-icons"
+  },
+  {
+    "name": "spa",
+    "class": "material-icons"
+  },
+  {
+    "name": "space_bar",
+    "class": "material-icons"
+  },
+  {
+    "name": "speaker",
+    "class": "material-icons"
+  },
+  {
+    "name": "speaker_group",
+    "class": "material-icons"
+  },
+  {
+    "name": "speaker_notes",
+    "class": "material-icons"
+  },
+  {
+    "name": "speaker_notes_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "speaker_phone",
+    "class": "material-icons"
+  },
+  {
+    "name": "spellcheck",
+    "class": "material-icons"
+  },
+  {
+    "name": "star",
+    "class": "material-icons"
+  },
+  {
+    "name": "star_border",
+    "class": "material-icons"
+  },
+  {
+    "name": "star_half",
+    "class": "material-icons"
+  },
+  {
+    "name": "stars",
+    "class": "material-icons"
+  },
+  {
+    "name": "stay_current_landscape",
+    "class": "material-icons"
+  },
+  {
+    "name": "stay_current_portrait",
+    "class": "material-icons"
+  },
+  {
+    "name": "stay_primary_landscape",
+    "class": "material-icons"
+  },
+  {
+    "name": "stay_primary_portrait",
+    "class": "material-icons"
+  },
+  {
+    "name": "stop",
+    "class": "material-icons"
+  },
+  {
+    "name": "stop_screen_share",
+    "class": "material-icons"
+  },
+  {
+    "name": "storage",
+    "class": "material-icons"
+  },
+  {
+    "name": "store",
+    "class": "material-icons"
+  },
+  {
+    "name": "store_mall_directory",
+    "class": "material-icons"
+  },
+  {
+    "name": "straighten",
+    "class": "material-icons"
+  },
+  {
+    "name": "streetview",
+    "class": "material-icons"
+  },
+  {
+    "name": "strikethrough_s",
+    "class": "material-icons"
+  },
+  {
+    "name": "style",
+    "class": "material-icons"
+  },
+  {
+    "name": "subdirectory_arrow_left",
+    "class": "material-icons"
+  },
+  {
+    "name": "subdirectory_arrow_right",
+    "class": "material-icons"
+  },
+  {
+    "name": "subject",
+    "class": "material-icons"
+  },
+  {
+    "name": "subscriptions",
+    "class": "material-icons"
+  },
+  {
+    "name": "subtitles",
+    "class": "material-icons"
+  },
+  {
+    "name": "subway",
+    "class": "material-icons"
+  },
+  {
+    "name": "supervisor_account",
+    "class": "material-icons"
+  },
+  {
+    "name": "surround_sound",
+    "class": "material-icons"
+  },
+  {
+    "name": "swap_calls",
+    "class": "material-icons"
+  },
+  {
+    "name": "swap_horiz",
+    "class": "material-icons"
+  },
+  {
+    "name": "swap_vert",
+    "class": "material-icons"
+  },
+  {
+    "name": "swap_vertical_circle",
+    "class": "material-icons"
+  },
+  {
+    "name": "switch_camera",
+    "class": "material-icons"
+  },
+  {
+    "name": "switch_video",
+    "class": "material-icons"
+  },
+  {
+    "name": "sync",
+    "class": "material-icons"
+  },
+  {
+    "name": "sync_disabled",
+    "class": "material-icons"
+  },
+  {
+    "name": "sync_problem",
+    "class": "material-icons"
+  },
+  {
+    "name": "system_update",
+    "class": "material-icons"
+  },
+  {
+    "name": "system_update_alt",
+    "class": "material-icons"
+  },
+  {
+    "name": "tab",
+    "class": "material-icons"
+  },
+  {
+    "name": "tab_unselected",
+    "class": "material-icons"
+  },
+  {
+    "name": "tablet",
+    "class": "material-icons"
+  },
+  {
+    "name": "tablet_android",
+    "class": "material-icons"
+  },
+  {
+    "name": "tablet_mac",
+    "class": "material-icons"
+  },
+  {
+    "name": "tag_faces",
+    "class": "material-icons"
+  },
+  {
+    "name": "tap_and_play",
+    "class": "material-icons"
+  },
+  {
+    "name": "terrain",
+    "class": "material-icons"
+  },
+  {
+    "name": "text_fields",
+    "class": "material-icons"
+  },
+  {
+    "name": "text_format",
+    "class": "material-icons"
+  },
+  {
+    "name": "textsms",
+    "class": "material-icons"
+  },
+  {
+    "name": "texture",
+    "class": "material-icons"
+  },
+  {
+    "name": "theaters",
+    "class": "material-icons"
+  },
+  {
+    "name": "thumb_down",
+    "class": "material-icons"
+  },
+  {
+    "name": "thumb_up",
+    "class": "material-icons"
+  },
+  {
+    "name": "thumbs_up_down",
+    "class": "material-icons"
+  },
+  {
+    "name": "time_to_leave",
+    "class": "material-icons"
+  },
+  {
+    "name": "timelapse",
+    "class": "material-icons"
+  },
+  {
+    "name": "timeline",
+    "class": "material-icons"
+  },
+  {
+    "name": "timer",
+    "class": "material-icons"
+  },
+  {
+    "name": "timer_10",
+    "class": "material-icons"
+  },
+  {
+    "name": "timer_3",
+    "class": "material-icons"
+  },
+  {
+    "name": "timer_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "title",
+    "class": "material-icons"
+  },
+  {
+    "name": "toc",
+    "class": "material-icons"
+  },
+  {
+    "name": "today",
+    "class": "material-icons"
+  },
+  {
+    "name": "toll",
+    "class": "material-icons"
+  },
+  {
+    "name": "tonality",
+    "class": "material-icons"
+  },
+  {
+    "name": "touch_app",
+    "class": "material-icons"
+  },
+  {
+    "name": "toys",
+    "class": "material-icons"
+  },
+  {
+    "name": "track_changes",
+    "class": "material-icons"
+  },
+  {
+    "name": "traffic",
+    "class": "material-icons"
+  },
+  {
+    "name": "train",
+    "class": "material-icons"
+  },
+  {
+    "name": "tram",
+    "class": "material-icons"
+  },
+  {
+    "name": "transfer_within_a_station",
+    "class": "material-icons"
+  },
+  {
+    "name": "transform",
+    "class": "material-icons"
+  },
+  {
+    "name": "translate",
+    "class": "material-icons"
+  },
+  {
+    "name": "trending_down",
+    "class": "material-icons"
+  },
+  {
+    "name": "trending_flat",
+    "class": "material-icons"
+  },
+  {
+    "name": "trending_up",
+    "class": "material-icons"
+  },
+  {
+    "name": "tune",
+    "class": "material-icons"
+  },
+  {
+    "name": "turned_in",
+    "class": "material-icons"
+  },
+  {
+    "name": "turned_in_not",
+    "class": "material-icons"
+  },
+  {
+    "name": "tv",
+    "class": "material-icons"
+  },
+  {
+    "name": "unarchive",
+    "class": "material-icons"
+  },
+  {
+    "name": "undo",
+    "class": "material-icons"
+  },
+  {
+    "name": "unfold_less",
+    "class": "material-icons"
+  },
+  {
+    "name": "unfold_more",
+    "class": "material-icons"
+  },
+  {
+    "name": "update",
+    "class": "material-icons"
+  },
+  {
+    "name": "usb",
+    "class": "material-icons"
+  },
+  {
+    "name": "verified_user",
+    "class": "material-icons"
+  },
+  {
+    "name": "vertical_align_bottom",
+    "class": "material-icons"
+  },
+  {
+    "name": "vertical_align_center",
+    "class": "material-icons"
+  },
+  {
+    "name": "vertical_align_top",
+    "class": "material-icons"
+  },
+  {
+    "name": "vibration",
+    "class": "material-icons"
+  },
+  {
+    "name": "video_call",
+    "class": "material-icons"
+  },
+  {
+    "name": "video_label",
+    "class": "material-icons"
+  },
+  {
+    "name": "video_library",
+    "class": "material-icons"
+  },
+  {
+    "name": "videocam",
+    "class": "material-icons"
+  },
+  {
+    "name": "videocam_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "videogame_asset",
+    "class": "material-icons"
+  },
+  {
+    "name": "view_agenda",
+    "class": "material-icons"
+  },
+  {
+    "name": "view_array",
+    "class": "material-icons"
+  },
+  {
+    "name": "view_carousel",
+    "class": "material-icons"
+  },
+  {
+    "name": "view_column",
+    "class": "material-icons"
+  },
+  {
+    "name": "view_comfy",
+    "class": "material-icons"
+  },
+  {
+    "name": "view_compact",
+    "class": "material-icons"
+  },
+  {
+    "name": "view_day",
+    "class": "material-icons"
+  },
+  {
+    "name": "view_headline",
+    "class": "material-icons"
+  },
+  {
+    "name": "view_list",
+    "class": "material-icons"
+  },
+  {
+    "name": "view_module",
+    "class": "material-icons"
+  },
+  {
+    "name": "view_quilt",
+    "class": "material-icons"
+  },
+  {
+    "name": "view_stream",
+    "class": "material-icons"
+  },
+  {
+    "name": "view_week",
+    "class": "material-icons"
+  },
+  {
+    "name": "vignette",
+    "class": "material-icons"
+  },
+  {
+    "name": "visibility",
+    "class": "material-icons"
+  },
+  {
+    "name": "visibility_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "voice_chat",
+    "class": "material-icons"
+  },
+  {
+    "name": "voicemail",
+    "class": "material-icons"
+  },
+  {
+    "name": "volume_down",
+    "class": "material-icons"
+  },
+  {
+    "name": "volume_mute",
+    "class": "material-icons"
+  },
+  {
+    "name": "volume_off",
+    "class": "material-icons"
+  },
+  {
+    "name": "volume_up",
+    "class": "material-icons"
+  },
+  {
+    "name": "vpn_key",
+    "class": "material-icons"
+  },
+  {
+    "name": "vpn_lock",
+    "class": "material-icons"
+  },
+  {
+    "name": "wallpaper",
+    "class": "material-icons"
+  },
+  {
+    "name": "warning",
+    "class": "material-icons"
+  },
+  {
+    "name": "watch",
+    "class": "material-icons"
+  },
+  {
+    "name": "watch_later",
+    "class": "material-icons"
+  },
+  {
+    "name": "wb_auto",
+    "class": "material-icons"
+  },
+  {
+    "name": "wb_cloudy",
+    "class": "material-icons"
+  },
+  {
+    "name": "wb_incandescent",
+    "class": "material-icons"
+  },
+  {
+    "name": "wb_iridescent",
+    "class": "material-icons"
+  },
+  {
+    "name": "wb_sunny",
+    "class": "material-icons"
+  },
+  {
+    "name": "wc",
+    "class": "material-icons"
+  },
+  {
+    "name": "web",
+    "class": "material-icons"
+  },
+  {
+    "name": "web_asset",
+    "class": "material-icons"
+  },
+  {
+    "name": "weekend",
+    "class": "material-icons"
+  },
+  {
+    "name": "whatshot",
+    "class": "material-icons"
+  },
+  {
+    "name": "widgets",
+    "class": "material-icons"
+  },
+  {
+    "name": "wifi",
+    "class": "material-icons"
+  },
+  {
+    "name": "wifi_lock",
+    "class": "material-icons"
+  },
+  {
+    "name": "wifi_tethering",
+    "class": "material-icons"
+  },
+  {
+    "name": "work",
+    "class": "material-icons"
+  },
+  {
+    "name": "wrap_text",
+    "class": "material-icons"
+  },
+  {
+    "name": "youtube_searched_for",
+    "class": "material-icons"
+  },
+  {
+    "name": "zoom_in",
+    "class": "material-icons"
+  },
+  {
+    "name": "zoom_out",
+    "class": "material-icons"
+  },
+  {
+    "name": "zoom_out_map",
+    "class": "material-icons"
+  }]

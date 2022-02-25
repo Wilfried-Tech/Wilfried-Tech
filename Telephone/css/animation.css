@@ -1,0 +1,12 @@
+@keyframes swipe-up {
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
