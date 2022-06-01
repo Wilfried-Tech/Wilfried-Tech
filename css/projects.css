@@ -161,13 +161,13 @@ nav .back {
   justify-content: space-between;
 }
 
-.app-logo .logo {
-  /*width: 110px;
+/*.app-logo .logo {
+  width: 110px;
   height: 110px;
   /*background-color: #e0e0e0;
   margin: 5px 0px 0px;
-  border-radius: 50%;*/
-}
+  border-radius: 50%;
+}*/
 
 .app-logo .app-name {
   flex: 0.9;
