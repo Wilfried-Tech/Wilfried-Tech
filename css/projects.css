@@ -1,0 +1,251 @@
+
+
+.projects {
+  grid-column: 3 /span 1;
+  grid-row: 1;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6),
+    -2px -2px 10px #f1f1f1;
+  text-align: center;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-rows: repeat(var(--count), 250px);
+  grid-gap: 25px;
+  padding: 25px;
+}
+
+article.page,
+article.app {
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px #aaa,
+    -2px -2px 3px #f1f1f1;
+  width: 75%;
+  margin: 0px auto;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.page img,
+.app img {
+  display: block;
+  width: 90%;
+  height: 80%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin: 7px auto;
+}
+
+.page>h2,
+.app>h2 {
+  height: calc(20% - 14px);
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+h2 a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.page div.description,
+.app div.description {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: radial-gradient(white, indigo 85%, navy);
+  overflow: scroll;
+  transition: all var(--timing);
+  text-transform: capitalize;
+  font-size: 17px;
+  -moz-transition: all var(--timing);
+  -ms-transition: all var(--timing);
+  -o-transition: all var(--timing);
+}
+
+
+div.description.opened {
+  transform: translateY(-102%);
+}
+
+article.app .version,
+article.page .type {
+  background-color: #5216859E;
+  width: 60px;
+  height: 60px;
+  border-radius: 0 0 0 100%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  padding: 15px 0 0 0;
+  font-weight: bolder;
+  font-style: italic;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+article h2 {
+  margin: 5px auto;
+}
+
+article[disabled='disabled'] {
+  background-color: gray;
+}
+
+div.description+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  background: transparent;
+  transform: translate(-50%, -50%);
+}
+
+
+/* download page */
+
+.downloadPage {
+  width: 500px;
+  max-width: 100%;
+  margin: auto;
+  min-height: 100%;
+  background-color: #fff;
+  position: absolute;
+  text-align: left;
+  z-index: 3;
+}
+
+.downloadPage nav.nav-bar {
+  width: 100%;
+  box-shadow: 1px 1px 4px var(--color-3);
+}
+
+.downloadPage nav.nav-bar>* {
+  display: inline-block;
+  padding: 10px;
+  height: 50px;
+}
+
+nav .back {
+  width: 15%;
+  border: none;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.back:active {
+  background-color: var(--theme-2);
+}
+
+.downloadPage nav h2.title {
+  text-align: center;
+  width: 83%;
+  text-transform: capitalize;
+}
+
+.app-logo,
+.app-info,
+.btn-group,
+.prev-screen {
+  width: 100%;
+  padding: 4px;
+  overflow: hidden;
+  margin: 0 0 7px;
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-logo .logo {
+  /*width: 110px;
+  height: 110px;
+  /*background-color: #e0e0e0;
+  margin: 5px 0px 0px;
+  border-radius: 50%;*/
+}
+
+.app-logo .app-name {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+  font-size: 18pt;
+  padding: 10px 3px 0;
+  text-transform: capitalize;
+}
+
+.app-name .author {
+  padding: 2px;
+  text-align: center;
+  font-weight: bold;
+  color: gray;
+  font-size: initial;
+}
+
+.app-info {
+  width: 99%;
+  overflow-x: scroll;
+  padding: 2px;
+}
+
+.app-info .info {
+  width: 150%;
+}
+
+.info td {
+  height: 40px;
+  border-right: 2px solid gray;
+  text-align: center;
+  padding: 0 7px;
+}
+
+td span {
+  display: block;
+  padding: 3px;
+}
+
+.btn-group {
+  text-align: center;
+  margin: 14px 0;
+}
+
+.btn-group .download-btn {
+  width: 90%;
+  padding: 7px;
+  border-radius: 7px;
+  border: none;
+  background-color: seagreen;
+  margin: auto;
+  text-transform: capitalize;
+}
+
+.download-btn:active {
+  box-shadow: 2px 2px 4px var(--color-3);
+}
+
+.download-btn a {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: var(--theme-1);
+}
+
+.prev-screen {
+  display: grid;
+  grid-template-columns: repeat(var(--img-count), 100px);
+  grid-gap: 10px;
+  overflow-x: scroll;
+  width: 99%;
+}
+
+.prev-screen img {
+  height: 200px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 7px;
+  box-shadow: 2px 2px 5px var(--color-3);
+}

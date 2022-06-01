@@ -3,10 +3,10 @@
  * @param {HTMLCanvasElement} canvas
  */
 function matrixRain(canvas) {
-  var style = getComputedStyle(document.documentElement);
-  var color1 = style.getPropertyValue('--theme-1');
-  var color2 = style.getPropertyValue('--theme-2');
-  var width, height, ctx, rain, matrix;
+  var style = getComputedStyle(canvas);
+  var color1 = style.getPropertyValue("color");
+  var color2 = style.getPropertyValue("background-color");
+  var width, height, ctx, rain, matrix;  
   width = canvas.offsetWidth;
   height = canvas.offsetHeight;
   ctx = canvas.getContext('2d');
@@ -17,10 +17,10 @@ function matrixRain(canvas) {
     rain.push(1);
   }
   function raining() {
-    ctx.fillStyle = color2+'20';
+    ctx.fillStyle = color2
     ctx.fillRect(0, 0, width, height);
     ctx.fillStyle = color1;
-    ctx.font = '10px arial';
+    ctx.font = '10px cursive';
     for (var j = 0; j < rain.length; j++) {
       var txt = matrix[Math.floor(Math.random() * matrix.length)];
       ctx.fillText(txt, j * 10, rain[j] * 10);

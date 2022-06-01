@@ -14,7 +14,7 @@ var Data = {
     },
     icon: {
       name: "converter",
-      url: "/app/Convertisseur/convertisseur_logo_old.png"
+      url: "app/Convertisseur/convertisseur_logo_old.png"
     },
     disabled: !false,
     prev: []

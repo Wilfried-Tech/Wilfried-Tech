@@ -40,7 +40,7 @@ function writeOnTerminal(elt) {
     elt.innerText = '';
     elt.classList.remove('pending');
     var letter = 0;
-    var timeout = setInterval(function() {
+    var timeout = setInterval(function () {
       elt.textContent += text[letter++];
       if (letter == text.length) {
         elt.classList.add('pending');
@@ -57,10 +57,11 @@ function writeOnTerminal(elt) {
 function initSwipeMenu() {
   var menu = $('#menu[data-swipe]')
   if (menu) {
+    var container = $(".container")
     menu.addEventListener('click', (e) => {
       e.currentTarget.classList.toggle('active');
-      e.currentTarget.style.setProperty('--menu-translationX', `${10+$('#nav-menu').offsetWidth-e.currentTarget.offsetWidth*2}px`);
-      e.currentTarget.style.setProperty('--menu-translationY', '0');
+      container.style.setProperty('--menu-translationX', `${20 + $('#nav-menu').offsetWidth - e.currentTarget.offsetWidth * 2}px`);
+      container.style.setProperty('--menu-translationY', '0');
     })
     $('#nav-menu').classList.replace('circled', 'swipe');
   }
@@ -71,13 +72,9 @@ function initSwipeMenu() {
 function initCircularMenu() {
   var menu = $('#menu[data-circled]');
   if (menu) {
-    menu.addEventListener('click', (e) => {
-      e.currentTarget.classList.toggle('active');
-      e.currentTarget.style.setProperty('--menu-translationX', `50%`);
-      e.currentTarget.style.setProperty('--menu-translationY', 'var(--menu-translationX)');
-    })
     var items = Array.prototype.map.call($$('.nav-menu-item'), item => item);
     var nav = $('#nav-menu');
+    var container = $(".container")
     nav.classList.add('circled');
     var angle = 360 / items.length;
     var radius = nav.offsetWidth / 2;
@@ -91,6 +88,13 @@ function initCircularMenu() {
       item.style.top = posY + 'px';
       item.style.left = posX + 'px';
     })
+    menu.addEventListener('click', (e) => {
+      e.currentTarget.classList.toggle('active');
+      container.style.setProperty('--menu-translationX', `50%`);
+      var translationY = container.scrollTop + (screen.height / 2)
+      container.style.setProperty('--menu-translationY', `${translationY}px`);
+    })
+
   }
 }
 
@@ -129,14 +133,14 @@ function prevImg(prefix, imgs) {
 
 function initDownloadPage(view) {
   var DownloadPage = `<div class="downloadPage"><nav class="nav-bar"><button class="back"><span><i class="fa fa-arrow-left"></i></span></button><h2 class="title">Wilfried-Tech</h2></nav><div class="app-logo"><progress-ring class="logo" radius="55" stroke="0" shape="circle" value="50" value-color='green' linecap='round' bar-color="#e0e0e0"><img src="${view.icon.url}" /></progress-ring><div class="app-name">${view.long_name}<p class="author">Wilfried-Tech</p></div></div><div class="app-info"><table class="info"><tr><td><span><i class="fa fa-star-half-alt"></i></span>${view.rate} avis</td><td><span><i class="fa fa-download"></i></span>${view.size}</td><td><span><i class="fa fa-plus-square"></i></span>${view.min_age} ans et plus</td><td><span>plus de ${view.nb_download}</span>téléchargements</td></tr></table></div><div class="btn-group"><div class="download-btn"><a href="${view.link}">download</a></div>
-    </div><div class="prev-screen">${prevImg(view.name,view.prev)}</div></div>`
+    </div><div class="prev-screen">${prevImg(view.name, view.prev)}</div></div>`
   document.querySelector('.container').insertAdjacentHTML('beforeend', DownloadPage);
 
   var page = document.querySelector('.downloadPage');
 
   document.documentElement.style.setProperty('--img-count', view.prev.length);
 
-  page.querySelector('.back').onclick = function() {
+  page.querySelector('.back').onclick = function () {
     page.remove();
   }
 }
