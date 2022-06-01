@@ -1,4 +1,5 @@
 .informations {
-    grid-column: 2 /span 1;
-    grid-row: 1;
-  }
+  grid-column: 2 /span 1;
+  grid-row: 1;
+  visibility: hidden;
+}

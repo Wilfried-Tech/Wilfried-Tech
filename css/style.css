@@ -17,6 +17,7 @@
 
 ::-webkit-scrollbar {
   display: none;
+  -webkit-appearance: none;
   appearance: none;
 }
 
@@ -43,7 +44,6 @@ body {
   overflow-x: hidden;
   background-color: #fff;
   min-height: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,6 +92,7 @@ body {
 #main-header img {
   width: 45px;
   height: 45px;
+  -o-object-fit: contain;
   object-fit: contain;
   border-radius: 50%;
   margin: 0 20px;
@@ -159,7 +160,7 @@ nav.navigation {
 
 #brand {
   height: 200px;
-  background: red;
+  background-color: #000;
   position: relative;
   width: 100%;
 }
@@ -191,6 +192,7 @@ nav.navigation {
 }
 
 #console-line.pending+#console-cursor {
+  -webkit-animation: pending 750ms linear infinite;
   animation: pending 750ms linear infinite;
 }
 
@@ -209,12 +211,13 @@ nav.navigation {
 #page-content {
   width: 100%;
   height: 100%;
+  flex: 2;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   overflow: hidden;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 div.content {
@@ -291,6 +294,11 @@ ul .fa-youtube {
     font-weight: bolder;
     color: white;
     justify-content: center;
+    font-size: 0.8em;
+  }
+
+  #main-header img {
+    margin: 0 10px;
   }
 
   .nav-title {
@@ -397,10 +405,6 @@ ul .fa-youtube {
     padding-left: 15px;
   }
 
-  #nav-menu.circled {
-    transition: none;
-  }
-
   #menu[data-swipe].active+.nav-bar+#nav-menu {
     left: 0;
   }
@@ -439,7 +443,7 @@ ul .fa-youtube {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: var(--theme-1);
+    transition: none;
   }
 
   #menu[data-circled].active+.nav-bar+#nav-menu {
@@ -491,10 +495,13 @@ ul .fa-youtube {
     padding: 7px 0;
     border-left: 2px solid;
     flex: 1;
+    border-style: outset;
+    border-color: #fff;
   }
 
   nav.navigation .tab.active {
     flex: 1.5;
+    border-style: inset;
   }
 
   #page-content {
@@ -543,6 +550,7 @@ ul .fa-youtube {
     padding: 5px 0;
     font-weight: bolder;
     margin: 3px 0;
+    font-size: 20px;
   }
 
 }

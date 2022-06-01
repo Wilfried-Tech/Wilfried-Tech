@@ -17,7 +17,7 @@ tabs.forEach((tab, index) => {
 })
 
 menuItems.forEach((menuItem) => {
-    menuItem.addEventListener("click",function (e) {
+    menuItem.addEventListener("click", function (e) {
         menuItems.forEach((menuItem) => {
             menuItem.classList.remove('active');
         })
